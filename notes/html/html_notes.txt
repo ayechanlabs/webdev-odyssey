@@ -1,0 +1,20 @@
+Self-closing Tags
+
+<br/> = line break tag
+
+Elements
+i. Block Elements: သူက ရှိတဲ့ content ကို screen width ရဲ့ 100% ကို ယူလိုက်တာကိုပြောတာ။ Even there is no more text.
+
+ii. Inline Elements: သူက ကျတော့ စာသားရှိသလောက်ပဲ နေရာယူတာကို ပြောတာ။
+
+
+Block Elements
+<p></p>: paragraph tag
+<h1>...<h6></h1>...</h6>: heading tag
+
+Inline Elements
+<b></b>: bold tag
+<i></i>: italic tag
+<u></u>: underline tag
+<a></a>: anchor tag
+

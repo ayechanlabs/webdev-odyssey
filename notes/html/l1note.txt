@@ -1,0 +1,12 @@
+Website
+
+website တခုမှာ informations တွေကို ဖတ်လို့ပဲ ရမယ် တခြား interaction လုပ်လို့ မရတာကို Static Website ဆိုပြီ ခေါ်တယ်။
+
+Website တခုမှာ informations တွေကို ဖတ်လို့ပဲ မဟုတ်ပဲ တခြား interaction(giving likes, comments, uploading images, etc.. in order word user input) လုပ်လို့ ရတာကို Dynamic Website ဆိုပြီ ခေါ်တယ်။
+
+Web Developer
+- Frontend Developer: User တွေ အတွက် design ကို အဓိက ဆွဲပေးတာ။ သူက လုံးဝ design, effect တွေကို အဓိကထားတာ။
+- Backend Developer: ဒါက Frontend ရလာတဲ့ actions တွေ, data တွေကို database ထဲ သိမ်းနိုင်အောင် ပြန်ထုတ်နိုင်အောင်လုပ်ပေးတာ, error handling လုပ်တာ, data တွေကို စီစစ်တာတွေကို လုပ်ပေးတယ်။
+- Database Developer: သူကတော့ Data ကို အဓိက သိမ်းထားတာ၊ security ကို setup လုပ်တာ hacker တွေ ဝင်ခိုးလို့ မရအောင် တားတာ။
+
+Website ဆိုတာ informations ကိုပဲ‌ပေးတာ, Web-Application က Dynamic functions အများကြီးပါတဲ့ website ကိုပြောတာ။
