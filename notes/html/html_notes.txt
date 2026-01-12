@@ -14,6 +14,8 @@ Block Elements
 <hr/>:horizontal line
 <br/>:line break
 <ul></ul> & <ol></ol>: Unordered List & Ordered List
+<table></table>: table tag
+<div></div>: division tag
 
 Inline Elements
 <b></b>: bold tag

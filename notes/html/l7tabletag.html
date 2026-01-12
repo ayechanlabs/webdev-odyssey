@@ -5,5 +5,165 @@
 
     <body>
         <h3>Table Tag</h3>
+
+        <table>
+            <!-- we can also use "th": table head instead of "b" bold tag. -->
+            <tr>
+                <th>No</th>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Unit</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Coffee</td>
+                <td>1</td>
+                <td>pk</td>
+                <td>1000</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Tea</td>
+                <td>1</td>
+                <td>pk</td>
+                <td>500</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Milk</td>
+                <td>2</td>
+                <td>btl</td>
+                <td>1500</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Grand Total</td>
+                <td>3000</td>
+            </tr>
+        </table>
+
+        <hr/>
+
+        <!-- 
+            Table with Border 
+            table border ရဲ့ value ကို number နဲ့ပေးရတယ်။
+            ပေးလိုက်တဲ့ number ရဲ့ value ပေါ်မူတည်ပြီ border ရဲ့ အထူကို သတ်မှတ်ပေးမှာ ဖြစ်တယ်။
+        -->
+        <table border="1"> 
+            <!-- we can also use "th": table head instead of "b" bold tag. -->
+
+            <tr>
+                <th colspan="6">ABC Co.,Ltd.</th>
+            </tr>
+
+            <tr>
+                <th>No</th>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Unit</th>
+                <th>Price</th>
+                <th>QC</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Coffee</td>
+                <td>1</td>
+                <td>pk</td>
+                <td>1000</td>
+                <td rowspan="3">Passed</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Tea</td>
+                <td>1</td>
+                <td>pk</td>
+                <td>500</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Milk</td>
+                <td>2</td>
+                <td>btl</td>
+                <td>1500</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Grand Total</td>
+                <td colspan="3">3000</td>
+            </tr>
+        </table>
+
+        <hr/>
+
+        <table border="2">
+
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Unit</th>
+                    <th>Price</th>
+                    <th>QC</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Coffee</td>
+                    <td>1</td>
+                    <td>pk</td>
+                    <td>1000</td>
+                    <td rowspan="3">Passed</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Tea</td>
+                    <td>1</td>
+                    <td>pk</td>
+                    <td>500</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Milk</td>
+                    <td>2</td>
+                    <td>btl</td>
+                    <td>1500</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="4">Grand Total</td>
+                    <td colspan="3">3000</td>
+                </tr>
+            </tfoot>
+        </table>
+
     </body>
 </html>
+
+<!-- 
+<thead>, <tbody>, <tfoot> ဆိုတာက backend သမားတွေ အတွက် table ကို ပိုမို အဆင်ပြေစေဖို့ အတွက် သုံးတာ ဖြစ်တယ်။
+<thead> ဆိုတာက table ရဲ့ header ကို သတ်မှတ်ပေးတဲ့ tag ဖြစ်တယ်။
+<tbody> ဆိုတာက table ရဲ့ body ကို သတ်မှတ်ပေးတဲ့ tag ဖြစ်တယ်။
+<tfoot> ဆိုတာက table ရဲ့ footer ကို သတ်မှတ်ပေးတဲ့ tag ဖြစ်တယ်။
+
+table မှာ အဲလိုမျိုး group ဖွဲ့လိုက်ရင် ရနိုင်တဲ့ advantages တွေ ရှိတယ်။
+အာ့က rowspan, colspan တွေကို သုံးတဲ့အခါမှာလည်း အဆင်ပြေတယ်။
+for example rowspan လုပ်ဖို့ လုပ်လို့ရတာ ၃ ခု ရှိတယ် ဆိုရင် dev က မှားပြီ 4 or 5 ရေးမိရင် လုပ်တဲ့ rowspan က နေရာကျော်ပြီ
+သွားမှာ မဟုတ်တော့ပဲ ကိုယ် region ထဲမှာပဲရှိနေတော့မယ်။
+ -->
