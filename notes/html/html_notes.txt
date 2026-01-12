@@ -11,10 +11,14 @@ ii. Inline Elements: သူက ကျတော့ စာသားရှိသလ
 Block Elements
 <p></p>: paragraph tag
 <h1>...<h6></h1>...</h6>: heading tag
+<hr/>:horizontal line
+<br/>:line break
+<ul></ul> & <ol></ol>: Unordered List & Ordered List
 
 Inline Elements
 <b></b>: bold tag
 <i></i>: italic tag
 <u></u>: underline tag
 <a></a>: anchor tag
+<img />: image tag
 
