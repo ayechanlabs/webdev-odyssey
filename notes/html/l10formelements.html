@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Form Elements</title>
+    </head>
+
+    <body>
+        <h3>Form Elements</h3>
+
+        <!-- 
+        action ဆိုတာ backend နဲ့ ချိတ်တဲ့ နေရာမှာ သုံးတာ။ အထူးသဖြင့် PHP အတွက် သုံးတာ။
+        method ဆိုတာ GET နဲ့ POST ဆိုတဲ့ နည်းလမ်း ၂ မျိုး ရှိတယ်။ GET ဆိုတာ URL မှာ data တွေကို ပို့တာဖြစ်ပြီး၊ POST ဆိုတာ body မှာ data တွေကို ပို့တာ ဖြစ်တယ်။
+          -->
+        <form action="" method="">
+            <label for="first_name">First Name</label>
+            <!-- 
+            name ဆိုတာက form data တွေကို backend ကို ပို့တဲ့အခါ အမည်ပေးဖို့ သုံးတာ။ အထူးသဖြင့် PHP အတွက် သုံးတာ။
+            id ဆိုတာက HTML element ကို unique အနေနဲ့ သတ်မှတ်ဖို့ သုံးတာ။ JavaScript သမားတွေသုံးမှာ ပြီရင် Frontend Developer တွေ design အနေနဲ့ ပြန်သုံးမှာ ဖြစ်တယ်။
+            class ဆိုတာက CSS က design တွေကို ဖန်တီးဖို့ သုံးမှာ။
+             -->
+            <input type="text" name="first_name" id="first_name" class="" placeholder="Enter Your First Name..." />
+
+            <br/><br/>
+
+            <!-- 
+            for ဆိုတာက label ကို input element နဲ့ ချိတ်ဆက်ဖို့ သုံးတာ။
+            ဥပမာ ကိုယ်က Last Name ဆိုတဲ့ label ကို နှိပ်လိုက်တာနဲ့ အလိုအလျှောက် cursor က 
+            last name input field ထဲကို သွားပါလိမ့်မယ်။
+            အဲလိုသွားဖို့ label ထဲမှာ ရှိတဲ့ for attribute က input element ရဲ့ id attribute နဲ့ တူညီဖို့ လိုပါတယ်။
+             -->
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" class="" placeholder="Enter Your Last Name..." />
+
+            <br/><br/>
+
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" class="" placeholder="Enter Your Age..." />
+
+            <br/><br/>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="" placeholder="Enter Your Email..." />
+
+            <br/><br/>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="" placeholder="Enter Your Password..." />
+
+            <br/><br/>
+
+            <label>Gender</label>
+            <input type="radio" name="gender" id="male" class="" value="1"><label for="male">Male</label>
+            <input type="radio" name="gender" id="female" class="" value="0"><label for="female">Female</label>
+
+            <br/><br/>
+        </form>
+    </body>
+</html>
+
+<!-- 
+Form elements are used to collect user input in HTML forms. Common form elements include:
+1. <input>: Used for various types of input fields such as text, password, checkbox, radio, etc.
+2. <textarea>: Used for multi-line text input.
+3. <select>: Used to create drop-down lists.
+4. <button>: Used to create clickable buttons.
+-->

@@ -23,4 +23,5 @@ Inline Elements
 <u></u>: underline tag
 <a></a>: anchor tag
 <img />: image tag
-
+<label></label>: label tag in FORM Tag
+<input />: input tag in FORM Tag
