@@ -25,3 +25,9 @@ Inline Elements
 <img />: image tag
 <label></label>: label tag in FORM Tag
 <input />: input tag in FORM Tag
+
+standalone attribute
+- checked
+- autofocus
+- readonly
+- disabled

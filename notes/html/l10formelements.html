@@ -17,7 +17,7 @@
             id ဆိုတာက HTML element ကို unique အနေနဲ့ သတ်မှတ်ဖို့ သုံးတာ။ JavaScript သမားတွေသုံးမှာ ပြီရင် Frontend Developer တွေ design အနေနဲ့ ပြန်သုံးမှာ ဖြစ်တယ်။
             class ဆိုတာက CSS က design တွေကို ဖန်တီးဖို့ သုံးမှာ။
              -->
-            <input type="text" name="first_name" id="first_name" class="" placeholder="Enter Your First Name..." />
+            <input type="text" name="first_name" id="first_name" class="" placeholder="Enter Your First Name..." autofocus/>
 
             <br/><br/>
 
@@ -28,12 +28,12 @@
             အဲလိုသွားဖို့ label ထဲမှာ ရှိတဲ့ for attribute က input element ရဲ့ id attribute နဲ့ တူညီဖို့ လိုပါတယ်။
              -->
             <label for="last_name">Last Name</label>
-            <input type="text" name="last_name" id="last_name" class="" placeholder="Enter Your Last Name..." />
+            <input type="text" name="last_name" id="last_name" class="" placeholder="Enter Your Last Name..." disabled />
 
             <br/><br/>
 
             <label for="age">Age</label>
-            <input type="number" name="age" id="age" class="" placeholder="Enter Your Age..." />
+            <input type="number" name="age" id="age" class="" placeholder="Enter Your Age..." readonly/>
 
             <br/><br/>
 
@@ -48,10 +48,29 @@
             <br/><br/>
 
             <label>Gender</label>
-            <input type="radio" name="gender" id="male" class="" value="1"><label for="male">Male</label>
-            <input type="radio" name="gender" id="female" class="" value="0"><label for="female">Female</label>
+            <input type="radio" name="gender" id="male" class="" value="1" checked /><label for="male">Male</label>
+            <input type="radio" name="gender" id="female" class="" value="0" /><label for="female">Female</label>
+            <input type="radio" name="gender" id="other" class="" value="2" /><label for="other">Other</label>
 
             <br/><br/>
+
+            <label>Fruit</label>
+            <input type="radio" name="fruit" id="apple" class="" value="0" checked /><label for="apple">Apple</label>
+            <input type="radio" name="fruit" id="orange" class="" value="1" /><label for="orange">Orange</label>
+            <input type="radio" name="fruit" id="pineapple" class="" value="2" /><label for="pineapple">Pineapple</label>
+
+            <br/><br/>
+
+            <label>Favourite Colors</label>
+            <input type="checkbox" name="favcolor" id="red" class="" value="1" checked /><label for="red">Red</label>
+            <input type="checkbox" name="favcolor" id="blue" class="" value="2" /><label for="blue">Blue</label>
+            <input type="checkbox" name="favcolor" id="green" class="" value="3" /><label for="green">Green</label>
+            <input type="checkbox" name="favcolor" id="white" class="" value="0" /><label for="white">White</label>
+
+            <br/><br/>
+
+
+
         </form>
     </body>
 </html>
