@@ -34,3 +34,4 @@ standalone attribute
 - selected
 - multiple
 - hidden
+- required

@@ -9,15 +9,31 @@
         <!-- 
         action ဆိုတာ backend နဲ့ ချိတ်တဲ့ နေရာမှာ သုံးတာ။ အထူးသဖြင့် PHP အတွက် သုံးတာ။
         method ဆိုတာ GET နဲ့ POST ဆိုတဲ့ နည်းလမ်း ၂ မျိုး ရှိတယ်။ GET ဆိုတာ URL မှာ data တွေကို ပို့တာဖြစ်ပြီး၊ POST ဆိုတာ body မှာ data တွေကို ပို့တာ ဖြစ်တယ်။
+
+        တကယ်လို့ form ထဲမှာ file upload ပါလာပြီဆိုရင် enctype="multipart/form-data" ကိုလည်း သတ်မှတ်ပေးဖို့ လိုပါတယ်။
+        နောက် သူကို သုံးရဲ့ အကြောင်းရင်းက -
+        user က ပုံကို upload လုပ်လိုက်တယ်ဆိုရင် ပုံက file server ထဲကို ရောက်သွားပေမဲ့ ပုံရဲ့ ပတ်လမ်းကြောင်းကို database ထဲမှာ
+        သွားသိမ်းလိုက်တာ။
           -->
-        <form action="" method="">
+        <form action="" method="" enctype="multipart/form-data">
             <label for="first_name">First Name</label>
             <!-- 
             name ဆိုတာက form data တွေကို backend ကို ပို့တဲ့အခါ အမည်ပေးဖို့ သုံးတာ။ အထူးသဖြင့် PHP အတွက် သုံးတာ။
             id ဆိုတာက HTML element ကို unique အနေနဲ့ သတ်မှတ်ဖို့ သုံးတာ။ JavaScript သမားတွေသုံးမှာ ပြီရင် Frontend Developer တွေ design အနေနဲ့ ပြန်သုံးမှာ ဖြစ်တယ်။
             class ဆိုတာက CSS က design တွေကို ဖန်တီးဖို့ သုံးမှာ။
+
+            textbox တွေမှာ စာလုံးတွေကို limit လုပ်စေချင်တယ်ဆိုရင်လည်း ရတယ် အဲလိုဆိုရင် minlength နဲ့ maxlength ကိုသုံးလို့ရတယ်။
+            textbox ကို ဖွင့်လိုက်တာနဲ့ အလိုအလျှောက် cursor က ထွက်လာစေချင်တယ်ဆိုရင် autofocus attribute ကို သုံးလို့ရတယ်။
+            textbox မှာ cursor ချလိုက်တာနဲ့ အရင်က နာမည်တွေ၊စာသားတွေပေါ်စေချင်တယ်ဆိုရင် ဒီတိုင်းထားလို့ရတယ် မပေါ်စေချင်ရင် autocomplete ကို off ဆိုပြီ ပေးလို့ရတယ်။
+            textbox မှာ တချို့ data တွေကို ထည့်ကို ထည့်ရမယ်ဆိုရင် required ဆိုတဲ့ attribute ကို သုံးလို့ရတယ်။
+            textbox ထဲမှာ အရင်ထည့်ခဲ့တဲ့ data ကို ပြန်ပြစေချင်တာပဲ ဖြစ်" user ကို data အစမ်းပြချင်တာပဲ ဖြစ်" အာ့ဆိုရင် value attribute ကို သုံးလို့ရတယ်။ value="example text"
+            data ကို မြင်ပဲ မြင်စေချင်တယ် မပြောင်းစေချင်ရင် readonly attribute ကို သုံးလို့ရတယ်။
+
+            disabled and readonly ကွာခြားချက်က -
+            diabled က လုံးဝကို အလုပ်မလုပ်တော့တာ။
+            readonly က data ကို ပြောင်းလဲမလုပ်နိုင်ပေမဲ့ copy/paste လုပ်လို့ရတယ်။ သူက database ကို ပြန်ဝင်လို့ရတယ်။
              -->
-            <input type="text" name="first_name" id="first_name" class="" placeholder="Enter Your First Name..." autofocus/>
+            <input type="text" name="first_name" id="first_name" class="" placeholder="Enter Your First Name..." minlength="3" maxlength="15" autocomplete="off" required autofocus/>
 
             <br/><br/>
 
@@ -32,8 +48,10 @@
 
             <br/><br/>
 
+            <!-- Number မှာလည်း limit သတ်မှတ်လို့ရနိုင်တယ်။ min and max ကိုသုံးပြီ -->
             <label for="age">Age</label>
             <input type="number" name="age" id="age" class="" placeholder="Enter Your Age..." readonly/>
+            <!-- <input type="number" name="age" id="age" class="" placeholder="Enter Your Age..." min="18" max="70" readonly/> -->
 
             <br/><br/>
 
@@ -115,7 +133,25 @@
             <br/><br/>
 
             <label for="nrc">NRC</label>
-            <input type="file" name="nrc" id="nrc" class="" />
+            <input type="file" name="nrc" id="nrc" class="" capture="user" />
+
+            <br/><br/>
+
+            <label for="photos">Photos</label>
+            <input type="file" name="photo" id="photo" class="" accept="image/*" capture="environment" multiple />
+
+            <br/><br/>
+
+            <label for="videos">Videos</label>
+            <input type="file" name="video[]" id="video" class="" accept="video/*" multiple />
+
+            <!-- 
+            file တွေအများကြီး ရွေးချင်တယ်ဆိုရင် [] = array key သုံးလိုက်ရင် ရသလို multiple လည်း ပေးလို့ရတယ်။
+            နောက် ကိုယ့်ပြစေချင်တဲ့ file အမျိုးစားလည်း ရွေးလို့ရတယ်။ accept="image/*" ဆိုတာက image file အမျိုးအစားတွေကိုပဲ ရွေးချင်တယ် ဆိုတဲ့ အဓိပ္ပါယ် ဖြစ်တယ်။
+            User တွေကို လည်း ပုံတွေရိုက်ခိုင်းစေချင်တယ်ဆိုရင် ရတယ် အာ့ဆိုရင် capture="user" ဆိုပြီ သုံးလို့ရတယ်။ ဒါမှမဟုတ် capture="environment" ဆိုပြီ အနောက်ခံကင်မရာကို သုံးစေလိုက်လို့ရတယ်။
+            ဒါမဲ့ အာ့က android ဖုန်းတွေမှာသာ အလုပ်လုပ်တယ် iOS မှာတော့ အလုပ်မလုပ်ပါဘူး။
+             -->
+            <!-- <input type="file" name="nrc[]" id="nrc" class="" /> -->
 
             <br/><br/>
 
