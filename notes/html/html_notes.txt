@@ -31,3 +31,6 @@ standalone attribute
 - autofocus
 - readonly
 - disabled
+- selected
+- multiple
+- hidden
