@@ -16,6 +16,7 @@ Block Elements
 <ul></ul> & <ol></ol>: Unordered List & Ordered List
 <table></table>: table tag
 <div></div>: division tag
+<address></address>: address tag.
 
 Inline Elements
 <b></b>: bold tag
@@ -26,6 +27,11 @@ Inline Elements
 <label></label>: label tag in FORM Tag
 <input />: input tag in FORM Tag
 <iframe></iframe>: information frame
+<strong></strong>: similar to bold tag
+<em></em>: emphasis tag similar to italic tag
+<span></span>: it is a tag with no feature
+<small></small>: it is a small tag which will show the text in small letters.
+<del></del>: this will draw a line through the text.
 
 standalone attribute
 - checked
@@ -36,3 +42,5 @@ standalone attribute
 - multiple
 - hidden
 - required
+- controls
+- loop
