@@ -1,0 +1,19 @@
+/* Single Selector */
+/* Element Selector */
+h3 {
+    color: blue;
+}
+
+/* Group Selector (,) */
+h4, h5, h6 {
+    color: steelblue;
+}
+
+
+
+/* 
+CSS မှာ selector အမျိုးအစား ၃ခု ရှိတယ်။
+1. Element Selector
+2. Class Selector
+3. ID Selector
+ */
