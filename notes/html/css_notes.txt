@@ -1,0 +1,23 @@
+=> CSS (Cascading Style Sheet Version3) -> CSS3
+
+CSS Integrate HTML
+
+1. Internal Style (inside HTML file)
+2. Inline Style (inside HTML file & inside HTML tags)
+3. External Style (CSS File)
+
+Inside HTML, we learnt about tags, attributes & values.
+Inside CSS, we will learn about properties & values.
+
+In HTML, when we write -> attribute = "value"/'value'
+
+In CSS, we will use selector.
+selector (means html tag or class value/attribute) {
+    property: value;
+}
+
+Comments:
+In HTML: <!-- ->
+
+In CSS:
+Both Single & Multi Line: /* */
