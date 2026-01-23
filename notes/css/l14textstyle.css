@@ -1,0 +1,40 @@
+.textalign {
+    /* text-align: left; */
+    /* text-align: center; */
+    /* text-align: right; */
+    text-align: justify;
+}
+
+.textdecoration {
+    /* text-decoration: underline; */
+    /* text-decoration: overline; */
+    text-decoration: line-through;
+}
+
+a {
+    text-decoration: none;
+}
+
+.textline {
+    /* It will specify the spacing between letters */
+    letter-spacing: 3px;
+
+    /* It will specify the spacing between lines */
+    /* line-height: 20px; */
+    line-height: 1.5;
+    /* line-height: 200%; */
+
+}
+
+/* shorthand = မြန်မြန်ရေးတာ */
+    /* text-shadow: offset-x offset-y blur-radius color; */
+    /* horizontal vertical blur color (h v b c) */
+    /* horizontal values: positive (right side) & negative (left side) */
+    /* vertical values: positive (below) & negative (above) */
+    /* blur values: 0 (no blur) to any positive number */
+    /* color values: any valid CSS color */
+.textshadow {
+    /* text-shadow: 10px 0 3px red; */
+    /* text-shadow: 0 10px 5px gray; */
+    text-shadow: 5px 5px 5px #0aeaf2;
+}

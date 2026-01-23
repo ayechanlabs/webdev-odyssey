@@ -9,7 +9,25 @@ h4, h5, h6 {
     color: steelblue;
 }
 
+/* ID Selector */
+#myself {
+    color: violet;
+}
 
+#family, #th, #la {
+    color: blue;
+    font-size: 20px;
+}
+
+/* Class Selector */
+.phone {
+    color: red;
+    /* font-size: 30px; */
+}
+
+.fontlg {
+    font-size: 30px;
+}
 
 /* 
 CSS မှာ selector အမျိုးအစား ၃ခု ရှိတယ်။
