@@ -1,0 +1,98 @@
+.bdsolid {
+    border-style: solid;
+}
+
+.bddouble {
+    border-style: double;
+}
+
+.bddotted {
+    border-style: dotted;
+}
+
+.bddashed {
+    border-style: dashed;
+}
+
+.bdinset {
+    border-style: inset;
+}
+
+.bdoutset {
+    border-style: outset;
+}
+
+.boxdesign {
+    width: 300px;
+    height: 300px;
+
+    /* we can use both 'background' and 'background-color' for background color. 
+    we can use both but for image, let's use 'background' & normal background use 'background-color'*/
+    /* background: yellow; */
+    background-color: orange;
+
+    /* border-radius: 150px; */
+    /* border-radius: 50%; */
+
+    /* left-top/right-bottom  right-top/left-bottom */
+    /* border-radius: 20px 20px; */
+
+    /* left-top right-top right-bottom left-bottom */
+    border-radius: 20px 50px 100px 200px;
+
+    /* border style color */
+    /* b s c */
+    border: 3px dashed blue;
+}
+
+/* list-style & list-style-type တို့လိုမျိုး property ကို သုံးချင်တယ်ဆိုရင် ul, li တိုနဲ့ သုံးမှ ရမယ် 
+အဲလိုမဟုတ်ပဲ div နဲ့ သုံးရင် ရမှာ မဟုတ်ဘူး။
+ul, li တို့ကို သုံးပြီ border ပေးရင်လည်း ပေါ်တဲ့ ပုံစံက မတူဘူး။
+ul ကို ပေးလိုက်ရင် list တခုလုံးကို စုပြီ အစအဆုံး border ပေးတာလို ဖြစ်သွားတယ်။ 
+li ကိုပေးလိုက်ရင်တော့ list item တခုချင်းစီကို border ပေးတာလို ဖြစ်သွားတယ်။
+
+border ကို short-hand လည်း ရေးလိ့ရသလို။ တခုချင်းဆီလည်း ရေးလို့ရတယ်။ အဲလိုဆိုရင်
+border: value;
+border-style: value;
+border-color: value;
+
+HTML မှာသာ ul, ol က အရေးကြီးတာ CSS ရောက်သွားတဲ့ အချိန်ကျရင် အရေးမကြီးတော့ဘူး။
+ol or ul တို့ကို သုံးပြီး list-style or list-style-type တို့ကို သတ်မှတ်ပေးလိုက်ရင် အဲဒီ list item တွေမှာပဲ သက်ရောက်မှုရှိတယ်။
+*/
+li {
+    /* list-style: none; */
+    /* list-style-type: none; */
+    /* list-style-type: circle; */
+    /* list-style-type: square; */
+    /* list-style-type: disc; */
+    /* list-style-type: decimal; */
+    list-style-type: decimal-leading-zero;
+
+
+    /* 
+    list style တွေ ပုံမှန်အားဖြင့် disc, circle, numbers တွေက border ရဲ့ အပြင်မှာ နေတယ်။ ဒါမဲ့ အာ့ကို အထဲထည့်လို့ရတယ်။
+    list-style-position: inside; ကိုသုံးပြီ အထဲထည့်လို့ရတယ်။
+    ဒါမဲ့ အဲဒါက border ကို li မှာ ပေးမှာသာ သိသာထင်ရှားမှာ ဖြစ်တယ်။
+    အဲလို မဟုတ်ရင် မဖြစ်ဘူး။
+     */
+    list-style-position: inside;
+
+    /* border: 2px dashed indianred */
+    border: 2px;
+    border-style: dashed;
+    border-color: indianred;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+    width: 200px;
+    background-color: silver;
+    color: red;
+    border-radius: 10px;
+}
+
+input[type="email"], input[type="password"] {
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}

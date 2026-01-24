@@ -38,3 +38,8 @@ a {
     /* text-shadow: 0 10px 5px gray; */
     text-shadow: 5px 5px 5px #0aeaf2;
 }
+
+.dreamshadow {
+    /* Multiple shadows for a dreamy effect */
+    text-shadow: 5px 0 5px #03fcdf, 0 5px 5px #03fca1, -5px 0 5px #fc0356, 0 -5px 5px #fc9803;
+}
