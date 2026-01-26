@@ -96,3 +96,27 @@ input[type="email"], input[type="password"] {
     color: white;
     border-radius: 10px;
 }
+
+/* 
+background vs background-color vs background-image
+- background: can set color, image, position, size, repeat, attachment all in one property
+- background-color: only sets the background color
+- background-image: only sets the background image
+
+* background ကို သုံးပြီး color, image, position, size, repeat, attachment စတာတွေကို တစ်ပြိုင်နက်တည်း သတ်မှတ်နိုင်တယ်။
+* background-color ကတော့ အရောင်ပဲ သတ်မှတ်နိုင်တယ်။
+* background-image ကတော့ ပုံပဲ သတ်မှတ်နိုင်တယ်။
+
+background => solid color, image, gradient colors
+background-color => solid color
+background-image => image, gradient colors
+ */
+body {
+    background-image: url(../html/img/icon/icon1.png);
+
+    /* ပုံကို ထပ်ခါ" ပေါ်စေချင်တာ မပေါ် စေချင်ရင်သုံးလို့ရတယ်။ */
+    /* background-repeat: repeat; */
+    background-repeat: no-repeat;
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+}
