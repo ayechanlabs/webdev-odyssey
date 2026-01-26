@@ -112,11 +112,33 @@ background-color => solid color
 background-image => image, gradient colors
  */
 body {
-    background-image: url(../html/img/icon/icon1.png);
+    background-image: url(../img/icon/icon1.png);
 
     /* ပုံကို ထပ်ခါ" ပေါ်စေချင်တာ မပေါ် စေချင်ရင်သုံးလို့ရတယ်။ */
     /* background-repeat: repeat; */
     background-repeat: no-repeat;
     /* background-repeat: repeat-x; */
     /* background-repeat: repeat-y; */
+
+    /* 
+    background-position က ပုံတွေကို နေရာပေးတာဖြစ်တယ်။
+    center: page တခုလုံးရဲ့ အလယ်မှာ ပုံကိုထားမယ်။
+    top: page တခုလုံးရဲ့ အပေါ်အလယ်ဘက်မှာ ပုံကိုထားမယ်။
+    bottom: page တခုလုံးရဲ့ အောက်အလယ်ဘက်မှာ ပုံကိုထားမယ်။
+    left: page တခုလုံးရဲ့ ဘယ်ဘက်အလယ်မှာ ပုံကိုထားမယ်။
+    right: page တခုလုံးရဲ့ ညာဘက်အလယ်မှာ ပုံကိုထားမယ်။
+
+    သူကို value ၂ခုလည်း ပေးလို့ရတယ်။ x, y axis အတိုင်းပဲ။
+    ထောင့်နေရာတွေကို position ချလို့ရသလိုမျိုး။
+    left top, left center, left bottom
+    right top, right center, right bottom
+     */
+    background-position: left top;
+
+    /* 
+    ပုံကို scroll ဆွဲတိုင်းပါလာချင်တယ်ဆိုရင် background-attachment ကို သုံးလို့ရတယ်။
+    fixed က ပုံကို အသေသတ်မှတ်လိုက်ပြီ scroll ဆွဲတိုင်း ပုံက ပါလာမှာ ဖြစ်တယ်။
+    scroll က ပုံကို ပုံမှန်အတိုင်းပဲ scroll ဆွဲတိုင်း ပုံက မပါလာဘူး။
+     */
+    background-attachment: fixed;
 }
