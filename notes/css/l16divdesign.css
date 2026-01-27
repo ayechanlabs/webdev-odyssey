@@ -22,3 +22,51 @@
 
     border: 3px solid red; /* border border-style border-color */
 }
+
+.thirddiv {
+    width: 300px;
+    height: 300px;
+
+    /* 
+    gradient colors တွေကို သုံးချင်တယ်ဆိုရင် background or background-image ဆိုတဲ့ property ကို သုံးရမယ်။
+    background-color ကို မသုံးနိုင်ပါ။
+    linear-gradient ဆိုတာက function တစ်ခုဖြစ်ပြီး color stops တွေကို parameter အနေနဲ့ လက်ခံပါတယ်။
+    သူထဲကို အရောင် အနည်းဆုံး ၂ ခု သို့မဟုတ် အများကြီး ထည့်နိုင်ပါတယ်။
+    */
+    /* background: linear-gradient(red, green, blue); */
+    /* background: linear-gradient(#df1818, #f7d40e); */
+
+    /* we can also use degrees to specify the direction of the gradient */
+    /* positive degree value, it will go clockwise & negative degree value, 
+    it will go anti-clockwise.*/
+    /* background: linear-gradient(-30deg, red, green, blue); */
+    background: linear-gradient(45deg, red, green, blue);
+
+    color: #ffffff;
+}
+
+.fourthdiv {
+    width: 300px;
+    height: 300px;
+
+    /* this will put the image on upper layer and color to lower layer */
+    /* background-image: url(../img/cover/bg2.jpg), linear-gradient(red, green, blue); */
+
+    /* this will put color on upper layer and image to lower layer,
+    we can use this way to add filter or color effect on the image.
+    we can also make this with 'background' property, along with 'degree'.*/
+    background-image: 
+    linear-gradient(
+        rgba(255, 0, 0, 0.3), 
+        rgba(0, 128, 0, 0.3), 
+        rgba(0, 0, 255, 0.3)
+        ), 
+    url(../img/cover/bg2.jpg);
+
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: 2px solid red;
+    color: #ffffff;
+}
