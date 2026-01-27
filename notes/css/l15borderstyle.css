@@ -112,7 +112,7 @@ background-color => solid color
 background-image => image, gradient colors
  */
 body {
-    background-image: url(../img/icon/icon1.png);
+    background-image: url(../img/icon/icon_1.png);
 
     /* ပုံကို ထပ်ခါ" ပေါ်စေချင်တာ မပေါ် စေချင်ရင်သုံးလို့ရတယ်။ */
     /* background-repeat: repeat; */
