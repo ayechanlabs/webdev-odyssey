@@ -1,3 +1,51 @@
-p {
-    color: red;
+/* AT-Rules (@) */
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+
+/* 
+Font Integration
+i. Local Machine Integrate
+ii. Global Integrate
+ */
+
+/* I. Local Machine Integrate */
+
+/* Universal Selector
+သူက web document ကြီး တခုလုံးကို ဆိုလိုတာ body နဲ့ မတူဘူး
+ */
+* {
+    font-family: "JetBrains Mono", Arial;
+}
+
+/* body {
+    font-family: Arial;
+} */
+
+/* .p1 {
+    font-family: Arial;
+} */
+
+/* .p2 {
+    font-family: "Times New Roman";
+} */
+
+.p3 {
+    font-family: Century, Arial, "Times New Roman";
+}
+
+/* 
+II. Global Integrate
+မှာ လုပ်လို့ရတဲ့ နည်း ၂နည်းရှိတယ်။
+Download လုပ်တဲ့ နည်းရယ်။ CDN (Content Deliver Network) ချိတ်တဲ့ နည်း။
+*/
+.p1, .p4 {
+    font-family: "Stick", sans-serif;
+    font-weight: 400; /* font အထူကို ပြောတာ 100 ကနေ 900 ထိပဲရှိတယ်။ */
+    font-style: normal;
+}
+
+.p2 {
+    font-family: "Akaya Kanadaka", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
