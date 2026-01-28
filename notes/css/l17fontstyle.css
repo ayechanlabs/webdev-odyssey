@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
 
+/* Fonts တွေကို ကိုယ့် project folder ထဲကို ထည့်ပြီ ခေါ်တာ။ */
+@font-face {
+    font-family: Stick; /* variable လိုမျိုး လုပ်ဆောင်တာ။ */
+    src: url(../fonts/Stick/Stick-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Akaya Kanadaka";
+    src: url(../fonts/Akaya_Kanadaka/AkayaKanadaka-Regular.ttf);
+}
+
 /* 
 Font Integration
 i. Local Machine Integrate
@@ -48,4 +59,14 @@ Download လုပ်တဲ့ နည်းရယ်။ CDN (Content Deliver Net
     font-family: "Akaya Kanadaka", system-ui;
     font-weight: 400;
     font-style: normal;
+}
+
+.clickme {
+    text-decoration: none;
+    color: green;
+}
+
+/* pseudo class (:) */
+.clickme:hover {
+    text-decoration: underline;
 }
