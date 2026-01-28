@@ -69,4 +69,14 @@ Download လုပ်တဲ့ နည်းရယ်။ CDN (Content Deliver Net
 /* pseudo class (:) */
 .clickme:hover {
     text-decoration: underline;
+    color: blue;
+    font-size: 20px;
+}
+
+.clickme:visited{
+    color: brown;
+}
+
+.clickme:active{
+    color: orange;
 }
