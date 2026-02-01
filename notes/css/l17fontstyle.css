@@ -1,6 +1,7 @@
 /* AT-Rules (@) */
 @import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+@import url(../css/l17addfile.css);
 
 /* Fonts တွေကို ကိုယ့် project folder ထဲကို ထည့်ပြီ ခေါ်တာ။ */
 @font-face {
@@ -73,10 +74,45 @@ Download လုပ်တဲ့ နည်းရယ်။ CDN (Content Deliver Net
     font-size: 20px;
 }
 
-.clickme:visited{
+.clickme:visited {
     color: brown;
 }
 
-.clickme:active{
+.clickme:active {
     color: orange;
+}
+
+.menutext {
+    font-family: Arial;
+    background-color: green;
+    color: #fff;
+    text-decoration: none;
+
+    /* padding ကို value က ၁ခု, ၂ခု နဲ့ ၄ခု ပေးလို့ရတယ်။
+    1 value: top, bottom, left, right
+    2 values: top & bottom, left & right
+    4 values: top, right, bottom, left 
+    padding တခုချင်းဆီကိုလည်း specify လုပ်လို့ရသေးတယ်။
+    padding-top, padding-right, padding-bottom, padding-left ဆိုပြီ ရှိသေးတယ်။*/
+
+    /* padding: 10px; */
+    /* padding: 10px 20px; */
+    /* padding: 10px 20px 30px 40px; */
+
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    border-radius: 10px;
+
+    /* transition ဆိုတာ property ကို အရောင်ပဲ ဖြစ်ဖြစ် တခုခု effect ဝင်စေချင်တာ အဲလိုချိန်ကျရင် သုံးလို့ရတယ်။
+    သူမှာ value ၂ခု ရှိတယ်။ တခုက ဖြစ်စေချင်တဲ့ property ရယ် နောက်တခုက အချိန်ရယ်။ */
+    /* transition: all 0.5s; */
+    transition: background-color 1s, color 0.5s; /* ဒါကျတော့ property တခုထဲကို ပေးတာ ကျန်တာက ချက်ချင်းဖြစ်တယ်။ */
+}
+
+.menutext:hover {
+    background-color: orange;
+    color: #000;
 }

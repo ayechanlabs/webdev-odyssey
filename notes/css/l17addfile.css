@@ -1,0 +1,13 @@
+.imgdesign {
+    width: 80px;
+    height: 80px;
+
+    cursor: pointer; /* cursor တင်လိုက်ရင် လက်ပုံဖြစ်သွားတာ */
+
+    transition: all 1s;
+}
+
+.imgdesign:hover {
+    width: 100px;
+    height: 100px;
+}
