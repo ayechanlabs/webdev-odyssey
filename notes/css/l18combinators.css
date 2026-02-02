@@ -38,3 +38,50 @@ div span .address {
 small.name{ /* same class, same element */
     color: darkgoldenrod;
 }
+
+/* Class to Class */
+.bank .money {
+    color: crimson;
+}
+
+.bank .currency {
+    color: orange;
+}
+
+.money .currency {
+    color: orangered;
+}
+
+/* Multi Class to Class */
+.bank .money .currency {
+    color: deeppink;
+}
+
+/* Class to Tag */
+.container b {
+    color: coral;
+}
+
+/* Class to Multi Tag */
+.container b span {
+    color: deepskyblue;
+}
+
+/* Same Class */
+.car.jpn, .car.cn, .car.indo, .car.us {
+    color: fuchsia;
+}
+
+/* Class to Same Class */
+.vehicle .car.jpn, .vehicle .car.cn, .vehicle .car.indo, .vehicle .car.us {
+    color: gold;
+}
+
+/* Class to Tag with Group Selector */
+.div1 p, .div1 b {
+    color: cyan;
+}
+
+/* Group Selector (,) then Child Selector (>) */
+
+

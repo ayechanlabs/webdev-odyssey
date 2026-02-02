@@ -90,8 +90,78 @@
 
         <h4>Class to Class</h4>
 
-        <div>
-            <b></b>
+        <div class="bank">
+            <b>I am b tag inside of div(bank) > b</b>
+            <br/>
+            <span class="money">
+                <b class="currency">I am b tag inside of div(bank) > span(money) > b(name)</b>
+            </span>
         </div>
+
+        <hr/>
+
+        <h4>Class to Tag</h4>
+
+        <div class="container">
+            <p>I am p tag inside of div(container) > p.</p>
+            <b>I am b tag inside of div(container) > b.</b>
+        </div>
+
+        <hr/>
+
+        <h4>Class to Multi Tags</h4>
+
+        <div class="container">
+            <p>I am p tag inside of div(container) > p.</p>
+            <b>
+                <span>I am span tag inside of div(container) > b > span.</span>
+            </b>
+        </div>
+
+        <hr/>
+
+        <h4>Same Class</h4>
+
+        <div class="vehicle">
+            <ul>
+                <li class="car jpn">Toyota</li>
+                <li class="car cn">Honda</li>
+                <li class="car indo">Mazda</li>
+                <li class="car us">Suzuki</li>
+            </ul>
+        </div>
+
+        <hr/>
+
+        <h4>Class to Tag with Group Selector</h4>
+
+        <div class="div1">
+            <p id="abc">I am p tag inside of div(div1) > p.</p>
+            <b>I am b tag inside of div(div1) > b</b>
+        </div>
+
+        <hr/>
+
+        <h4>Child Selector</h4>
+
+        <div class="div2">
+            <b>I am b tag inside of div(div2) > b1.</b>
+            <p>I am p tag inside of div(div2) > p1.</p>
+            <i>I am i tag inside of div(div2) > i1.</i>
+
+            <div class="div3">
+                <b>I am b tag inside of div(div2) > div(div3) > b2.</b>
+                <p>I am p tag inside of div(div2) > div(div3) > p2.</p>
+                <i>I am i tag inside of div(div2) > div(div3) > i2.</i>
+            </div>
+
+            <p>I am p tag inside of div(div2) > p3.</p>
+        </div>
+
+        <b>I am b tag outside of div(div2) > b3.</b>
+        <p>I am p tag outside of div(div2) > p4.</p>
+        <i>I am i tag outside of div(div2) > i3.</i>
+
+        <hr/>
     </body>
 </html>
