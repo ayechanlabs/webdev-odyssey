@@ -1,0 +1,40 @@
+/* Descendant Selector (space) */
+/* ancestor descendant {
+    properties: values;
+}
+
+Group Selector (,), Descendant Selector (space)
+*/
+
+/* tag to tag သွားတာ */
+div span {
+    color: red;
+}
+
+/* multi tags to tag */
+div p span {
+    color: blue;
+}
+
+/* tag to class */
+div span .address {
+    color: purple;
+}
+
+div p {
+    color: brown;
+}
+
+span .address {
+    color: chartreuse;
+}
+
+/* multi tags to class */
+div span .address {
+    color: darkblue;
+}
+
+/* mutli tag to same class */
+small.name{ /* same class, same element */
+    color: darkgoldenrod;
+}

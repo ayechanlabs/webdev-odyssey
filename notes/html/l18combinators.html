@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Combinators</title>
+        <link href="../img/fav/instgram.png" rel="icon" type="image/png" sizes="32x32" />
+
+        <link href="../css/l18combinators.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <h4>Tag to Tag</h4>
+
+        <div>
+            <span>I am span tag inside of div > span.</span>
+        </div>
+
+        <div>
+            I am div tag outside of div.
+        </div>
+
+        <span>
+            I am span tag outside of div.
+        </span>
+
+        <hr/>
+
+        <h4>Multi Tags to Tag</h4>
+
+        <div>
+            <p>
+                <span>I am span tag inside of div > p > span.</span>
+            </p>
+        </div>
+
+        <div>
+            <p>I am p tag inside of div > p.</p>
+        </div>
+
+        <p>
+            <span>I am span tag inside of p > span.</span>
+        </p>
+
+        <hr/>
+
+        <h4>Tag to Class</h4>
+
+        <div>
+            <p>I am p tag inside of div > p (address).</p>
+            <span>
+                <b class="address">I am b tag inside of div > span > b (address).</b>
+            </span>
+        </div>
+
+        <p class="address">I am p tag outside of div > p (address).</p>
+
+        <span>
+            <i class="address">I am i tag outside of div > span > i (address).</i>
+        </span>
+
+        <hr/>
+
+        <h4>Multi Tag to Class</h4>
+
+        <div>
+            <p>I am p tag inside of div > p (address).</p>
+            <span>
+                <b class="address">I am b tag inside of div > span > b (address).</b>
+            </span>
+        </div>
+
+        <p class="address">I am p tag outside of div > p (address).</p>
+
+        <span>
+            <i class="address">I am i tag outside of div > span > i (address).</i>
+        </span>
+
+        <hr/>
+
+        <h4>Multi Tags to Same Class</h4>
+       
+        <div>
+            <span>
+                <small class="name">I am small tag inside of div > span > small (name).</small>
+            </span>
+            <p class="name">I am p tag inside of div > p(name)</p>
+            <p>I am p tag inside of div > p.</p>
+        </div>
+
+        <hr/>
+
+        <h4>Class to Class</h4>
+
+        <div>
+            <b></b>
+        </div>
+    </body>
+</html>
