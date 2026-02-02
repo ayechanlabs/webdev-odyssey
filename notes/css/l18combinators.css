@@ -83,5 +83,29 @@ small.name{ /* same class, same element */
 }
 
 /* Group Selector (,) then Child Selector (>) */
+ .div2 > p { /* ဒါက div2 ထဲက p (p1, p3) ပဲ အရောင်ရမှာ */
+    color: darkgreen;
+ }
 
+ .div3 > i { /* ဒါက div3 ထဲက i (i3) ပဲ အ‌ရောင်ရမှာ */
+    color: darkgreen
+ }
+
+ .div2 > b { /* ဒါက div2 ထဲက b (b1) ပဲ အ‌ရောင်ရမှာ */
+    color: darkgreen;
+ }
+
+ .div2 > .div3 { /* ဒါက div2 ထဲက div3 ထဲမှာ ရှိတဲ့ tags တွေ အားလုံး အရောင် ရမှာ */
+    color: darkgreen;
+ }
+
+ /* (i) General Sibling Selector (~) */
+ .div4 ~ p { /* သူက div4 နဲ့ မောင်နှမ ဖြစ်နေတဲ့ tag ကိုပဲ အရောင်ပေးမှာ ဖြစ်တယ်။*/
+    color: darkseagreen;
+ }
+
+ /* (ii) Adjacent Sibling Selector (+) */
+ .div7 + p { /* သူက လုံးဝ ကပ်ရပ် ရှိနေတဲ့ သူကိုပဲ effect ပေးတာ သူတို့ ၂ယောက်ကြားထဲမှာ တခြားဟာ ရှိနေလို့ မရဘူး ရှိရင် effect က လုံးဝ မဝင်တော့ဘူး။ */
+    color: darkolivegreen;
+ }
 
