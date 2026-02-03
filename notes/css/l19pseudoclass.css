@@ -1,0 +1,59 @@
+/* Pseudo Class (:) */
+.div1 {
+    width: 300px;
+    height: 100px;
+    background-color: green;
+}
+
+/* 
+သူက ဘယ်ချိန်မှာ effect ဝင်မလဲဆိုရင် သူ့အပေါ်မှာ တခြား ဘာ element မရှိတဲ့ အချိန်မှ ဝင်မှာ ဖြစ်တယ်။
+အဲလို မဟုတ်ရင် သူပေါ်မှာ ရှိတဲ့ တခြား element မှာ effect သွား ဝင်သွားတယ်။
+ */
+/* .div1:first-child {
+    background-color: orange;
+    color: #ffffff;
+} */
+
+/* သူက ကျတော့ သူပေါ်မှာ တခြား element ရှိ/မရှိ သူနဲ့ အမျိုးအစား သူတဲ့ div မှာ effect ဖြစ်မှာ။ */
+.div1:first-of-type {
+    background-color: orange;
+    color: #ffffff;
+}
+
+/* သူကလည်း "first-child" နဲ့ အတူတူပဲ ဘယ်ချိန်မှာ effect ဝင်မလဲဆိုရင် သူအောက်မှာ တခြား ဘာ element မှ မရှိတဲ့
+အချိန်မှာ ဝင်မှာ ဖြစ်တယ်။
+အဲလိုမဟုတ်ရင် သူအောက်မှာ ရှိတဲ့ တခြား element မှာ effect ဝင်သွားလိမ့်မယ်။ */
+/* .div1:last-child {
+    background-color: darkorange;
+    color: #ffffff;
+} */
+
+/* သူလည်း "first-of-type နဲ့ အတူတူပဲ သူအောက်မှာ တခြား element ရှိ/မရှိ သူနဲ့ အမျိုးအစား သူတဲ့ div မှာ effect ဖြစ်မှာ */
+.div1:last-of-type {
+    background-color: darkorange;
+    color: #ffffff;
+}
+
+/* ကြားထဲက ဟာတွေကျတော့ Oridinary Number တွေနဲ့ ခေါ်မှ ရမယ်
+1st
+2nd
+3rd
+4th.. nth
+ */
+/* 
+nth-child(number) - သူကျတော့ document မှာ ရှိတဲ့ element တခုချင်းဆီကို တွက်နေတာ။
+ */
+.div1:nth-child(4) {
+    background-color: darksalmon;
+    color: #ffffff;
+}
+
+/* 
+အဲလို မဟုတ်ပဲ တိုက်ရိုက်ဖြစ်တာကို သုံးစေချင်တယ်ဆိုရင် nth-of-type() ကို သုံးလို့ရတယ်။ 
+သူကို div အများကြီးကို ပေးစေချင်တယ်ဆိုရင် group selector ကို သုံးပြီတော့ ရေးလိ့ရသလို
+ပိုပြီ အဆင်ပြေအောင် "even" and "odd" ကို သုံးပြီလည်း ရေးလိ့ရတယ်။
+*/
+.div1:nth-of-type(3) {
+    background-color: red;
+    color: #ffffff;
+}
