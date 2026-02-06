@@ -1,0 +1,55 @@
+/* 
+Variable
+i. System Variable (System/Default Property)
+ii. Custom Variable (Custom Property)
+*/
+
+/* variable ကြေငြာမယ်။ Custom Property ကြေငြာမယ် အဲလိုမျိုးမှာ သုံးတာ။ 
+hypen 2ခုနဲ့ ကြေငြာရမယ် reason သူတို့ ဖန်တီးထားတဲ့ မတူအောင်။*/
+:root {
+    --or:orange;
+    --red: red;
+    --gn: rgb(78, 216, 78);
+    --sil: rgb(201, 196, 196);
+    --gdc: linear-gradient(crimson, silver);
+}
+
+.div1 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--red);
+
+    float: left;
+}
+
+.div2 {
+    width: 200px;
+    height: 200px;
+    background-color: var(--gn);
+
+    float: left;
+}
+
+.div3 {
+    width: 300px;
+    height: 300px;
+    background-color: var(--sil);
+
+    float: left;
+}
+
+.div4 {
+    width: 400px;
+    height: 400px;
+    background-color: var(--or);
+
+    float: left;
+}
+
+.div5 {
+    width: 500px;
+    height: 500px;
+    background: var(--gdc);
+
+    float: left;
+}
