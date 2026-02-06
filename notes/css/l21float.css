@@ -15,7 +15,8 @@ hypen 2ခုနဲ့ ကြေငြာရမယ် reason သူတို့ 
 }
 
 .div1 {
-    width: 100px;
+    --wth: 100px;
+    width: var(--wth);
     height: 100px;
     background-color: var(--red);
 
