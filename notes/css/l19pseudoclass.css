@@ -57,3 +57,22 @@ nth-child(number) - သူကျတော့ document မှာ ရှိတဲ�
     background-color: red;
     color: #ffffff;
 }
+
+/* သူက ဒီ class မဟုတ်တဲ့ ကောင်က လွှဲရင် ကျန်တာ အကုန် bold ဖြစ်မှာ */
+p:not(.nobold){
+    font-weight: bold;
+}
+
+.fullname:focus {
+    outline: none; /* 0 လိုလည်း ပေးလို့ရတယ် */
+    border: 2px solid green;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: darkorange;
+}
+
+button:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
