@@ -1,0 +1,53 @@
+/* 
+Pseudo Class (:)
+Pseudo Element (::)
+ */
+
+/* user-select: none; -> user interface ပြောမယ်ဆိုရင် user ကြည့်မယ့် နေရာက စာသားကို select လုပ်လို့ မရတာ */
+
+/* .paragraph {
+    color:blue;
+    font-size: 20px;
+    user-select: none;
+} */
+
+/* .paragraph::selection {
+    background-color: steelblue;
+    color: #ffffff;
+} */
+
+/* .paragraph::first-line {
+    color: blue;
+    font-size: 20px;
+} */
+
+/* .paragraph::first-letter {
+    color: blue;
+    font-size: 50px;
+} */
+
+.paragraph::before {
+    content: "ABC";
+    font-size: 50px;
+    color: blue;
+}
+
+.paragraph::after {
+    content: "DEF";
+    font-size: 50px;
+    color: violet;
+}
+
+li::marker {
+    color: blue;
+    font-size: 25px;
+}
+
+.form-control {
+    color: red;
+}
+
+.form-control::placeholder {
+    color: steelblue;
+    font-weight: bold;
+}
