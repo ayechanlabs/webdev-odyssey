@@ -1,0 +1,49 @@
+:root {
+    --wh: 100px;
+    --ht: 80px;
+    --rd: red;
+    --be: blue;
+    --gn: green;
+    --oe: orange;
+    --ste: steelblue;
+    --crm: crimson;
+    --gd: gold;
+    --sr: silver;
+}
+
+.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+    width: var(--wh);
+    height: var(--ht);
+}
+
+.div1 {
+    background-color: var(--rd);
+}
+
+.div2 {
+    background-color: var(--be);
+}
+
+.div3 {
+    background-color: var(--gn);
+}
+
+.div4 {
+    background-color: var(--oe);
+}
+
+.div5 {
+    background-color: var(--ste);
+}
+
+.div6 {
+    background-color: var(--crm);
+}
+
+.div7 {
+    background-color: var(--gd);
+}
+
+.div8 {
+    background-color: var(--sr);
+}
