@@ -18,22 +18,34 @@
 
 .div1 {
     background-color: var(--rd);
+
+    /* rotate(xy) - it can be given both positive and negative*/
+    transform: rotate(45deg);
 }
 
 .div2 {
     background-color: var(--be);
+
+    transform: rotate(-45deg);
 }
 
 .div3 {
     background-color: var(--gn);
+
+    /* same as 360deg (360deg = 1turn) */
+    transform: rotate(1turn);
 }
 
 .div4 {
     background-color: var(--oe);
+
+    transform: rotateX(45deg);
 }
 
 .div5 {
     background-color: var(--ste);
+
+    transform: rotateY(45deg);
 }
 
 .div6 {
