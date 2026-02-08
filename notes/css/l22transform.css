@@ -9,9 +9,10 @@
     --crm: crimson;
     --gd: gold;
     --sr: silver;
+    --bn: brown; 
 }
 
-.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9 {
     width: var(--wh);
     height: var(--ht);
 }
@@ -50,12 +51,52 @@
 
 .div6 {
     background-color: var(--crm);
+
+    /* 
+    scale ဆိုတာ အစတိုင်းနဲ့ ကြီးမှာ/သေးမှာ
+    default ကတော့ 1, 0 ဆိုရင် လုံးဝပျောက်သွားတာ
+    */
+    /* transform: scale(0); */
+    transform: scale(1.5);
 }
 
 .div7 {
     background-color: var(--gd);
+
+    /* 
+    skew ဆိုတာ တိန်စောင်းသွားတာ
+    skew (xy)
+    positive ဆိုရင် left side
+    negative ဆိုရင် right side
+    */
+    transform: skew(20deg);
 }
 
 .div8 {
     background-color: var(--sr);
+
+    /* 
+    နေရာတခုကနေ နောက်တခုကို ပြောင်းသွားတာ/မူလ နေရာကနေ နောက်တနေရာကို ရွေ့တာ
+    သူက ဘာမှ မပြောဘူးဆိုရင် default အနေနဲ့ X တန်ဖိုးနဲ့ အလုပ်လုပ်တာ
+    value ကို px နဲ့ ပေးလို့ရသလို percentage နဲ့ ပေးလို့ရတယ်။
+    positive value ဆိုရင် left side ကို ရွေ့သွားမယ်။
+    negative value ဆိုရင် right side ကို ရွေ့သွားမယ်။
+
+    translate မှာ normal translate ရှိသလို့
+    translateX and translateY လည်း ရှိတယ်။
+     */
+
+    transform: translate(50px);
+    /* transform: translateX(50px); */
+    /* transform: translateY(50px); */
+}
+
+.div9 {
+    background-color: var(--bn);
+
+    /* သူက translate ကို value 2ခု ပေးပြီ လုပ်မှာ
+    အဲလိုဆိုရင် သူက both x & y axis မှာ အလုပ်လုပ်သွားမယ်။ */
+
+    /* transform: translate(50px, 50px); */
+    transform: translateX(50px) translateY(-50px);
 }
