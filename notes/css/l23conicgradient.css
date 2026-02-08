@@ -1,0 +1,36 @@
+.div1, .div2, .div3, .div4, .div5, .div6, .div7 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* 
+conic-gradient ကို color ပေးတဲ့ အချိန်ကျရင် naming color, hex color, rgb, rgba, hsl တို့နဲ့လည်း ပေးလို့ ရတယ်။
+ */
+.div1 {
+    background-image: conic-gradient(yellow, red);
+}
+
+.div2 {
+    background: conic-gradient(green,blue);
+}
+
+/* conic-gradient ကို သုံးပြီ pie-chart လိုလည်း ဖြစ်အောင် လုပ်လို့ရတယ်။
+အရောင်ကို တန်ဖိုး ပေးတဲ့ အချိန်ကျရင် -> color, start-point, fill percentage
+စစချင်း အရောင်ကို start-point ပေးစရာမလိုသလို အနောက်ဆုံး အရောင်ကိုလည်း fill percentage မပေးလည်း ရတယ်။ */
+.div3 {
+    background: conic-gradient(
+        red 30%,
+        green 0% 60%,
+        blue 0% 90%,
+        silver 0% 100%
+    );
+}
+
+.div4 {
+    background-image: conic-gradient(
+        rgb(204, 42, 42) 33%,
+        rgb(54, 189, 54) 0% 66%,
+        rgb(45, 45, 201) 0%
+    );
+}
