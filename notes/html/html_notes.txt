@@ -17,6 +17,7 @@ Block Elements
 <table></table>: table tag
 <div></div>: division tag
 <address></address>: address tag.
+<nav></nav>: navigation tag similar to division tag
 
 Inline Elements
 <b></b>: bold tag

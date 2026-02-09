@@ -1,0 +1,65 @@
+nav ul {
+    /* list-style: none; */
+    list-style-type: none;
+
+    padding: 0;
+}
+
+nav ul li {
+    width: 250px;
+    height: 50px;
+
+    /* background: green; */
+    background-color: green;
+
+    float: left;
+    /* 
+    b (border), s (style), c (color)
+    you can also give = top, right, bottom
+    */
+    border-right: 2px solid #000000;
+
+    /* text-align: center; */
+    /* 
+    line-height ကို box တခုထဲမှာ စာကြောင်းတကြောင်းထဲ ရှိတဲ့ အချိန်မှာလည်း သုံးလို့ရမှာ
+    စာသားကို horizontal center ဖြစ်ချင်တယ်ဆိုရင် - အဲလိုဖြစ်ဖို့ အတွက် သူရ့ box ရဲ့ height value အတိုင်းပေးလိက်ရင်
+    ရပြီ။
+     */
+    /* line-height: 50px; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* we can also give "all" */
+    transition: background-color 0.5s;
+}
+
+/* 
+float: left နဲ့ display: flex နဲ့ ကွာခြားချက်က
+display: flex က သူရဲ့ မူရင်း layer မှာပဲ အလုပ်လုပ်တာ ပြောမယ်ဆိုရင် အောက် layer မှာပဲ
+float: left က ကျတော့ အပေါ် layer ကို တက်သွားတာ သူရဲ့ မူရင်း layer မှာ ရှိမနေတော့ဘူး
+float: left က ပေးလိုက်တဲ့ element မှာ ဖြစ်တာ for example li ကို ပေးရင် li မှာ ဖြစ်တာ
+ဒါပေမဲ့ display: flex က သူပေးလိုက်တဲ့ element ရဲ့ child ကို effect ဖြစ်မှာ။
+display: flex က child elements တွေကို ဘေးတိုက် ဖော်ပြချင်တာ
+ */
+
+
+/* 
+we can also use "first-child", since there are no element (or) tag before it.
+nth-of-type(1), last-of-type, last-child, nth-child
+*/
+nav ul li:first-of-type {
+    border-left: 2px solid #000000;
+}
+
+nav ul li:hover {
+    background-color: orange;
+}
+
+/* ဒီလိုမျိုး ပေးလိုက်ချင်အားဖြင့် document ထဲမှာ ရှိတဲ့ တခြား a တွေကို effect မဝင်တော့ပဲ အခုပြောထားတဲ့
+nav ul li ထဲမှာ ရှိတဲ့ a tag ပဲ effect ဝင်သွားတော့မှာ */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
