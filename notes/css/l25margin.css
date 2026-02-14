@@ -54,14 +54,31 @@ body {
     1 ဆိုရင် လုံးဝ ထင်နေတာ
     0 ဆိုရင် လုံးဝ ပျောက်သွားတာ
     သူက element ကိုတော့ ပျောက်ပေးတယ် ဒါမဲ့ space ကို မပျောက်ပေးဘူး။
+    element တခုကို မှိန်"လေးနဲ့ ပျောက်စေချင်တယ်ဆိုရင် opacity ကို သုံး
      */
     /* opacity: 0.3; */
 
     /* 
     visibility ကို သုံးပြီတော့လည်း ပျောက်လို့ရတယ်။ သူ့မျာတော့ နံပါတ် value မရှိဘူး။
     ပေါ်ချင်ရင် visible သုံးတယ် ပျောက်ချင်ရင် hidden သုံးတယ်။
+    element တခုကို ချက်ချင်း ပျောက်စေချင်တယ်ဆိုရင် visibility ကိုသုံး
      */
-    visibility: visible;
+    /* visibility: visible; */
+
+    /* 
+    transform နဲ့လည်း ပျောက်လို့ရတယ်။
+    transform ကျတော့ element ကို သေးအောင် လုပ်ပြီ ပျောက်တာ ပြန်ပေါ်လာတဲ့ အချိန်ကျရင် zoom ဖြစ်ပြီ ပြန်ပေါ်လာတာ
+     */
+    /* transform: scale(0); */
+
+    /* 
+    display: none; ဆိုရင် space ကော element ကော ပျောက်သွားတာ
+    သူက visibility နဲ့ မတူတဲ့ အချက်က visibility မှာ space ကျန်ခဲ့တယ်။
+    သူက space မကျန်ခဲ့ဘူး
+    ပြန်ပေါ်ချင်ရင် block element နဲ့ ပေါ် ချင်ရင် display: block
+    inline element နဲ့ ပေါ် ချင်ရင် display: inline
+     */
+    display: none;
 }
 
 .display2 {
