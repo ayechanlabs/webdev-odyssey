@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+}
+
+.divtop {
+    width: 100%;
+    height: 200px;
+    background-color: red;
+    border: 2px solid red;
+}
+
+.parent {
+    width: 100%;
+    height: 500px;
+    border: 5px solid deepskyblue;
+}
+
+.divleft {
+    width: 10%;
+    height: 500px;
+    background-color: green;
+    border: 2px solid green;
+
+    float: left;
+}
+
+.divcenter {
+    width: 79%;
+    height: 500px;
+    background-color: blue;
+    border: 2px solid blue;
+
+    float: left;
+}
+
+.divright {
+    width: 10%;
+    height: 500px;
+    background-color: orange;
+    border: 2px solid orange;
+
+    float: left;
+}
+
+.divbottom {
+    width: 100%;
+    height: 200px;
+    background-color: purple;
+    border: 2px solid purple;
+
+    clear: both;
+}
