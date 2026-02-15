@@ -1,6 +1,6 @@
 .boxone {
-    width: 1200px;
-    height: 1200px;
+    width: 600px;
+    height: 600px;
     background-color: green;
 
     display: flex;
@@ -16,24 +16,51 @@
      */
     /* display: grid;
     place-items: center; */
+
+    /*  */
+    position: relative;
 }
 
 .boxone .div1 {
     width: 300px;
     height: 300px;
-    background-color: orange;
+    background-color: #000;
     color: #fff;
     border-radius: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* 
+    position ကို absolute ပေးလိုက်ရင် element က အပေါ်ကို တက်သွားတယ်။
+    ပြီရင် သူနောက်ကနေ left, top, right, bottom ပေးလိုက်တဲ့ အချိန်ကျရင် သူတို့က
+    ကိုယ့်ရဲ့ parent က သတ်မှတ်ထားတဲ့ နေရာမှာ မဟုတ်ပဲ document တခုလုံးပေါ်မှာ ဖြစ်နေတာ။
+    for example left: 20px; top: 20px; ဆိုတာနဲ့ document ကနေ စတွက်တော့တာ။
+    အဲလိုမျိုး မဖြစ်ချင်ဘူးဆိုရင် သူရဲ့ parent element မှာ ရှိနေစေချင်တယ်ဆိုရင် သူရဲ့ parent element မှာ သွားပြီ
+    position: relative; ပေးလိုက်ရင် ရသွားပြီ
+     */
+    position: absolute; 
+    /* left: 20px;
+    top: 20px; */
+
+    z-index: 1;
 }
 
 .boxone .div2 {
-    width: 300px;
-    height: 300px;
-    background-color: deepskyblue;
+    width: 320px;
+    height: 320px;
+    /* background-color: deepskyblue; */
+
+    background: conic-gradient(
+        red,
+        violet 30%,
+        red 0%,
+        blue 70%,
+        red 0%,
+        yellow 100%
+    );
+
     color: #fff;
     border-radius: 50%;
 
@@ -43,6 +70,54 @@
     
     text-align: center;
     line-height: 300px;
+
+    position: absolute;
+    
+    /* 
+    z-index က document မှာ ရှိတဲ့ element တွေရဲ့ နေရာ ဦးစားပေးတာကို ဆုံးဖြတ်တာ။
+    ဥပမာ: z-index ၂ခုရှိတယ် document မှာ အာ့ဆိုရင် သူက ကြီးတဲ့ value ရှိတဲ့ element ကို ဦးစားပေးမှာ။
+    နောက်သူက position: absolute နဲ့ တွဲပြီ အလုပ်လုပ်တာ။
+    z-index ရဲ့ value ကို positive ကော negative ကော ပေးလို့ရတယ်။
+    default ကတော့ 0 ပဲ 1 ပေးရင် အပေါ်ဆုံးကို ရောက်တယ် -1 ပေးရင် အောက်ဆုံးကို ရောက်တယ်။
+     */
+    /* z-index: 2; */
+}
+
+.pointercontainer {
+    width: 20px;
+    height: 200px;
+    /* background-color: gray; */
+
+    position: absolute;
+    top: 100px;
+
+    z-index: 2;
+
+    animation-name: myani;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    transform-origin: bottom;
+}
+
+.pointercontainer .pointer {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+
+    display: block;
+}
+
+@keyframes myani {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* 
