@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
 :root {
     --wcc: #f4f4f4;
     --gyc: #777;
@@ -6,6 +8,7 @@
     --gnc: green;
 }
 
+/* Universal Selector */
 * {
     /* 
     သူကို global selector ပေးရလိုက်ရင် document တခုလုံးမှာ effect ဝင်သွားတယ်။
@@ -13,11 +16,20 @@
     သူက input element တွေကို ဘေး ဘယ်ညာ အညီ ညှိပေးတာ
      */
     box-sizing: border-box;
+
+    /* 
+    သူကို universal selector မှာလည်း ပေးလို့ရတယ်။
+    ဒီမှာ ပေးရင် heading, label တွေ မဟုတ်ပဲ input boxes, button တွေပါ အစ effect ဝင်သွားတယ်။
+    body ပေးရင်တော့ display လုပ်တဲ့ element တွေကိုပဲ effect ဝင်မှာ
+     */
+    /* font-family: "Stick", sans-serif; */
 }
 
 body {
     /* vh = viewport height, vw = viewport width*/
     height: 100vh;
+
+    font-family: "Stick", sans-serif;
 
     display: flex;
     justify-content: center;
@@ -57,6 +69,8 @@ body {
     width: 100%;
     padding: 10px;
 
+    font-family: inherit;
+
     /* box-sizing: border-box; */
 }
 
@@ -69,6 +83,13 @@ body {
     background-color: var(--dbc);
     color: #fff;
     font-size: 16px;
+
+    /* 
+    အဲလို ရေးလို့ရသလို
+    inherit လိုလည်း ရေးလိ့ရတယ်။
+     */
+    /* font-family: "Stick", sans-serif; */
+    font-family: inherit;
 
     border: none;
     border-radius: 4px;
@@ -88,4 +109,30 @@ body {
     background-color: var(--gnc);
 }
 
+/* သူက design တွေကို screen-size ပေါ် မူတည်ပြီ ပြတာ
+ပြောမယ်ဆိုရင် ပိုပြီ responsive ဖြစ်အောင်လုပ်တာကို ပြောတာ */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
 
+    .form .btn {
+        font-size: 14px;
+        padding: 12px;
+        background-color: var(--gnc);
+    }
+
+    .form .form-group {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h2 {
+        font-size: 20px;
+    }
+
+    .form-group .form-control {
+        font-size: 12px;
+    }
+}
