@@ -1,0 +1,38 @@
+Code တွေကို browser မှာ ကြည့်လို့ ရတဲ့ နည်း ၂ နည်းရှိတယ်။
+1. Inspect ထောက်ပြီ ကြည့်တာရယ်
+2. View Page Source နဲ့ ကြည့်တာရယ်။
+
+ဒါမဲ့ သူတို့ မှာ မတူညီတဲ့ အချက်ရှိတယ်။
+Inspect က JS ကနေ လုပ်လိုက်တဲ့ action တွေကို တိုက်ရိုက် မြင်ရမှာ ဖြစ်ပြီ view page source က code editor မှာ
+ရေးထားတဲ့ static code ကိုပဲ ပြမှာ ဖြစ်တယ်။
+for example - web page ထဲကို li တခု ထပ်ထည့်မယ်ဆိုရင် JS ကနေ လုပ်လို့ ရတယ်။ အဲဒါကို Inspect မှာပဲ မြင်ရမှာ ဖြစ်ပြီ
+view page source မှာတော့ ဘာမှ ပြောင်းလဲမှာ မဟုတ်ဘူး။
+
+=> Javascript
+
+JS ကိုရေးလို့ရတဲ့ နည်း ၂ နည်း ရှိတယ်။
+1. Internal
+2. Inline
+3. External
+
+-> Data Type
+1. String --> string ကို ရေးချင်ရင် single/double quote/s ("",'') မှာ ရေးလို့ရသလို back-tick (``)
+နဲ့လည်းရေးလို့ရတယ်။
+
+2. Number
+
+3. Boolean --> boolean ကို ရေးရင် ပုံမှန် true, false နဲ့ ရေးလို့ ရသလို number နဲ့ လည်း ဖော်ပြတယ်။
+1 ဆိုရင် true 0 ဆိုရင် false အနေနဲ့ ပြတယ်။
+
+'+' sign ရဲ့ အလုပ်လုပ်ပုံ
+number + number = calculate
+string + number = concat
+boolean + number = calculate
+string + boolean = concat
+
+'variable' name ပေးပုံ
+JS မှာ variable တခုကို ကြေငြာတော့မယ်ဆိုရင် - const, var, let ဆိုတဲ့ keyword ကို အသုံးပြုပြီ ဖော်ပြရတယ်။
+variable name တွေကို ပေးတဲ့ အချိန်မှာ variable names တွေကို အားလုံး small letter နဲ့ ရေးသင့်တယ်။
+
+
+
