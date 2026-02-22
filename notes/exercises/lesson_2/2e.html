@@ -7,10 +7,48 @@
         <title>CSS Exercise 2E</title>
 
         <link href="../../img/fav/youtube.png" rel="icon" type="image/png" sizes="64x64" />
+
+        <style type="text/css">
+            .apply_company_site {
+                background-color: rgb(10, 102, 194);
+                color: #ffffff;
+                font-size: 15px;
+                font-weight: bold;
+
+                /* border-width border-style border-color (b s c) */
+                border: 1px solid rgb(10, 102, 194); /* can also give -> border: none; */
+                border-radius: 20px;
+
+                padding: 10px 20px;
+                margin-right: 10px;/* margin: 0 10px 0 0; */
+
+                cursor: pointer;
+            }
+
+            .save_btn {
+                background-color: transparent;
+                color: rgb(10, 102, 194);
+                font-size: 15px;
+                font-weight: bold;
+
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgb(10, 102, 194);
+                border-radius: 20px;
+
+                padding: 10px 20px;
+
+                cursor: pointer;
+            }
+        </style>
     </head>
 
     <body>
-        <input type="button" name="apply_company_site" id="apply_company_site" class="apply_compnay_site" value="Apply on company website" />
+        <h3>2e. LinkedIn</h3>
+        
+        <input type="button" name="apply_company_site" id="apply_company_site" class="apply_company_site" value="Apply on company website" />
+
+        <button type="button" name="save" id="save" class="save_btn">Save</button>
     </body>
 
 </html>
