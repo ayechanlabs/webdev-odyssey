@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Exercise 3E</title>
+
+        <link href="../../img/fav/spotify.png" rel="icon" type="image/png" sizes="64x64" />
+
+        <style type="text/css">
+            .apply_company_website, .save {
+                font-size: 15px;
+                font-weight: bold;
+
+                border: 1px solid #0C5ABA;
+                border-radius: 20px;
+
+                padding: 10px 20px;
+
+                cursor: pointer;
+
+                transition: all 0.2s;
+            }
+
+            .apply_company_website {
+                background-color: #0C5ABA;
+                color: #FFFFFF;
+
+                /* can use 'border: none;' */
+                /* border: none; */
+
+                margin-right: 5px;
+            }
+
+            .apply_company_website:hover {
+                background-color: #003877;
+            }
+
+            .save {
+                background-color: transparent;
+                color: #0c5aba;
+            }
+
+            .save:hover {
+                /* rgba(12, 90, 186, 0.2) */
+                background-color: #DDECFD;
+                border-width: 2px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>3e. LinkedIn</h3>
+
+        <input type="button" name="apply_company_website" id="apply_company_website" class="apply_company_website" value="Apply on company website" />
+
+        <button type="button" name="save" id="save" class="save">Save</button>
+    </body>
+</html>
+
+<!-- 
+Apply on company website button:
+- before hover color: #0C5ABA
+- on hover color: #003877
+
+Save button:
+- on hover color: #DDECFD
+ -->

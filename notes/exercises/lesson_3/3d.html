@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Exercise 3D</title>
+
+        <link href="../../img/fav/instgram.png" rel="icon" type="image/png" sizes="64x64" />
+
+        <style type="text/css">
+            .get_started, .download {
+                font-size: 15px;
+                font-weight: bold;
+
+                border-radius: 3px;
+
+                padding: 10px 20px;
+
+                cursor: pointer;
+            }
+
+            .get_started {
+                background-color: #6A46A7;
+                color: #FFFFFF;
+
+                border: none;
+
+                margin-right: 10px;
+
+                transition: background-color 0.3s;
+            }
+
+            .get_started:hover {
+                background-color: #573982;
+            }
+
+            .download {
+                background-color: #FDFDFD;
+                color: #606970;
+
+                /* border-width border-style border-color */
+                border: 1px solid #606970;
+
+                transition: all 0.3s;
+            }
+
+            .download:hover {
+                background-color: #606970;
+                color: #FDFDFD;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>3d. Bootstrap</h3>
+
+        <input type="button" name="get_started" id="get_started" class="get_started" value="Get started" />
+
+        <button type="button" name="donwload" id="download" class="download">Download</button>
+    </body>
+</html>
+
+<!-- 
+Get Started Button:
+ - before hover color: #6A46A7
+ - on hover color: #573982
+
+Download Button:
+ - before hover color: #FDFDFD
+ - on hover color: #606970
+ -->
