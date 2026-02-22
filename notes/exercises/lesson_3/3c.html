@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Exercise 3C</title>
+
+        <link href="../../img/fav/youtube.png" rel="icon" type="image/png" sizes="64x64" />
+
+        <style type="text/css">
+            .sign_up {
+                background-color: #289B46;
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 15px;
+
+                border: none;
+                border-radius: 5px;
+
+                padding: 10px 20px;
+
+                cursor: pointer;
+
+                transition: box-shadow 0.2s;
+            }
+
+            .sign_up:hover {
+                /* horizontal vertical blur color */
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>3c. GitHub</h3>
+
+        <input type="button" name="sign_up" id="sign_up" class="sign_up" value="Sign Up" />
+    </body>
+</html>
