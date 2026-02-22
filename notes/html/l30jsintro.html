@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Intro</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Hi</p>
+
+        <!--
+        JavaScript code တွေကို HTML မှာ Internal အနေနဲ့ ရေးမှာ။
+         -->
+        <script type="text/javascript">
+            console.log("Hello, World!");
+            console.log('Welcome to JavaScript Programming!');
+            console.log(`22th February 2025 start of JavaScript Class.`);
+
+            console.log(500);
+
+            // JS မှာ single, double quotes and backticks ထဲကို number တွေကို ထည့်လိုက်တာနဲ့
+            // အလိုလို string အဖြစ်သတ်မှတ်ပေးတယ်။
+
+            console.log('600');
+            console.log("700");
+            console.log(`800`);
+
+            console.log(true);
+            console.log(false);
+
+            // console.log() ဆိုတာကတော့ JavaScript မှာ output ကို console မှာပြတဲ့ function တစ်ခုဖြစ်တယ်။
+            // console.log() ကိုသုံးပြီး string, number, boolean, array, object စတဲ့ data type တွေကို console မှာပြနိုင်တယ်။
+            // console.log() ကိုသုံးပြီး variable တွေကိုလည်း console မှာပြနိုင်တယ်။
+            // console.log() ကိုသုံးပြီး expression တွေကိုလည်း console မှာပြနိုင်တယ်။
+            // console.log() ကိုသုံးပြီး function တွေကိုလည်း console မှာပြနိုင်တယ်။
+            // console.log() ကိုသုံးပြီး error messages တွေကိုလည်း console မှာပြနိုင်တယ်။
+            // console.log() ကိုသုံးပြီး debugging လုပ်နိုင်တယ်။
+            // console.log() ထဲမှာပဲ strin တွေကို တချိန်ထဲမှာပဲ အများကြီး ပြနိုင်တယ်။
+            console.log("Zaw Zaw", "Tun Tun", "Aung Aung");
+            console.log(100, 200, 300, 400);
+
+            // console.log ကို သုံးပြီ မတူညီတဲ့ data type တွေကို တချိန်ထဲမှာပဲ ပြနိုင်တယ်။
+            console.log("Aye Chan", 27, true);
+
+            console.log(10 + 10); // 20
+            console.log(10 + '40'); // 1040, string concatenation ဖြစ်တယ်။ number data type ကို string data type အဖြစ်သတ်မှတ်ပေးတယ်။
+            console.log('20' + "50"); // 2050, string concatenation
+            console.log("Aye Chan" + 27); // Aye Chan27, string concatenation
+
+            console.log(true + true); // 2, true ကို number data type အဖြစ်သတ်မှတ်ပေးတယ်။ true = 1, false = 0
+            console.log(true + false); // 1, true = 1, false = 0
+            console.log('true' + true); // truetrue, string concatenation
+            console.log(true + 50); // 51
+            console.log(false + 50); // 50, false = 0
+            console.log('true' + 20); // true20, string concatenation
+            console.log('true' + "aung aung"); // trueaung aung, string concatenation
+            console.log('zaw zaw' + false); // zaw zawfalse, string concatenation
+
+            // web page/browser မှာ dialog box တခုအနေနဲ့ ဖော်ပြချင်တယ်ဆိုရင် window.alert() ကိုသုံးနိုင်တယ်။
+            window.alert("Welcome to JavaScript Programming alert box!");
+            // alert ကိုလည်း သုံးပြီ ဖော်ပြလို့ရတယ်။
+            alert("This is an alert box!");
+
+            // Variable ဆိုတာကတော့ data တွေကို သိမ်းဆည်းထားတဲ့ container တစ်ခုဖြစ်တယ်။
+            // Variable ကိုသုံးပြီး data တွေကို သိမ်းဆည်းထားနိုင်သလို data တွေကိုလည်း ပြောင်းလဲလို့ရတယ်။
+            // var/ const/ let variablename = value;
+
+            let fullname = "Aye Chan";
+
+            console.log(fullname); // Aye Chan
+            console.log('fullname'); // fullname ဆိုပြီ ထွက်လိမ့်မယ် သူက string ဖြစ်နေလို့။
+            console.log("fullname"); // fullname
+            console.log(`fullname`); // fullname
+
+            // ဒီလိုမျိုး ရေးလိုက်တာက string တခုကို variable နဲ့ တွဲချင်တာ ဒါမဲ့ variable ကို string ထဲ
+            // ထည့်လိုက်တဲ့ အတွက် strin concatenation ဖြစ်သွားပြီ My friend name is fullname ဆိုတဲ့
+            // string စာသား ထွက်လာတာဖြစ်တယ်။
+            // ဒီလိုမျိုး အခြေအနေက single, double quotes or backticks ဖြစ်" ဘာနဲ့ ပဲ ရေး"
+            // ဒီလိုပဲ ပေါ်လာမှာ ဖြစ်တယ်။
+            console.log("My friend name is fullname.")
+
+            // Concatenate (+)
+            // ဒီ string concatenation မှာလည်း single, double quotes or backticks ဘာနဲ့ပဲ ဖြစ်" ရေးလို့ရတယ်။
+            console.log("My friend name is " + fullname + "."); // My friend name is Aye Chan.
+            console.log('My name is ' + fullname + '.'); // My name is Aye Chan.
+            console.log(`My name is ` + fullname + `.`); // My name is Aye Chan.
+
+            
+            // My name is Aye Chan, backticks နဲ့ string interpolation လုပ်တာဖြစ်တယ်။ 
+            // ${variable name} ဆိုတဲ့ syntax ကိုသုံးပြီး variable ထဲက data ကို string ထဲမှာထည့်နိုင်တယ်။
+            console.log(`My name is ${fullname}.`);
+
+            var num1 = 10;
+            const num2 = 20;
+
+            console.log(num1); // 10
+            console.log(num2); // 20
+
+            console.log(num1, num2); // 10 20, console.log() ထဲမှာပဲ တချိန်ထဲမှာပဲ ပြနိုင်တယ်။
+            console.log(num1 + num2); // 30, number data type တွေကို ပေါင်းလိုက်တာဖြစ်တယ်။
+
+        </script>
+    </body>
+</html>
