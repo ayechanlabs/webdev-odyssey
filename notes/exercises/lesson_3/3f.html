@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Exercise 3F</title>
+
+        <link href="../../img/fav/instgram.png" rel="icon" type="image/png" sizes="64x64" />
+
+        <style type="text/css">
+            .amazon_link {
+                color: #205364;
+            }
+
+            .amazon_link:hover {
+                color: #AB3400;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .stock_price {
+                color: #187414;
+                font-weight: bold;
+            }
+
+            .add_to_cart, .buy_now {
+                font-size: 15px;
+
+                border: none;
+                border-radius: 20px;
+
+                padding: 10px 30px;
+
+                cursor: pointer;
+            }
+
+            .add_to_cart {
+                background-color: #FDD111;
+
+                margin-right: 10px;
+            }
+
+            .add_to_cart:hover {
+                background-color: #F4C100;
+            }
+
+            .buy_now {
+                background-color: #FC9819;
+            }
+
+            .buy_now:hover {
+                background-color: #F87D01;
+            }
+
+            .add_to_cart:active, .buy_now:active {
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="https://www.amazon.com" target="_blank" class="amazon_link">Back to Amazon</a>
+
+        <h2>Nick Black Running Shoes</h2>
+
+        <p class="stock_price">$39 - in stock.</p>
+        <p>Free delivery tomorrow.</p>
+
+        <input type="button" name="add_to_cart" id="add_to_cart" class="add_to_cart" value="Add to Cart" />
+        <button type="button" name="buy_now" id="buy_now" class="buy_now">Buy now</button>
+    </body>
+</html>
+
+<!-- 
+#f4c100
+ -->
