@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Exercise 4J</title>
+
+        <link href="../../img/fav/instgram.png" rel="icon" type="image/png" sizes="64x64" />
+
+        <style type="text/css">
+            .shadow_btn {
+                background-color: #017501;
+                color: #FFFFFF;
+                font-size: 15px;
+
+                border: none;
+
+                padding: 10px 20px;
+
+                /* 
+                box-shadow: horizontal vertical blur color
+                - horizontal(x offset) => positive value ဆိုရင် right ကို shadow ပေးတယ်၊ negative value ဆိုရင် left ကို shadow ပေးတယ်။
+                positive value = right (margin-right)
+                negative value = left (margin-left)
+
+                - vertical(y offset) => positive value ဆိုရင် down ကို shadow ပေးတယ်၊ negative value ဆိုရင် up ကို shadow ပေးတယ်။
+                positive value = down (margin-bottom)
+                negative value = up (margin-top)
+                */
+                box-shadow: 5px 5px 5px #888888;
+
+                cursor: pointer;
+            }
+
+            /* active ဆိုတဲ့ pseudo-class က button ကို click လုပ်တဲ့ အချိန်မှာ ဖြစ်တဲ့ action ဖြစ်တယ်။ */
+            .shadow_btn:active {
+                margin: 5px 5px;
+                /* margin-left: 5px;
+                margin-top: 5px; */
+
+                box-shadow: none;
+            }
+
+            /* .shadow_btn:hover {
+                box-shadow: 8px 8px 12px #666666;
+                transform: translateY(-2px);
+            }
+
+            .shadow_btn:active {
+                box-shadow: 2px 2px 4px #444444;
+                transform: translateY(2px);
+            } */
+
+
+        </style>
+    </head>
+
+    <body>
+        <h3>4j. 3D Click</h3>
+
+        <button type="button" name="shadow_btn" id="shadow_btn" class="shadow_btn">Shadow</button>
+    </body>
+</html>

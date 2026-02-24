@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Exercise 4H</title>
+
+        <link href="../../img/fav/spotify.png" rel="icon" type="image/png" sizes="64x64" />
+
+        <style type="text/css">
+            .back, .next {
+                padding: 10px;
+            }
+
+            .back {
+                margin-right: 10px;
+            }
+
+            .next {
+                margin-left: 10px;
+            }
+
+            a:nth-of-type(1), a:nth-of-type(2), a:nth-of-type(3), a:nth-of-type(4) {
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>4h. Pagination</h3>
+
+        <button type="button" name="back" id="back" class="back">Back</button>
+
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+
+        <input type="button" name="next" id="next" class="next" value="Next" />
+    </body>
+</html>
