@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Template String</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS Template String</p>
+
+        <script type="text/javascript">
+            var fullname = "Aye Chan"; // both variable declaration and variable initialization
+
+            // var fullname; // variable declaration
+            // fullname = "Aye Chan"; // variable initialization
+
+            console.log("My name is " + fullname); // My name is Aye Chan
+
+            var nickname = "Aryan";
+            console.log("My nickname is " + nickname); // My nickname is Aryan
+
+            var age; // variable declaration only, variable initialization is not done yet, so the value of age is undefined.
+            console.log("My age is " + age); // My age is undefined
+
+            let familyname; // variable declaration only, variable initialization is not done yet, so the value of familyname is undefined.
+            console.log("My family name is " + familyname); // My family name is undefined
+
+            let aliasname; // variable declaration only, variable initialization is not done yet.
+            aliasname = "Than Than Soe"; // variable initialization & can sometimes be seen as value ovrride.
+            console.log("My alias name is " + aliasname); // My alias name is Than Than Soe
+
+            // const lastname; // const မို့လို့ variable create လုပ်ပြီရင် value ‌ပေးကို ပေးရတယ်။ ဘာကြောင့်ဆိုရင် const variable ကို override လုပ်ဖို့ မပေးချင်လို့။
+            // console.log("My last name is " + lastname); // SyntaxError: Missing initializer in const declaration
+
+            const name = "May Thu Lwin";
+            const curr_age = 28;
+            const job = "Medical Sales Representative";
+            const city = "Yangon";
+
+            document.write(name);
+            document.write(curr_age);
+            document.write(job);
+            document.write(city);
+
+            let myheading;
+            console.log(myheading); // undefined
+
+            myheading = "<h1>Hello, World!</h1>";
+            console.log(myheading); // <h1>Hello, World!</h1>, console မှာ ရေးရင် string အနေနဲ့ ပြမှာ။
+            document.write(myheading); // Hello, World!, HTML tag တွေကို HTML အနေနဲ့ ပြမှာ။
+
+            // Without Template String
+            let myliststyle;
+
+            myliststyle = "<ul>" +
+                "<li>Name: " + name + "</li>" +
+                "<li>Age: " + curr_age + "</li>" +
+                "<li>Job: " + job + "</li>" +
+                "<li>City: " + city + "</li>" +
+                "</ul>";
+            document.write(myliststyle);
+
+            // With Template String (`` - backticks)
+            let myliststyle2 = `<ul>
+                <li>Name: ${name}</li>
+                <li>Age: ${curr_age}</li>
+                <li>Job: ${job}</li>
+                <li>City: ${city}</li>
+            </ul>`;
+            document.write(myliststyle2);
+
+        </script>
+    </body>
+</html>
