@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Date & Time</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS Date & Time</p>
+
+        <div>
+            <small>&copy; <span id="curryear"></span> JS Date & Time Tutorial</small>
+        </div>
+
+        <script type="text/javascript">
+            let mydate = new Date();
+            console.log(mydate); // current date and time
+            console.log(typeof mydate); // object
+            console.log(new Date()); // we can also create a new date object without assigning it to a variable, but we won't be able to use it later in the code.
+
+            console.log(new Date().getDate()); // current date
+
+            let getdate = new Date().getDate();
+            console.log("Today's date is " + getdate); // current date
+
+            let hour = mydate.getHours();
+            console.log("Current hour is " + hour); // current hour
+
+            let minute = mydate.getMinutes();
+            console.log("Current minute is " + minute); // current minute
+
+            let second = mydate.getSeconds();
+            console.log("Current second is " + second); // current second
+
+            // 1s = 1000ms
+            let millisecond = mydate.getMilliseconds();
+            console.log("Current millisecond is " + millisecond); // current millisecond
+
+            // 1s = 1000ms, 1m = 60s, 1h = 60m, 1d = 24h, 1y = 365d
+            // 1 Jan 1970 > 1 Jan 1970 00:00:00 UTC > 1 Jan 1970 00:00:00 GMT
+            // getTime() method ကတော့ current time ကို milliseconds အနေနဲ့ ပြတဲ့ method တစ်ခုဖြစ်တယ်။ 1 Jan 1970 00:00:00 UTC မှာစပြီး ယခုအချိန်ထိ ဘယ်လောက်ကြာခဲ့ပြီဆိုတာကို milliseconds အနေနဲ့ ပြတယ်။
+            // သူက Unix OS စပြီ ထွင်တဲ့ ပြီ နေ့ကနေ နောက်ပိုင်းကို တွက်ထားတာဖြစ်တယ်။ timestamp လိုလည်း ‌ပြောလို့ရတယ်။
+            let time = mydate.getTime();
+            console.log("Current time in milliseconds since January 1, 1970 is " + time); // current time in milliseconds since January 1, 1970
+
+            // သူက new Date.getTime() နဲ့ အတူတူပဲ သူတို့မှာ တခုပဲကွာခြားချက်ရှိတယ်။
+            // အဲဒါက new Date.getTime() က object အရင် တည်ဆောက်တယ် ပြီမှ ပြန်‌ခေါ်တာ အာ့ကြောင့် နည်းနည်းပိုကြာတယ်။
+            // Date.now() ကျတော့ function ကို တိုက်ရိုက် invoke လုပ်တဲ့ အတွက်ကြောင့် မို့လို့ နည်းနည်းပိုမြန်နေတာဖြစ်တယ်။
+            let now = Date.now();
+            console.log(now); // current time in milliseconds since January 1, 1970
+
+            // all of months တွေကို JS မှာဆိုရင် array ထဲမှာ သိထားတာဖြစ်တယ်။ ဒါမဲ့ represent လုပ်တဲ့ အချိန်ကျရင် 0-11 အနေနဲ့ represent လုပ်နေတာ။
+            // ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+            // length ဆိုရင် 12 ဖြစ်မယ်။ index ဆိုရင် 0-11 နဲ့ ဖြစ်မယ်။
+            let month = mydate.getMonth();
+            console.log("Current month is " + month); // current month, 0-11, 0 = January, 1 = February, 2 = March, 3 = April, 4 = May, 5 = June, 6 = July, 7 = August, 8 = September, 9 = October, 10 = November, 11 = December.
+
+            // same as month
+            // ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            let day = mydate.getDay();
+            console.log("Current day is " + day); // current day, 0-6, 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday, 5 = Friday, 6 = Saturday.
+
+            let year = mydate.getFullYear();
+            console.log("Current year is " + year); // current year
+
+            // Coordinate Universal Time (UTC) ဆိုတာကတော့ Greenwich Mean Time (GMT) နဲ့ တူညီတဲ့ အချိန်စံတော်ချိန်တစ်ခုဖြစ်တယ်။ UTC ကတော့ time zone တွေကို မပါဘဲ အချိန်ကို ပြတဲ့အချိန်စံတော်ချိန်တစ်ခုဖြစ်တယ်။
+            let utcyear = mydate.getUTCFullYear();
+            console.log("Current UTC year is " + utcyear); // current UTC year
+
+
+            // .textContent, .innerText, .innerHTML တို့ကတော့ HTML element တွေကို access လုပ်ပြီး အဲ့ element ထဲမှာရှိတဲ့ text content ကို ပြောင်းလဲဖို့ သုံးတဲ့ properties တွေဖြစ်တယ်။
+            // သူတို့ တွေမှာ မတူညီနဲ့ ခြားနားချက်တွေလည်း ရှိသေးတယ်။
+            // document.getElementById("curryear").textContent = year; // current year
+            // document.getElementById("curryear").innerText = new Date().getFullYear(); // current year
+            document.getElementById("curryear").innerHTML = new Date().getUTCFullYear(); // current UTC year
+        </script>
+    </body>
+</html>
