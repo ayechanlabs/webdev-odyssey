@@ -104,6 +104,53 @@
             console.log(num1, num2); // 10 20, console.log() ထဲမှာပဲ တချိန်ထဲမှာပဲ ပြနိုင်တယ်။
             console.log(num1 + num2); // 30, number data type တွေကို ပေါင်းလိုက်တာဖြစ်တယ်။
 
+            console.log("num1" + "num2"); // num1num2, string concatenation ဖြစ်တယ်။ number data type တွေကို string data type အဖြစ်သတ်မှတ်ပေးတယ်။
+            console.log("num1+num2"); // num1+num2, string concatenation ဖြစ်တယ်။ number data type တွေကို string data type အဖြစ်သတ်မှတ်ပေးတယ်။
+            console.log('num1 + num2'); // num1 + num2, string concatenation ဖြစ်တယ်။ number data type တွေကို string data type အဖြစ်သတ်မှတ်ပေးတယ်။
+            console.log(`num1 + num2`); // num1 + num2, string concatenation ဖြစ်တယ်။ number data type တွေကို string data type အဖြစ်သတ်မှတ်ပေးတယ်။
+
+            console.log(`${num1} + ${num2}`); // 10 + 20, string interpolation ဖြစ်တယ်။ number data type တွေကို string data type အဖြစ်သတ်မှတ်ပေးတယ်။
+            console.log(`${num1}` + `${num2}`); // 1020, string concatenation ဖြစ်တယ်။ number data type တွေကို string data type အဖြစ်သတ်မှတ်ပေးတယ်။
+            console.log(`${num1 + num2}`); // 30, string interpolation ဖြစ်တယ်။ number data type တွေကို string data type အဖြစ်သတ်မှတ်ပေးတယ်။
+            console.log(typeof `${num1 + num2}`); // string, string interpolation ဖြစ်တယ်။ number data type တွေကို string data type အဖြစ်သတ်မှတ်ပေးတယ်။
+
+            // Overwrite/ Override ဆိုတာကတော့ variable ထဲက data ကို ပြောင်းလဲတာဖြစ်တယ်။
+            var num3 = 30; // ဒီနေရာမှာ num3 = 40 ဆိုပြီ ရေးလို့ရတယ်၊ အဲဒါ data reassignment လုပ်လိုက်တာ။
+            var num4 = 40;
+
+            console.log("num3 value is: " + num3); // num3 value is: 30
+            console.log("num4 value is: " + num4); // num4 value is: 40
+            console.log(num3 + num4); // 70, number data type တွေကို ပေါင်းလိုက်တာဖြစ်တယ်။
+
+            num3 = 50; // num3 variable ထဲက value ကို override လုပ်လိုက်တာ၊ override လုပ်လိုက်တဲ့ အချိန်မှာ variable ဆိုတဲ့ keyword ကြေငြာစရာ မလိုဘူး
+            console.log("num3 value is: " + num3); // num3 value is: 50
+            console.log(`num3 value is: ${num3}`);
+            console.log(num3 + num4); // 90, number data type တွေကို ပေါင်းလိုက်တာဖြစ်တယ်။
+
+            let num5 = 50;
+            console.log("num5 value is: " + num5); // num5 value is: 50
+            num5 = 60; // num5 variable ထဲက value ကို override လုပ်လိုက်တာ၊ override လုပ်လိုက်တဲ့ အချိန်မှာ variable ဆိုတဲ့ keyword ကြေငြာစရာ မလိုဘူး။
+
+            const num6 = 60;
+            console.log("num6 value is: " + num6); // num6 value is: 60
+
+            // num6 = 70; // TypeError: Assignment to constant variable. const variable ထဲက value ကို override လုပ်လို့မရဘူး၊ override လုပ်လိုက်တဲ့ အချိန်မှာ variable ဆိုတဲ့ keyword ကြေငြာစရာ မလိုဘူး။
+
+            // Special Escape Characters (\)
+            // String တခုကို ကြေငြာတဲ့ အချိန်ကျရင် တချို့သော် highlight လုပ်ချင်တဲ့ keyword တွေကို
+            // single, double quotes ထဲ ထည့်ပြီ လုပ်လို့ရတယ်။
+            // example -> "Hey this is 'working'." 
+            // ဒီလိုမျိုး ရေးလို့ရသလို single quotes ထဲမှာ double quotes ကိုလည်း ရေးလို့ရတယ်။
+            // but single quotes ထဲမှာ single quotes or double quotes ထဲမှာ double quotes ကို ရေးလို့မရဘူး၊ အဲဒါကတော့ syntax error ဖြစ်တယ်။
+            console.log("Hey I'm 'working'. Do you see now.");
+            console.log('Hey I am "working". Do you see now.');
+
+            let x = 'He\'s U Ba.';
+            let y = "He\'s my \"Uncle\". ";
+
+            console.log(x + y);
+            console.log(`${x} ${y}`);
+
         </script>
     </body>
 </html>
