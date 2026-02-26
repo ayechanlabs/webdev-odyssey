@@ -75,9 +75,34 @@
 
             // .textContent, .innerText, .innerHTML တို့ကတော့ HTML element တွေကို access လုပ်ပြီး အဲ့ element ထဲမှာရှိတဲ့ text content ကို ပြောင်းလဲဖို့ သုံးတဲ့ properties တွေဖြစ်တယ်။
             // သူတို့ တွေမှာ မတူညီနဲ့ ခြားနားချက်တွေလည်း ရှိသေးတယ်။
+
             // document.getElementById("curryear").textContent = year; // current year
             // document.getElementById("curryear").innerText = new Date().getFullYear(); // current year
             document.getElementById("curryear").innerHTML = new Date().getUTCFullYear(); // current UTC year
+
+            // Birthday ကို create လုပ်မယ်ဆိုရင်တော့ new Date() နဲ့ date object တစ်ခုကို create လုပ်ပြီး ပြီမှ setDate(), setMonth(), setFullYear() method တွေကို သုံးပြီး birthday ကို set လုပ်နိုင်တယ်။
+            // month, day, year, hour, minute, second, millisecond တို့ကို set လုပ်နိုင်တယ်။
+            // မွေးနေ့ တွေကို ပေးတဲ့ နေရာမှာ ပေးပုံပေးနည်း တခြားတွေလည်း ရှိတယ်။
+            // for example -
+            // Aug-2-2023 11:30:00
+            // Aug 3 2025 12:12:12
+            // July 1 2024 11:11:11
+            // 5/10/2020 12:12:12
+            let birthday = new Date("8-20-1998 11:35:10");
+            console.log(birthday);
+            console.log(birthday.getMonth()); // 7 = August
+
+            // အပေါ်မှာ date, month, year တွေကို manuel ထားခဲ့တာ ပြောမယ်ဆိုရင် user ကိုယ်တိုင် hard-coded လုပ်ခဲ့တာ
+            // အခုက function ကို သုံးပြီ သွားထည့်မှာ
+            birthday.setMonth(2);
+            birthday.setDate(15);
+            birthday.setFullYear(2020);
+            birthday.setHours(15);
+            birthday.setMinutes(10);
+            birthday.setSeconds(12);
+            console.log(birthday)
         </script>
     </body>
 </html>
+
+debym
