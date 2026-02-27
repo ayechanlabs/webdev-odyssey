@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Math Object</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS Math Object.</p>
+
+        <script type="text/javascript">
+
+            let val;
+
+            val = 2;
+            val = 2.8; // 2.8 JS မှာ Maths နဲ့ မတူတာက decimal number တွေဆိုရင် ကိန်းပြည့်နဲ့ မပြပဲ ဒီတိုင်း decimal number နဲ့ပြတာပဲ
+
+            // Math.round()
+            val = Math.round(2.5); // 3
+            val = Math.round(2.4); // 2
+
+            // Math.ceil()
+            // This function will convert any decimal number to whole number even if there is one point decimal.
+            // ဒီ function က decimal number တွေကို whole number အနေနဲ့ ပြောင်းပေးမှာ၊ သူက ဒဿမ တနေရာ ကျော်ရင်လည်း ပြောင်းမှာ ဖြစ်တယ်။ example -> 2.1 ဆိုတာနဲ့ 3 ဆိုပြီ သတ်မှတ်လိုက်တာ။
+            val = Math.ceil(2.0); // 2
+            val = Math.ceil(2.1); // 3
+            val = Math.ceil(2.5); // 3
+            val = Math.ceil(2.01); // 3
+
+            // Math.floor()
+            // သူကကျတော့ decimal number တွေ ဘယ်လောက်ပဲ point ကျော် သူရဲ့ မူရင်းတန်ဖိုးကိုပဲ ယူမှာ။ example -> 2.1 or 2.9 ဖြစ်ရင်တောင် 2 လိုပဲ သတ်မှတ်တာ။
+            val = Math.floor(2.9); // 2
+            val = Math.floor(2.4); // 2
+            val = Math.floor(2.1); // 2
+            val = Math.floor(2.0); // 2
+
+            // Math.sqrt() => This will provide the square root of the input number.
+            val = Math.sqrt(49); // 7
+
+            // pow(base, power) => This will provide the power of the input number.
+            val = Math.pow(4, 3); // 64
+
+            // Absolute Value => This will convert any negative number to positive number.
+            val = Math.abs(100); // 100
+            val = Math.abs(100.52); // 100.52
+            val = Math.abs(-100); // 100
+            val = Math.abs(-100.52); // 100.52
+
+            // Minimum Number
+            val = Math.min(8, 2, 5, 7, 1, 0, -1, -9); // -9
+
+            // Maximum Number
+            val = Math.max(8, 2, 5, 7, 1, 0, -1, -9); // 8
+
+            // Random => this will give the number between 0 and 1.
+            val = Math.random();
+
+            // we can also make it generate a random number between 1 to 10.
+            val = Math.random() * 10; // result will from 0 to 10
+
+            // but let's say you don't want decimal points, then you can do it like the below code.
+            val = Math.floor(Math.random() * 10); // 0 to 10
+
+            console.log(val);
+
+            // default_random = Math.random();
+            // console.log(default_random);
+
+            // whole_random = default_random * 10;
+            // console.log(whole_random);
+
+            // no_decimals = Math.floor(whole_random);
+            // console.log(no_decimals);
+        </script>
+    </body>
+</html>
