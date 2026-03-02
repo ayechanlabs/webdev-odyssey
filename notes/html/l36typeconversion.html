@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Type Conversion</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS Type Conversion</p>
+
+        <script type="text/javascript">
+            // String (character array) ဖြစ်နေလို့ length ဆိုတဲ့ function သုံးလို့ရနေတာ
+            let val;
+            val = "Aung Aung";
+            console.log(val); // Aung Aung
+            console.log(typeof(val)); // string
+            console.log(val.length); // length = 9, index (0 -> 8)
+
+            // Number to String
+            // number data type ကို string ပြောင်းချင်တယ်ဆိုရင် ပြောင်းလို့ရတဲ့ နည်းတွေရှိတယ်။
+            // example -> putting numbers into single, double quotes & backticks
+            // using 'String' function
+            val = 28;
+            console.log(val); // 28
+            console.log(typeof(val)); // number
+            console.log(val.length); // undefined
+
+            val = String(28); // converted number to string
+            console.log(val); // '28'
+            console.log(typeof val); // string
+            console.log(val.length); // 2
+
+            // Boolean to String
+            val = true;
+            console.log(val); // true
+            console.log(typeof val); // boolean
+            console.log(val.length); // undefined
+
+            val = String(true); // converted boolean to string
+            console.log(val); // 'true'
+            console.log(typeof val); // string
+            console.log(val.length); // 4
+
+            // Object to String
+            val = new Date();
+            console.log(val); // current date
+            console.log(typeof val); // object
+            console.log(val.length); // undefined
+
+            // val = "new Data()"; // this is pure string with "new Data()" character
+            val = String(new Date());
+            console.log(val); // current date in string data type
+            console.log(typeof(val)); // string
+            console.log(val.length); // 57
+
+            // Array to String
+            val = [1, 2, 3, 4, 5];
+            console.log(val); // [1, 2, 3, 4, 5]
+            console.log(typeof(val)); // object
+            console.log(val.length); // 5
+
+            // Array ကိုလည်း String ပြောင်းချင်ရင် single, double quotes & backticks ထဲ ထည့်ပြီ ပြောင်းလို့ရတယ်။
+            // or String() ဆိုတဲ့ function ကို သုံးပြီ ပြောင်းလို့ရတယ်။
+            val = String([1, 2, 3, 4, 5]);
+            console.log(val); // '1, 2, 3, 4, 5'
+            console.log(typeof(val)); // string
+            console.log(val.length); // 9
+
+
+        </script>
+    </body>
+</html>
