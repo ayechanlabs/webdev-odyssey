@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Arithmetic Operators</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS Arithmetic Operators </p>
+
+        <script type="text/javascript">
+
+            // Group Variables Declaration
+            var num1 = 10;
+            var num2 = 20;
+            var num3 = 30;
+
+            console.log(num1, num2, num3);
+
+            var num4, num5, num6; // group declaration
+
+            num4 = 40;
+            num5 = 50;
+            num6 = 60;
+
+            console.log(num4, num5, num6);
+
+            var num7 = 70, // group declaration & initialization
+                num8 = 80,
+                num9 = 90;
+            
+            console.log(num7, num8, num9);
+
+            var num10 = num11 = num12 = 100;
+            console.log(num10, num11, num12);
+
+            let val1, val2, val3;
+            val1 = 10;
+            val2 = 20;
+            val3 = 30;
+
+            console.log(val1, val2, val3);
+
+            let val4 = 40, val5 = 50, val6 = 60;
+            console.log(val4, val5, val6);
+
+            let val7 = val8 = val9 = 70;
+            console.log(val7, val8, val9);
+
+            // var & val ကို group selector နဲ့ ရေးလို့ရတယ်။
+
+            // const num13, num14, num15; // ဒီလို ရေးလို့မရဘူး
+
+            // const က value ပါတယ် ဆိုရင် group declaration လုပ်လို့ရတယ်။
+            const val10 = 100, val11 = 110, val12 = 120; // ဒီလိုရေးလို့ရတယ်။
+            console.log(val10, val11, val12);
+
+            const val13 = val14 = val15 = 200; // ဒီလိုလည်း ရေးလို့ရတယ်။
+            console.log(val13, val14, val15);
+
+            // values တွေကို group selector နဲ့ လုပ်ပြီရင်လည်း override လုပ်လို့ရတယ်။
+            let x = 10, y = 20, z = 30;
+            console.log(x, y, z);
+
+            document.write("Adding Result = " + (x + y) + "<br/>");
+            document.write("Subtraction Result = " + (x - y) + "<br/>");
+            document.write("Multiplication Result = " + (x * y) + "<br/>");
+            document.write("Power Result = " + (2 ** 3) + "<br/>");
+            document.write("Division Result = " + (x / y) + "<br/>");
+            document.write("Modulus Result = " + (x % y) + "<br/>");
+
+            // After Increment
+            let p = 10;
+            document.write("Increment Result After Printout = " + (p++) + "<br/>"); // 10
+            document.write("Increment Result After Printout = " + (p) + "<br/><br/>"); // 11
+
+            // Before Increment
+            let q = 10;
+            document.write("Increment Result Before Printout = " + (++q) + "<br/>"); // 11
+            document.write("Increment Result Before Printout = " + (q) + "<br/><br/>"); // 11
+
+            // After Decrement
+            let a = 10;
+            document.write("Decrement Result After Printout = " + (a--) + "<br/>"); // 10
+            document.write("Decrement Result After Printout = " + (a) + "<br/><br/>"); // 9
+
+            // Before Decrement
+            let b = 10;
+            document.write("Decrement Result Before Printout = " + (b) + "<br/>"); // 10
+            document.write("Decrement Result Before Printout = " + (--b) + "<br/>"); // 9
+            document.write("Decrement Result Before Printout = " + (b) + "<br/><br/>"); // 9
+
+
+
+        </script>
+    </body>
+</html>
+
+<!-- 
+Arithmetic Operators
++ addition
+- subtraction
+* multiplication
+/ division
+% remainder (modulus)
+
+++ increment (before/after) operation တခုရဲ့ အရင် ဒါမှမဟုတ် ပြီတဲ့ အချိန်
+-- decrement (before/after) increment နဲ့ အတူတူပဲ
+ -->
