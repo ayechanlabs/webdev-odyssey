@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Data Types</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS Data Types</p>
+
+        <script type="text/javascript">
+            // String
+            const name = "Su Su";
+            console.log(name); // Su Su
+            console.log(typeof name); // string
+
+            // output ကို ထုတ်တဲ့ အချိန်ကျရင် console.log နဲ့ ထုတ်လို့ရသလို့ console.warm & console.error နဲ့
+            // လည်း ထုတ်လို့ရတယ်။ သူက အရောင်ပြောင်းအောင်လုပ်ပေးတဲ့ အနေနဲ့လည်း သုံးလို့ရသလို သူရဲ့ ပင်ကိုယ် feature 
+            // အတွက်လည်း သုံးလို့ရတယ်။
+            console.warn(typeof name);
+            console.error(typeof name);
+
+            // Number
+            const age = 28;
+            console.log(age); // 28
+            console.log(typeof(age)); // number
+
+            // Boolean (true, false)
+            const hascar = false;
+            console.log(hascar); // false
+            console.log(typeof(hascar)); // boolean
+
+            // Object
+            const date = new Date();
+            console.log(date); // current date or today's date
+            console.log(typeof(date)); // object
+
+            // Object (Javascript Object), we also have json object.
+            // key: value
+            const address = {
+                no: "No. 123",
+                street: "st btw 75x76",
+                city: 'Mandalay',
+                country: "Myanmar"
+            };
+            console.log(address);
+            console.log(typeof address);
+            console.log(address.no); // No. 123
+            console.log(address.cities); // undefined = invalid result
+
+            console.log(address.city); // Mandalay
+            console.log(typeof address.city); // string
+
+            // Array
+            const hobbies = ["watching movies", "listening music", "sports"]; // length = 3, index (0 -> 2)
+            console.log(hobbies);
+            console.log(typeof hobbies); // object
+            console.log(hobbies[0]); // watching movies
+            console.log(hobbies[2]); // sports
+            console.log(typeof(hobbies[2])); // string
+
+            let fullname;
+            console.log(fullname); // undefined
+            console.log(typeof fullname); // undefined <- ဒါလည်း data type တမျိုးပဲ
+
+            fullname = "aung aung";
+            console.log(fullname);
+
+            lists = [];
+            console.log(lists); // empty array
+            console.log(typeof(lists)); // object
+
+            names = {};
+            console.log(names); // empty object
+            console.log(typeof(names)); // object
+
+            let nickname = ""; // this is empty string
+            console.log(nickname); // empty string = blank
+            console.log(typeof nickname); // string, instead of 'empty' data type since JS don't have 'empty' data type.
+
+            let car = null;
+            console.log(car); // null
+            console.log(typeof(car)); // object
+
+        </script>
+    </body>
+</html>
+
+<!-- 
+JS Object မှာက object ထဲမှာ ကိုယ်က ဘယ်လိုပဲ ရေးထား console မှာ ထုတ်တဲ့ အချိန်ကျရင် A to Z ပြန်ပြီ စီသွားတာ။
+Array ကျတော့ အဲလို မဟုတ်ပဲ ကိုယ်ရေးထားတဲ့ အတိုင်းပဲ ပြန်ပြတယ်။
+
+JS Object မှာတော့ values ကို ဆွဲထုတ်ချင်ရင် key နဲ့ ဆွဲထုတ်လို့ရတယ်။ Array ကျတော့ index number ကို သုံးပြီ ဆွဲထုတ်လို့
+ရတယ်။
+
+JS မှာ ကိုယ်က string, number, boolean တွေ အတွက် variable တခု တည်ဆောက် ခဲ့လို့ရတယ်။
+ဒါမဲ့ အဲလို လုပ်တဲ့ အချိန်ကျရင် data type က undefined ဆိုပြီ ဖြစ်သွားတယ်။
+but for array & object ကျတော့ အဲလို မဖြစ်ပဲ တန်ပြီ object or array data type ဆိုပြီ တန်ထွက်တယ်။
+
+အခုလို empty ထားက ကိုယ်က user ဆီကနေ ဘာ data type လာမယ်ဆိုတာ မသိရင် empty ထား အဲလို မဟုတ်ရင်
+သိတယ် သူနဲ့ ပတ်သက်တဲ့ data type ကို empty values ထား
+for example -
+User ဆီက ဘာ value လာမယ်ဆိုတာ မသိရင် 
+let names;
+
+but user ဆီကနေ array, string or object values လာမယ်ဆိုတာ သိတယ်။
+let names = []; / let names = ""; / let names = {};
+ -->
