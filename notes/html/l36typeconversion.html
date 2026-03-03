@@ -71,6 +71,90 @@
             console.log(typeof(val)); // string
             console.log(val.length); // 9
 
+            // String to Number
+            val = "20";
+            console.log(val); // 20 as a string
+            console.log(typeof val); // string
+            console.log(val.length); // 2
+
+            // string ကို number ပြောင်းချင်ရင် Number() ဆိုတဲ့ function ကို သုံးပြီ ပြောင်းလို့ရတယ်။
+            // +number -> +20 အဲလို မျိုး plus sign ကပ်ပြီလည်း ပြောင်းလို့ရတယ်။
+            // +"string" -> +"20" အဲလိုလည်း ပြောင်းလို့ရတယ်။
+            val = +"20"; // convert number to string
+            // val = Number(val)
+            console.log(val); // 20 as a number
+            console.log(typeof val); // number
+
+            // JS မှာ User ဆီက input တောင်ချင်းရင် prompt ဆိုတာကို သုံးပြီ တောင်းလို့ရတယ်။
+            // User ဆီက ဝင်လာတဲ့ data (or) values မှန်သမျှ အကုန်လုံးက String အနေနဲ့ လာတာဖြစ်တယ်။
+            // val1 = Number(prompt("Enter First Number"));
+            val1 = +prompt("Enter First Number");
+            console.log(val1);
+            console.log(typeof val1);
+
+            // NaN = Not a Number
+            val = Number("Aung Aung"); // NaN, number
+            // val = +"Aung Aung"; // NaN, number
+            // val = Number([1, 2, 3, 4, 5]); // NaN, number
+
+            val = 10 + "33.34"; // 1033.34, string
+            val = 10 + +"33.34"; // 43.34, number
+
+            console.log(val);
+            console.log(typeof val);
+
+            val = 123.456789;
+            console.log(val); // 123.456789
+            console.log(val.toFixed(5)); // 123.45679
+            console.log(typeof val); // number
+
+            val = 123;
+            console.log(val); // 123
+            console.log(val.toFixed(3)); // 123.000
+            console.log(typeof val); // number
+
+            // String ကနေ number ပြောင်းစေချင်ရင်ပြောင်းလို့ရတဲ့ နည်း ၄ နည်းရှိတယ်။
+            // Number(string_data), +string သုံးပြီပြောင်းလိုရတယ်။
+            // parseInt(string_data) or parseFloat(string_data) ကောလည်း သုံးပြီ ပြောင်းလို့ရတယ်။
+            val = "50.789";
+            // val = Number(val); // 50.789 as a Number
+            // val = +val; // 50.789 as a Number
+            // val = parseInt(val); // 50 သူက whole number အနေနဲ့ ထုတ်ပေးမှာ တကယ်လို့ string ထဲက data က points တွေနဲ့ ဖြစ်ရင်တောင်။
+            val = parseFloat(val); // 50.789 သူက string မှာ ပေးထားတဲ့ အတိုင်းကို ထွက်လာမှာ example: string မှာ 50.78 ဆိုရင် Number ပြောင်းလိုက်ရင်လည်း အဲ့တိုင်းပဲ ထွက်လာမှာ>
+
+            console.log(val);
+            console.log(typeof val);
+
+            // Boolean to Number
+            val = true; // boolean
+            val = Number(val); // 1, when we convert Number data type to Boolean, it changes into 0,s and 1,s.
+            val = +false; // 0
+
+            console.log(val);
+            console.log(typeof val); // number
+
+            // String to Array
+            val = "Aye Chan";
+            val = Array.from(val); // convert string to array
+
+            console.log(val); // ['A', 'y', 'e', ' ', 'C', 'h', 'a', 'n']
+            console.log(typeof val); // object
+            console.log(val.length); // 8
+
+            // Numbers, Boolean & Object can't convert to Array
+            // val = 50;
+            // val = true;
+            // val = new Date();
+            // val = {
+            //     music: "rock"
+            // }
+            val = Array.from(val);
+
+            console.log(val); // empty array
+            console.log(typeof val); // object
+            console.log(val.length); // 0
+
+
 
         </script>
     </body>
