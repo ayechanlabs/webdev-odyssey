@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Array</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS Array</p>
+
+        <script type="text/javascript">
+            let arrgirls = new Array("Su Su", "Lu Lu", "Hla Hla");
+            console.log(arrgirls);
+            console.info(arrgirls);
+            console.table(arrgirls);
+
+            let arrboys = ["Mg Mg", "Kyaw Kyaw", "Zaw Zaw", "Naung Naung", 200];
+            console.log(arrboys);
+            console.log(arrboys.length); // 5
+            console.log(typeof arrboys); // object
+
+            console.log(arrboys[0]); // Mg Mg
+            console.log(typeof arrboys[0]); // string
+            console.log(arrboys[4]); // 200
+            console.log(typeof arrboys[4]); // number
+            console.log(arrboys[arrboys.length - 1]); // 5 - 1 = 4, 200
+            console.log(arrboys[arrboys.length - 3]); // 5 - 3 = 2, Zaw Zaw
+
+            let myarrs = [
+                "Hello",
+                1500,
+                true,
+                undefined,
+                null,
+                new Date(),
+                ["red", "green"],
+                {
+                    firstname: "Aung Kyaw",
+                    city: "Yangon"
+                }
+            ];
+
+            console.log(myarrs);
+            console.log(myarrs.length); // 8
+            console.log(myarrs[0]); // hello
+            console.log(myarrs[5]); // current date
+            console.log(myarrs[6]); // ['red', 'green']
+            console.log(myarrs[6][0]); // red, string
+            console.log(myarrs[6][1]); // green
+            console.log(typeof myarrs[6][1]); // string
+            console.log(myarrs[7]); // {firstname: 'Aung Kyaw', city: 'Yangon'}
+            console.log(myarrs[7].firstname); // Aung Kyaw
+            console.log(myarrs[7]['city']); // Yangon
+            console.log(myarrs[7].city); // Yangon
+
+            let colors = ["red", "green", "blue"];
+                colors = ["rgba", "cmyk"]; // this will override above array.
+
+            console.log(colors);
+            console.log(colors.length);// 3 -> 2
+
+            let paints = ["red", "green", , "blue"];
+            
+            console.log(paints);
+            console.log(paints.length); // 4
+            console.log(paints[0]); // 0 -> red, 1 -> green, 2 -> undefined, 3 -> blue, ဒါမဲ့ အဲ့ undefined နေရာမှာ undefined လို့ ထည့်လိုက်ရင် string အနေနဲ့ undefined ဆိုပြီ ထွက်လာမှာ။
+
+            let colours = [];
+
+            colours[3] = "blue";
+            colours[0] = "white";
+            colours[1] = "black"; // it will be override by "gray"
+            colours[2] = "pink";
+            colours[1] = "gray"; // override above color "black" with "gray"
+            colours[5] = "steelblue"; // index[4] will be empty, since there is no input data for it.
+
+            console.log(colours);
+            console.log(typeof colours); // object
+            console.log(colours.length); // 6
+            console.log(colours[4]); // since there is no data, output will be undefined
+
+            // colours = []; အဲလို ‌ရေးလိုက်ရင် သူက empty array ဖြစ်တယ်။
+            // အာ့ကို colours = "white"; လို့ ရေးလိုက်ရင် အလိုအလျှောက် string ဖြစ်သွားတယ်။
+            // အဲတော့ အဲလိုမရေးပဲ array ထဲကို data ဝင်အောင် ရေးချင်တယ်ဆိုရင် 
+            // colours[0] = "white"; ဆိုပြီ ရေးမှ ရမယ်။
+            // နောက် ကိုယ်က user ဆီကနေ data ကို array အနေနဲ့ ယူမယ်ဆိုရင် empty array တည်ဆောက်ခဲ့ဖို့ လိုတယ်။
+            // array ထဲကို data ထဲရင် index ကိုပဲ အဓိက ထားပြီ ထည့်ရတာ ဘယ်လိုပဲ အပေါ်အောက် ရေး"
+
+            let animals = ['cat', 'dog'];
+
+            animals[2] = "owl";
+            animals[5] = "tiger";
+            animals[3] = "fish";
+            animals[0] = "cow"; // this will override 'cat' data in the array
+
+            console.log(animals);
+            console.log(animals.length); // 6
+            console.log(animals[5]); // tiger
+            console.log(animals[4]); // undefined
+            console.log(animals[6]); // undefined
+        </script>
+    </body>
+</html>
