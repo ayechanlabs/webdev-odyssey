@@ -103,6 +103,21 @@
             console.log(animals[5]); // tiger
             console.log(animals[4]); // undefined
             console.log(animals[6]); // undefined
+
+            // Nested Array
+            const nestarrs = [
+                ["red", "green", "blue"],
+                ["cmyk", "rgba", "hsla"],
+                ["canon", "epson", ["laser", "ink"]]
+            ];
+
+            console.log(nestarrs); // whole nested array will displayed
+            console.log(nestarrs.length); // 3
+            console.log(typeof nestarrs);
+            console.log(typeof nestarrs.length); // data type of array length is number
+            console.log(nestarrs[0]); // ['red', 'green', 'blue']
+            console.log(nestarrs[0][1]); // green
+            console.log(nestarrs[2][2][1]); // ink
         </script>
     </body>
 </html>
