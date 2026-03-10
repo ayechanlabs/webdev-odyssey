@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>String Methods</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS String Methods</p>
+
+        <script type="text/javascript">
+            let firstname = "Yamin";
+            let lastname = "May Oo";
+
+            console.log(firstname); // Yamin
+            console.log(lastname); // May Oo
+            console.log(firstname, lastname); // Yamin May Oo, not string concatenate
+            console.log(firstname.length); // 5
+
+            // concat()
+            let fullname = firstname + " " + lastname;
+            console.log(fullname); // Yamin May Oo, this is actual string concatenate
+
+            // concat(string)
+            // သူကို တခြား string တခုနဲ့ ကပ်ချင်တယ်ဆိုရင် other_string.concat(string) or vice-versa.
+            console.log(firstname.concat(lastname)); // YaminMay Oo
+            console.log(lastname.concat(firstname)); // May OoYamin
+
+            // append (+=) -> သူ string တခုကို နောက်ထဲ ပေါင်းထည့်တာ။ +string <- သူကျတော့ string data type ကို number ပြောင်းတာ။
+            let name1 = "Honey";
+            let name2 = "Shwe Oo";
+
+            console.log(name1 + name2); // HoneyShwe Oo
+            console.log(name1.concat(name2)); // HoneyShwe Oo
+
+            name1 += name2;
+            console.log(name1); // HoneyShwe Oo
+
+            let num1 = 10;
+            let num2 = 20;
+
+            num1 += num2; // 30
+            console.log(num1);
+
+            // string is Character Array in JS => string indexing
+            let myfriend = "Aung Ko Ko"
+
+            console.log(myfriend); // Aung Ko Ko
+            console.log(typeof myfriend); // string
+            console.log(myfriend.length); // 10
+
+            console.log(myfriend[0]); // A
+            console.log(myfriend[3]); // g
+            console.log(myfriend[4]); // space, "" = empty string, " " = one string as a space
+            console.log(myfriend[-2]); // undefined
+            console.log(myfriend[myfriend.length - 1]); // 10 - 1 = 9, myfriend[9] = o
+
+            // charAt(index)
+            const nickname = "Aung Kyaw Kyaw";
+            console.log(nickname[5]); // K
+            console.log(nickname.charAt(5)); // K
+            console.log(nickname.charAt(nickname.length - 1)); // w
+
+            // indexOf(value)
+            const familyname = "Tun Win";
+            console.log(familyname.indexOf("T")); // 0
+            console.log(familyname.indexOf("t")); // -1 = the data is not in the array
+            console.log(familyname.indexOf("a")); // -1
+            console.log(familyname.indexOf("n")); // 2, if there are 2 same item in string, it will show the index of the first character in that string.
+
+            // lastIndexOf(value)
+            const myname = "Aye Chan Nyein"
+            console.log(myname.lastIndexOf("w")); // -1
+            console.log(myname.lastIndexOf("A")); // 0
+            console.log(myname.lastIndexOf("e")); // 11
+            console.log(myname.lastIndexOf("E")); // -1
+
+            // padStart(target_length, padstring)
+            // target_length ဆိုတာ string တခုထဲမှာ ရှိတဲ့ character အရေအတွက်ကိုပြောတာ, 5 ဆိုရင် total 5 characters
+            // padstring ဆိုတာ နောက်ဆုံးမှာ ရှိမဲ့ character ကို ပြောတာ, padStart(3, "0") လိုပြောရင် 005/ 00A အဲလိုမျိုး
+            let num = "5";
+            console.log(num); // 5
+            console.log(typeof num); // string
+            console.log(num.padStart(5, "A")); // AAAA5
+
+            // padEnd(target_length, padstring)
+            // this is opposite of "padStart". In padStart, the characters are added before the actual or specific character/string
+            // but for padEnd, it will added after it.
+            let yournum = "5";
+            console.log(yournum.padEnd(3, "0")); // 500
+
+            // repeat(count)
+            const greet = "Hello, World!";
+            console.log(greet.repeat(5));
+
+            // includes(value) => it will if a specific word is included in the string or not.
+            // the return value or result is in boolean.
+            let favcolor = "My favourite color is black color";
+            console.log(favcolor.includes("black")); // true
+            console.log(favcolor.includes("Black")); // false, due to "B"
+            console.log(favcolor.includes("red")); // false
+
+            // replace(old, new)
+            console.log(favcolor.replace("black", "red"));
+            console.log(favcolor.replace("Black", "red")); // it will not replace
+            console.log(favcolor.replace("BLACK", "red")); // it will not replace
+            console.log(favcolor.replace("bla", "red")); // it will replace "bla" with "red"
+            console.log(favcolor.replace("color", "colour")); // this will replace the first "color" word when it sees in the string. (in order word) it will work left to right.
+
+            // replaceAll(old, new) => it will replace every word in the string.
+            console.log(favcolor.replaceAll("color", "colour"));
+
+            // startsWith(value), return boolean, case sensitive
+            // startsWith(value, index)
+            const greeting = "Dear U Ba";
+            console.log(greeting.startsWith("Dear")); // true
+            console.log(greeting.startsWith("dear")); // false
+            console.log(greeting.startsWith("D")); // true
+            console.log(greeting.startsWith("d")); // false
+
+            console.log(greeting.startsWith("Dear", 0)); // true
+            console.log(greeting.startsWith("ar")); // false
+            console.log(greeting.startsWith("ar", 2)); // true
+            console.log(greeting.startsWith("U", 5)); // true
+            console.log(greeting.startsWith("Ur", 5)); // false
+
+            // endsWith(value), return boolean, case sensitive
+            // endsWith(value, length)
+            const adieu = "See you later";
+            console.log(adieu.endsWith("later")); // true
+            console.log(adieu.endsWith("Later")); // false
+            console.log(adieu.endsWith("r")); // true
+            console.log(adieu.endsWith("R")); // false
+
+            // သူက startsWith နဲ့ မတူပဲ length ကို သုံးတာ ဖြစ်နေတယ်။
+            // သူပြောချင်တာက စကားလုံး တလုံးက length အရှည် ဘယ်လောက်မှာ ဆုံးသလား
+            // See you ဆိုတာ length 7 ဖြစ်တယ် အဲတော့ you ဆိုတဲ့ စာသားက string length 7 ဖြစ်တဲ့ string မှာ you နဲ့ ဆုံးသလား ဆိုပြီ စစ်တာ
+            console.log(adieu.endsWith("r", adieu.length)); // true
+            console.log(adieu.endsWith("r", adieu.length - 1)); // false
+            console.log(adieu.endsWith("l", adieu.length - 4)); // true, 13 - 4 = 9
+            console.log(adieu.endsWith("a", adieu.length - 4)); // false, 13 - 4 = 9
+            console.log(adieu.endsWith("you", 7)); // true
+
+            // substring(index, length)
+            const content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            console.log(content.substring(0, 11)); // Lorem Ipsum
+            console.log(content.substring(0, 11).concat(".....")); // Lorem Ipsum.....
+            console.log(content.substr(0, 20)); // Lorem Ipsum is simpl
+
+            // slice(start, end)
+            const info = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            console.log(info.slice(0, 5)); // Lorem
+            console.log(info.slice(1, 5)); // orem
+            console.log(info.slice(0, 10) + "..."); // Lorem Ipsu...
+            console.log(info.slice(0, 10).concat(".....")); // Lorem Ipsu...
+
+            // difference between substring & slice
+            // substring ဆိုရင် ပြောင်းပြန်ပေးလို့ရတယ် အနောက်က တွက်တာ
+            // slice ကျတော့ မရဘူး
+
+
+            
+        </script>
+    </body>
+</html>
