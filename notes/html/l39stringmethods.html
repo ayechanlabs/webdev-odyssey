@@ -163,6 +163,59 @@
             // substring ဆိုရင် ပြောင်းပြန်ပေးလို့ရတယ် အနောက်က တွက်တာ
             // slice ကျတော့ မရဘူး
 
+            let mylang = "JavaScript";
+            console.log(mylang.substring(0, 4)); // Java
+            console.log(mylang.substring(4, 0)); // Java
+
+            console.log(mylang.slice(0, 4)); // Java
+            console.log(mylang.slice(4, 0)); // empty
+
+            // split(separator)
+            // split(separator, limit)
+            let fruits = "Apple, Banana, Cherry, Orange";
+            console.log(fruits); // Apple, Banana, Cherry, Orange
+            console.log(typeof fruits); // string
+            console.log(fruits.split(",")); // ['Apple', 'Banana', 'Cherry', 'Orange'], it will convert the string into array
+            console.log(typeof(fruits.split(","))); // object
+
+            console.log(fruits.split(",", 2)); // ['Apple', 'Banana'], it will generate only 2 rooms
+
+            let text = "Hello";
+            console.log(text.split("/")); // ['Hello'], သူက အဲ separator မရှိလည်း Array အခန်းအနေနဲ့ ပြောင်းပြစ်တယ်။
+            
+            let text2 = "Hello Sir";
+            console.log(text2.split("/")); // ['Hello Sir']
+            console.log(text2.split(" ")); // ['Hello', 'Sir']
+            console.log(text2.split("")); // ['H', 'e', 'l', 'l', 'o', ' ', 'S', 'i', 'r']
+
+            // trim()
+            let password = " hello ";
+            console.log(password); // _hello_
+            console.log(password.length); // 7
+
+            console.log(password.trim()); // hello, it will delete white space
+            console.log(password.trim().length); // 5
+
+            // trimStart(), trimLeft()
+            console.log(password.trimStart()); // hello_
+            console.log(password.trimStart().length); // 6
+            console.log(password.trimLeft()); // hello_
+            console.log(password.trimLeft().length); // 6
+
+            // trimEnd(), trimRight()
+            console.log(password.trimEnd()); // _hello
+            console.log(password.trimEnd().length); // 6
+            console.log(password.trimRight()); // _hello
+            console.log(password.trimRight().length); // 6
+
+            // toLowerCase()
+            let name = "Aung Kyaw Kyaw";
+            console.log(name.toLowerCase());
+
+            // toUpperCase()
+            console.log(name.toUpperCase());
+
+
 
             
         </script>
