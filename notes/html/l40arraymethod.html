@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Array Methods</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS Array Methods</p>
+
+        <script type="text/javascript">
+            const arrcolors = ["red", "green", "blue", "white", "black", "pink"];
+            console.log(arrcolors);
+            console.log(typeof arrcolors); // object
+            console.log(arrcolors.length); // 6
+            console.log(arrcolors[3]); // white
+
+            // Array.isArray(value)
+            const name = "Hsu Hsu";
+            console.log(Array.isArray(name)); // false
+            console.log(Array.isArray(arrcolors)); // true
+
+            // flat(depth) => default is 1 => it is mostly used in nested array.
+            let nestarrs1 = [
+                1, 2, [3, 4], 5
+            ];
+
+            console.log(nestarrs1); // default nested array
+            console.log(nestarrs1.flat()); // it will merge all nested array into one array, [1, 2, 3, 4, 5]
+            console.log(nestarrs1.flat(1));
+
+            let nestarrs2 = [
+                1, 2, [3,
+                    [4, 5]
+                ]
+            ];
+
+            console.log(nestarrs2); // defalut nested array
+            console.log(nestarrs2.flat(1)); // it will step-down one step, 1 is also default value
+            console.log(nestarrs2.flat(2)); // it will step-down two step
+            console.log(nestarrs2.flat(Infinity)); // it will step-down all of the arrays.
+
+            // indexOf(value), သူက array ထဲမှာ ရှိတဲ့ item တခုရဲ့ array အခန်းကို ထုတ်ပေးတာ ပြောမယ်ဆိုရင် index number
+            const arrcolours = ["red", "green", "blue", "black", "blue", "green", "red"];
+            console.log(arrcolours.indexOf("black")); // 3
+            console.log(arrcolours.indexOf("Black")); // -1
+            console.log(arrcolours.indexOf("green")); // 1
+
+            // lastIndexOf(value), သူက array ထဲမှာ ရှိတဲ့ item တခုရဲ့ array အခန်းကို ထုတ်ပေးတာပဲ ဒါမဲ့ အနောက်က တွက်ပြီ ထုတ်ပေးတာ, စတွက်တာကတော့ အရှေ့ကနေပဲ
+            console.log(arrcolours.lastIndexOf("black")); // 3
+            console.log(arrcolours.lastIndexOf("Black")); // -1
+            console.log(arrcolours.lastIndexOf("green")); // 5
+
+            // join(delimiter)
+            const arrpaints = ["red", "green", "blue", "white", "black", "pink"];
+            console.log(String(arrpaints)); // it will convert array into string, (red, green, blue, white, black, pink)
+            console.log(arrpaints.toString()); // it will convert array into string, (red, green, blue, white, black, pink)
+            console.log(arrpaints.join()); // it will convert array into string by concatenate with "," as a default seperator -> red, green, blue, white, black, pink
+            console.log(arrpaints.join("")); // redgreenbluewhiteblackpink <- all without space
+            console.log(arrpaints.join(" ")); // red green blue white black pink <- with space
+            console.log(arrpaints.join("-")); // red-green-blue-white-black-pink
+
+            // this is one way of append.
+            const candies = ["red", "green", "blue,", "white", "black"];
+            candies[5] = "pink";
+            candies[1] = "skyblue" // it will replace an item inside array.
+            console.log(candies);
+            console.log(candies.length); // 6
+
+            // push(value), it will add a new item to array but it will add value at the last index of the array.
+            candies.push("orange");
+            candies.push("gold");
+            candies.push("violet", "gray");
+            console.log(candies); // ['red', 'skyblue', 'blue,', 'white', 'black', 'pink', 'orange', 'gold', 'violet', 'gray']
+            console.log(candies.length); // 10
+
+            // unshift(value), it will add a new item to array but it will add value at the start index of the array.
+            candies.unshift("tomato");
+            candies.unshift("green");
+            candies.unshift("silver", "steelblue");
+            console.log(candies); // ['silver', 'steelblue', 'green', 'tomato', 'red', 'skyblue', 'blue,', 'white', 'black', 'pink', 'orange', 'gold', 'violet', 'gray']
+            console.log(candies.length); // 14
+
+            // shift(), it will delete both value & index of an item from the array at the start of the array & it will remove only one item at a time.
+            candies.shift();
+            console.log(candies);
+            console.log(candies.length);
+
+            // pop(), it will remove/delete both value & index of an item from the array at the end of the array & it will remove only one item at a time.
+            candies.pop();
+            console.log(candies);
+            console.log(candies.length);
+
+            // delete (remove only value but index number stays)
+            delete candies[1];
+            console.log(candies); // ['steelblue', empty, 'tomato', 'red', 'skyblue', 'blue,', 'white', 'black', 'pink', 'orange', 'gold', 'violet']
+            console.log(candies.length); // 10
+            console.log(candies[1]); // undefined
+
+            // slice(index start, length end)
+            const arrnums = [100, 200, 300, 400, 500, 600, 700];
+            console.log(arrnums.slice(0, 5)); // [100, 200, 300, 400, 500]
+            console.log(arrnums.slice(1, 5)); // [200, 300, 400, 500]
+            console.log(arrnums.slice(1, 4)); // [200, 300, 400]
+
+            // concat()
+            const arrboys = ["Aung Aung", "Mg Mg", "Zaw Zaw", "Tun Tun"];
+            const arrgirls = ["Su Su", "Nu Nu", "Yu Yu", "Lu Lu", "Wai Wai"];
+            console.log(arrboys);
+            console.log(arrboys + arrgirls); // it will 2 arrays but it will convert it into String
+            console.log(arrboys.concat(arrgirls)); // it will combine 2 arrays
+
+            // sort(), A to Z
+            const combinearrs = arrboys.concat(arrgirls);
+            console.log(combinearrs); // it will output array as it original
+            console.log(combinearrs[0]); // Aung Aung
+            console.log(combinearrs[5]); // Nu Nu
+            console.log(combinearrs.sort()); // it will sort the items inside array A to Z
+            console.log(combinearrs[5]); // Tun Tun
+
+            // reverse(), it will only reverse the array not sorted it into descending order
+            // but if we use it on sorted array, then it will give us descending order of the array
+            console.log(combinearrs.reverse());
+        </script>
+    </body>
+</html>
