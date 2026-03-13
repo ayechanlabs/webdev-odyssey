@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Statement</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS Statements.</p>
+
+        <script type="text/javascript">
+            // Statements
+            // i. Ternary Operators (?)
+            // ii. If Statement
+            // iii. Switch Statement
+
+            // Ternary Operators (?)
+            // c1 statement c2 ? true : false;
+            const x = 100;
+            const y = 200;
+            console.log(x > y ? "X is greater than Y" : "Y is greater than X");
+            console.log(x < y ? "X is less than Y" : "Y is less than X");
+            console.log(x == y ? "X is equal to Y" : "X is not equal to Y");
+            console.log(x != y ? "X is not equal to Y" : "X is equal to Y");
+            console.log(x == y ? "X is equal to Y" : (x > y ? "X is greater than Y" : "Y is greater than X"));
+
+            const num1 = "200";
+            const num2 = 200;
+
+            console.log("== equal to result = " + num1 + num2); // this will give us -> "== equal to result = 200200", since code works left to right
+            // double equal only checks value
+            console.log("== equal to result = " + (num1 == num2 ? "True" : "False"));
+            // tripe equal, check both value & datatype
+            console.log("=== strict equal to result = " + (num1 === num2 ? "True" : "False"));
+
+            console.log("> greater than result = " + (num1 > num2 ? "True" : "False"));
+            console.log(">= greater than or equal result = " + (num1 >= num2 ? "True" : "False"));
+
+            console.log("< less than result = " + (num1 < num2 ? "True" : "False"));
+            console.log("<= less than or equal result = " + (num1 <= num2 ? "True" : "False"));
+
+            const n1 = 100;
+            const n2 = 200;
+            // not equal, same is normal equal to, this will only check value
+            console.log("!= not equal to result = " + (n1 != n2 ? "True" : "False"));
+            // strict not equal, same is triple equal to, this will check both value and datatype
+            // strict not equal will give us true value if both values and datatypes are not same.
+            // otherwise it will give us false.
+            console.log("!== strict not equal to result = " + (n1 !== n2 ? "True" : "False"));
+
+            // IF Statement
+            const idx = 30;
+
+            if (idx < 10){
+                console.log("Hello");
+            }
+
+            if (idx < 100){
+                console.log("Hi");
+            }
+
+            console.log("I'm Working.");
+        </script>
+    </body>
+</html>
+
+<!-- 
+Comparison Operators
+== equal to
+=== strict equal to (triple equals)
+!= not equal
+!== strict not equal (triple equals)
+> greater than
+< less than
+>= greater than or equal to
+<= less than or equal to
+? statement (ternary operator)
+
+Assignment Operators (=)
+= equal
++= add
+-= sub
+*= mul
+/= div
+%= mod
+
+Logical Operators
+&& - and
+|| - or
+! - not
+ -->
