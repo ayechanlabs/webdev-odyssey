@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Looping</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <p>Welcome to JS Looping</p>
+
+        <script type="text/javascript">
+            const name = "Aung Aung";
+            console.log(name);
+
+            const arrs = ["red", "green", "blue", "white"];
+
+            // console.log(arrs);
+
+            // console.log(arrs[0]); // 0
+            // console.log(arrs[1]); // 1
+            // console.log(arrs[2]); // 2
+            // console.log(arrs[3]); // 3
+            // console.log(arrs[4]); // undefined
+
+            // 1. For Loop
+            for (var i = 0; i < 5; i++) {
+                console.log(i); // 0 1 2 3 4
+                // console.log(arrs[i]);
+            }
+            console.log("Hello Sir.");
+            console.log("'i' outside value is = ", i);
+
+            let j = 10;
+            for (j; j <= 20; j++) {
+                console.log(j); // 10 to 20
+            }
+            console.log("'j' outside value is = ", j);
+
+            for (var k = 0; k <= 10; k++) {
+                if (k === 5) {
+                    console.log(`${k} is my favourite number.`);
+                }
+                console.log("'k' value is = ", k); // 0 to 10
+            }
+            console.log("'k' outside value is = ", k);
+
+            // break keyword, သူက looping လုံးဝ ရပ်ချလိုက်တာ ဆက်မသွားတော့တာ
+            for (var p = 0; p < 10; p++) {
+                console.log(p); // 0 to 9
+
+                if (p === 2) {
+                    console.log(p + " is my favourite number.");
+                    break;
+                }
+            }
+            console.log("'p' outside value is = ", p);
+
+            // continue keyword, သူက looping ကို တဆင့်ကျော်ချလိုက်တာ
+            for (var q = 0; q < 10; q++) {
+                // console.log(q); // ဒီအပေါ်မှာ ‌ရေးရင် ဒီ line ကို အရင် execute လုပ်တယ် ပြီမှ အောက်က if statement ကို စစ်တာ
+
+                if (q == 2) {
+                    console.log(q + " is my favourite number.");
+                    continue;
+                }
+
+                // but if write 'console' after if statement along with 'continue', then it will skip this console.log(q)
+                console.log(q);
+            }
+            console.log("'q' outside value is = ", q);
+
+            for (var s = 10; s > 0; s--) {
+                console.log(s); // 10 to 1
+            }
+            console.log("'s' outside value is = ", s);
+
+        </script>
+    </body>
+</html>
