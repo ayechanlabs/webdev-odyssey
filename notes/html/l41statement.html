@@ -64,6 +64,167 @@
                 console.log("Hi");
             }
 
+            // If...else...Statement
+            if (idx > 100){
+                console.log("Correct");
+            }
+            else {
+                console.log("Incorrect"); // output
+            }
+
+            if (idx > 10){
+                console.log("Correct"); // output
+            }
+            else {
+                console.log("Incorrect");
+            }
+
+            if (idx == "30"){
+                console.log("Correct"); // output
+            }
+            else {
+                console.log("Incorrect");
+            }
+
+            if (idx === "30"){
+                console.log("Correct");
+            }
+            else {
+                console.log("Incorrect"); // output
+            }
+
+            if (idx != "30"){
+                console.log("Correct");
+            }
+            else {
+                console.log("Incorrect"); // output
+            }
+
+            if (idx !== "30"){
+                console.log("Correct"); // output bcoz datatypes မတူလို့
+            }
+            else {
+                console.log("Incorrect");
+            }
+
+            // else if()
+            const j = 1000;
+            const k = 1000;
+
+            if (j > k){
+                console.log("Yes, J is greater than K.");
+            }
+            else if(j === k){
+                console.log("J is equal to K.");
+            }
+            else {
+                console.log("No, J is less than K.")
+            }
+
+            // Nested Condition
+            const passcode = "hifi123";
+            console.log(passcode.length); // 7
+
+            if (passcode.length >= 5){
+                console.log("Good Passcode");
+                
+                if(passcode.indexOf(" ") === -1) {
+                    console.log("Valid Passcode.");
+                }
+                else {
+                    console.log("Passcode length is enough! but should not contain space.");
+                }
+            }
+            else {
+                console.log("Passcode must be longer");
+            }
+
+            // SWITCH Statement
+            const user = "violet";
+
+            switch(user) {
+                case "red":
+                    console.log("My Favourite Color is not Red.");
+                    break;
+                
+                case "green":
+                    console.log("My Favourite Color is not Green.");
+                    break;
+                
+                case "white":
+                    console.log("My Favourite Color is not White.");
+                    break;
+
+                case "violet":
+                    console.log("Correct! My Favourite Color is Violet");
+                    break;
+                
+                default:
+                    console.log("Try Again!");
+                    break;
+            }
+
+            let getday = new Date().getDay();
+            let today;
+
+            switch (getday) {
+                case 0:
+                    today = "Sunday";
+                    break;
+
+                case 1:
+                    today = "Monday";
+                    break;
+                
+                case 2:
+                    today = "Tuesday";
+                    break;
+
+                case 3:
+                    today = "Wednesday";
+                    break;
+
+                case 4:
+                    today = "Thursday";
+                    break;
+
+                case 5:
+                    today = "Friday";
+                    break;
+                
+                case 6:
+                    today = "Saturday";
+                    break;
+            }
+
+            console.log(today);
+
+            let p = 10;
+            let q = 50;
+            console.log(p); // 10
+            console.log(q); // 50
+
+            // p = q;
+            // console.log(p); // 50
+
+            // p += q; // p = p + q
+            // console.log(p); // 60
+
+            // p -= q; // p = p - q
+            // console.log(p); // 40
+
+            // p *= q; // p = p * q
+            // console.log(p); // 500
+
+            // q /= p; // q = q / p
+            // console.log(q); // 5
+
+            // q %= p; // q = q % p
+            // console.log(q); // 0
+
+
+
+
             console.log("I'm Working.");
         </script>
     </body>
@@ -93,4 +254,7 @@ Logical Operators
 && - and
 || - or
 ! - not
+
+We use if-statement, the input values are unknown.
+We use switch statement, if the input values are known.
  -->
