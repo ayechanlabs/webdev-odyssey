@@ -79,6 +79,49 @@
             }
             console.log("'s' outside value is = ", s);
 
+            // Exercise
+            let myarrs = ["red", "green", "blue", "pink", "steelblue"];
+
+            for (var w = 0; w < myarrs.length; w++) {
+                console.log(myarrs[w]);
+            }
+
+            const peoples = [
+                {name: "Aung Aung", age: 25},
+                {name: "Su Su", age: 30},
+                {name: "Kyaw Kyaw", age: 23}
+            ];
+
+            console.log(peoples); // it will display the objects which are inside array
+            console.log(typeof peoples); // object
+
+            console.log(peoples[1]); // JS Object
+            console.log(typeof peoples[1]); // object
+
+            for (var i = 0; i < peoples.length; i++) {
+                // console.log(i); // 0 1 2
+                // console.log(peoples[i]);
+                console.log(`Name: ${peoples[i].name}, Age: ${peoples[i].age}`);
+            }
+
+            // 2. For In Loop, it is very useful for Objects & Array
+            let students = {
+                name: "Aung Aung",
+                city: "Mandalay",
+                parent: "U Ba",
+                phone: "0123456789"
+            };
+
+            // console.log(students);
+            // console.log(students.name); // Aung Aung
+            // console.log(students["city"]); // Mandalay
+            // console.log(students.parent); // U Ba
+            // console.log(students['phone']); // 0123456789
+
+            for (key in students) {
+                console.log(students[key]);
+            }
+
         </script>
     </body>
 </html>
