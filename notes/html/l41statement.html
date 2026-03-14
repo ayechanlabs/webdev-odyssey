@@ -222,10 +222,25 @@
             // q %= p; // q = q % p
             // console.log(q); // 0
 
-
-
-
             console.log("I'm Working.");
+
+            // Exercise
+            const username = prompt("Enter Username: ");
+            const password = prompt("Enter Password: ");
+
+            if (username === "susu" && password === "12345") {
+                console.log("Welcome Su Su.")
+            }
+            else {
+                console.log("Try Again.")
+            }
+
+            if (username === "susu" || password === "12345") {
+                console.log("Welcome Su Su.");
+            }
+            else {
+                console.log("Try Again.");
+            }
         </script>
     </body>
 </html>
