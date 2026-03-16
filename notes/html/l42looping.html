@@ -118,8 +118,35 @@
             // console.log(students.parent); // U Ba
             // console.log(students['phone']); // 0123456789
 
-            for (key in students) {
-                console.log(students[key]);
+            for (var key in students) {
+                console.log(students[key]); // bracket notation
+            }
+
+            const ourteams = ["Kyaw Kyaw", "Aung Aung", "Zaw Zaw", "Mg Mg"];
+            for (let idx in ourteams) {
+                console.log(ourteams[idx]);
+            }
+
+            const greeting = "Hello";
+            for (var idx in greeting) {
+                console.log(greeting[idx]);
+            }
+
+            // 3. For of Loop (array)
+            const girls = ["Su Su", "Lu Lu", "Yu Yu", "Nu Nu"];
+            for (var girl of girls) {
+                console.log(girl);
+            }
+
+            const thanks = "Thank you";
+            for (var char of thanks) {
+                console.log(char);
+            }
+
+            // 4. while loop
+            let b = 0;
+            while(b < 10) {
+                b++;
             }
 
         </script>
