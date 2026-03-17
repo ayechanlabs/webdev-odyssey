@@ -145,10 +145,108 @@
 
             // 4. while loop
             let b = 0;
-            while(b < 10) {
+            while (b < 10) {
+                console.log("Number b value is = ", b); // 0 to 9
                 b++;
             }
+            console.log("b outside value is = ", b);
 
+            let c = 0;
+            while (c < 10) {
+                c++;
+                console.log("Number c value is = ", c); // 1 to 10
+            }
+            console.log("c coutside value is = ", c);
+
+            // Exercise
+            const paints = ["red", "green", "blue", "white", "black"];
+            let num = 0;
+            while (num < paints.length) {
+                console.log("My paint color is = ", paints[num]);
+                num++;
+            }
+
+            const laptop = [
+                {
+                    cpu: "core i9",
+                    ram: "16GB",
+                    hdd: "1TB"
+                }
+            ];
+
+            // console.log(laptop);
+            // console.log(laptop.length); // 1
+            // console.log(laptop[0].cpu); // core i9
+
+            let idxnum = 0;
+            while (idxnum < laptop.length) {
+                console.log(`CPU: ${laptop[idxnum].cpu}, RAM: ${laptop[idxnum].ram}, HDD: ${laptop[idxnum].hdd}`);
+                idxnum++;
+            }
+
+            // 5. Do While Loop
+            let n = 0;
+
+            do {
+                console.log("N value is = ", n);
+                n++;
+            } while (n < 10);
+            console.log("Outside N value is = ", n);
+
+            let g = 0;
+            do {
+                g++;
+                console.log("G value is = ", g);
+            } while (g < 10);
+            console.log("Outside G value is = ", g);
+
+            const colors = ["red", "green", "blue", "white", "black"];
+            let init = 0;
+            do {
+                console.log("My Favourite color is: ", colors[init]);
+                init++;
+            } while (init < colors.length);
+
+            // 6. For Each Loop
+            const candycolors = ["red", "green", "blue", "white", "black"];
+
+            // mainarrays.forEach(functin(value, index,array) { 
+            //      code to be executed
+            // });
+            candycolors.forEach(function(value, index, array) {
+                // console.log(value);
+                // console.log(index);
+                // console.log(array); // same as console.log(candycolors)
+
+                console.log(`Index number is = ${index}, Value is = ${value}`);
+            });
+
+            // 7. Map Loop
+            // mainarrays.map(function(value, index, array) {
+            //      code to be executed
+            // });
+            const visitors = ["Sai Sai", "Aung Aung", "Naung Naung", "Su Su", "Yu Yu", "Nu Nu"];
+            visitors.map (function(value, index, array) {
+                // console.log(visitors); // it will print out whole array
+                console.log(value); // it will print each item from array
+                // console.log(index); // it will print each index of an item
+                // console.log(array); // it will print out whole array smae as line 230
+            });
+
+            // difference between forEach and Map -
+            // forEach ကကျတော့ variable ထဲ ထည့်လို့ မရဘူး
+            // Map ကကျတော့ variable ထဲ ထည့်လို့ရတယ်။
+
+            const visitorarrs = visitors.forEach (function(visitor) {
+                return `Dr. ${visitor}`;
+            });
+            console.log(visitorarrs); // undefined
+
+            const doctorarrs = visitors.map (function(visitor) {
+                return `Dr. ${visitor}`;
+            });
+            console.log(doctorarrs);
+            console.log(visitors);
         </script>
     </body>
 </html>
