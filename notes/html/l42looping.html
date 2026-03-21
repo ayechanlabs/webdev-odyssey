@@ -247,6 +247,21 @@
             });
             console.log(doctorarrs);
             console.log(visitors);
+
+            // 8. Filter Loop
+            const ages = [23, 34, 56, 80, 13, 12, 18, 17, 10, 19, 60, 25, 21, 30, 14];
+            console.log(ages); // 15 length
+
+            const getover18 = ages.filter(function(age){
+                // console.log(age);
+                return age > 18;
+            });
+            console.log(getover18);
+
+            const getover20 = ages.filter(function(age){
+                return age > 20;
+            });
+            console.log(getover20);
         </script>
     </body>
 </html>
