@@ -12,6 +12,48 @@
 
     <body>
         <script type="text/javascript">
+            // LocalStorage
+
+            // => Create
+            // syntax -> setItem(key, value);
+            localStorage.setItem("name", "Aung Aung");
+            localStorage.setItem("age", 27);
+            localStorage.setItem("city", "Yangon");
+
+            // => Update (edit)
+            // Method 1
+            localStorage.setItem("name", "Kyaw Kyaw");
+
+            // Method 2
+            localStorage.city = "Mandalay";
+
+            // => Read
+            // Method 1
+            const getname = localStorage.name;
+            const getage = localStorage.age;
+            const getcity = localStorage.city;
+
+            console.log(getname, getage, getcity);
+            console.log(typeof getname, getage, getage);
+
+            // Method 2
+            const name = localStorage.getItem("name");
+            const age = localStorage.getItem("age");
+            const city = localStorage.getItem("city");
+
+            console.log(name, age, city);
+
+            // => Delete
+            // Method 1 (Single Delete)
+            // localStorage.removeItem("name");
+            // localStorage.removeItem("age");
+            // localStorage.removeItem("city");
+
+            // console.log(name, age, city); // ဒီမှာ ရှိလိမ့်မယ် ဘာလို့ဆိုရင် variable ထဲမှာ ရှိနေလို့ 
+            // console.log(localStorage.getItem("name"), age, city); // ဒီလိုဆိုရင် မရှိတော့ဘူး
+
+            // Method 2 (All Delete)
+            localStorage.clear(); // it will delete all
 
         </script>
     </body>
