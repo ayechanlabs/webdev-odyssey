@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Generator Function</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            function test1() {
+                return 10;
+            }
+            console.log(test1()); // 10 -> သူက ခေါ်တဲ့ အခေါက်တိုင်း လိုလို ကို ထွက်နေမှာ
+
+            function test2() {
+                let x = 1;
+                x++;
+                return x;
+            }
+            console.log(test2()); // 2 -> သူက ခေါ်တဲ့ အခေါက်တိုင်း လိုလို ကို 2 ပဲထွက်နေမှာ
+
+            let x = 1;
+            function test3() {
+                x++;
+                return x;
+            }
+            console.log(test3()); // 2 -> ဒါကျတော့ ၁ တိုးသွားမှာ
+            console.log(test3()); // 3
+
+            // Generator Function ကို သုံးမယ်ဆိုရင်
+            // yield ဆိုတဲ့ keyword ကို သုံးရမှာ -> သူက ထုတ် ပေးမှာ
+            // next() ဆိုတဲ့ method ကို သုံးရမှာ -> yield က ထုတ်ပေးတဲ့ value ကို next() က ရယူမှာ
+            function* genfun() {
+                yield 1;
+                yield 2;
+                yield 3;
+            }
+
+            console.log(genfun()); // genfun {suspended}
+            console.log(genfun().next()); // {value: 1, done: false} -> value က yield က ထုတ်ပေးတဲ့ value ကို ပြန်ပေးမှာ, done က generator function က အလုပ်ပြီးပြီလား ဆိုတာကို ပြန်ပေးမှာ
+            console.log(genfun().next().value); // 1 -> value က yield က ထုတ်ပေးတဲ့ value ကို ပြန်ပေးမှာ
+            console.log(genfun().next().value); // 1 -> ဒီလိုကျတော့ ဘယ်နှစ်ခါ ထုတ်" ထုတ်လို့ ရနေတယ်။ တကယ်လို့ generator function ထဲမှာ values အသစ်တွေ ထည့်ရင်တောင် ပထမဆုံး yield ကိုပဲ ထုတ်ပေးမှာ ဖြစ်တယ်။
+            console.log(genfun().next().done); // false -> done က generator function က အလုပ်ပြီးပြီလား ဆိုတာကို ပြန်ပေးမှာ
+
+            // ဒါမဲ့ အာ့ကို ငါတို့ variable တခုထဲမှာ သိမ်းထားပြီ ပြန်ခေါ်လိုက်ရင် ပြောင်းသွားလိမ့်မယ်
+            const getgenfun = genfun();
+            console.log(getgenfun); // genfun {suspended}
+            console.log(getgenfun.next()); // {value: 1, done: false}
+            console.log(getgenfun.next()); // {value: 2, done: false}
+            console.log(getgenfun.next()); // {value: 3, done: false}
+            console.log(getgenfun.next()); // {value: undefined, done: true} -> generator function က ဒီမှာ သူထဲမှာ ရှိတဲ့ yield values တွေကို အကုန်ထုတ်ပြီတဲ့ အတွက် done: true ဖြစ်သွားတာ။
+            console.log(getgenfun.next().done); // true
+            console.log(getgenfun.next().value); // undefined
+
+            // generator function ဆိုတာ values ကို ကန့်သတ်ထားလိုရတယ်။ values ကို ဒီကနေ ဒီလောက်ပဲထုတ်ဆိုပြီ။
+
+        </script>
+    </body>
+</html>
