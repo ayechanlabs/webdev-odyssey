@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Regular Function</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            // A. Default Function | System Function
+
+            // B. User Define Function
+            //      1. Regualr Function
+            //          i. Manual Function
+            //          ii. Parameter Function
+            //              a. Single Parameter Function
+            //              b. Multi Parameter Function
+            //      2. Arrow Function
+            //          i. Manual Function
+            //          ii. Parameter Function
+            //              a. Single Parameter Function
+            //              b. Multi Parameter Function
+            //      3. Generator Function
+
+            // function function_name() {
+            //      code to be executes
+            // }
+
+            // User Define Function -> Regular Function -> Manual Function
+            function greet() {
+                console.log("Hello Myanamr.");
+                console.log("Hello Thailand");
+                console.log("Hello SriLanka");
+            }
+
+            greet();
+
+            hello(); // ဒီမှာ ခေါ် ထားလို့ ရတယ် function ကို မရေးခင်ထဲက
+            function hello() {
+                console.log("Hello Yangon");
+            }
+            hello();
+
+            // after line 51 အပေါ်က line 43 က "Hello Bago" ပဲထွက်တော့မယ် ဘာလို့ ဆိုရင်
+            // ငါတို့က hello() ဆိုတဲ့ function ၂ခါ ရေးခဲ့တယ်။ နောက် JS သဘောအရ
+            // function ကို waterfall အတိုင်း executes လုပ်တဲ့ အတွက်ကြောင့် မို့လို့။
+
+            function hello() {
+                console.log("Hello Bago");
+            }
+            hello();
+
+            function funone() {
+                console.log("I'm function one.");
+            }
+
+            function funtwo() {
+                console.log(`Calling from funtwo --`);
+                funone();
+                console.log("I'm function two.");
+                console.log(`Calling from funtwo --`);
+                funone();
+            }
+
+            function funthree() {
+                console.log(`Calling from funthree --`);
+                funtwo();
+                console.log(`Calling from funthree --`);
+                funone();
+            }
+
+            funthree();
+
+            // ------------------------------------------------------------
+
+            // RETURN
+            function funfour() {
+                console.log(4);
+            }
+
+            function funfive() {
+                console.log(5);
+            }
+
+            funfour();
+            funfive();
+
+            function funsix() {
+                const num4 = funfour();
+                const num5 = funfive();
+
+                console.log(num4); // undefined
+                console.log(num5); // undefined
+
+                const total = num4 + num5; // NaN
+                console.log(total);
+            }
+
+            funsix();
+
+            function funseven() {
+                return 7; // return က တကြိမ်ပဲ ပြန်လို့ရမှာ
+            }
+
+            console.log(funseven()); // 7
+
+
+            // Single Parameter Function
+            function myfun1(city) {
+                console.log(`Hello ${city}`);
+            }
+
+            myfun1(); // Hello undefined
+            myfun1("Yangon"); // Hello Yangon
+            myfun1("Mandalay"); // Hello Mandalay
+            myfun1("Bago"); // Hello Bago
+            myfun1(500); // Hello 500
+
+            // Default Parameter
+            function myfun2(city = "Bangkok") {
+                console.log(`Hello ${city}`);
+            }
+
+            myfun2(); // Hello Bangkok
+            myfun2("Myanmar"); // Hello Myanmar
+            myfun2("Thailand"); // Hello Thailand
+
+            // Multi Parameter Function
+            function multifun(x, y, z) {
+                console.log(`X value is ${x}, Y value is ${y}, Z value is ${z}`);
+            }
+
+            multifun(); // X value is undefined, Y value is undefined, Z value is undefined
+            multifun(10); // X value is 10, Y value is undefined, Z value is undefined
+            multifun(10, 20); // X value is 10, Y value is 20, Z value is undefined
+            multifun(10, 20, 30); // X value is 10, Y value is 20, Z value is 30
+            // multifun(10, , 30); // error, missing argument in the middle
+
+            function multifun2 (x = 1, y = 2, z = 3) {
+                console.log(`X value is ${x}, Y value is ${y}, Z value is ${z}`);
+            }
+
+            multifun2(); // X value is 1, Y value is 2, Z value is 3
+            multifun2(10); // X value is 10, Y value is 2, Z value is 3
+            multifun2(10, 20); // X value is 10, Y value is 20, Z value is 3
+            multifun2(10, 20, 30); // X value is 10, Y value is 20, Z value is 30
+            multifun2(10, 20, 30, 40); // X value is 10, Y value is 20, Z value is 30 (extra argument will be ignored)
+            // multifun2(10, , 30); // error, missing argument in the middle
+
+            function multifun3 (x = 1, y = 2, z = 3) {
+                const result = x + y + z;
+                return result;
+            }
+
+            console.log(multifun3()); // 6
+            console.log(multifun3(10)); // 15
+            console.log(multifun3(10, 20)); // 33
+            console.log(multifun3(10, 20, 30)); // 60
+
+            // Nameless Function => သူက function ကို variable ထဲမှာ သိမ်းထားတာ
+            const infofun = function (name, color) {
+                console.log(`My name is ${name} and my favorite color is ${color}`);
+            }
+
+            infofun("Alice", "blue"); // My name is Alice and my favorite color is blue
+        </script>
+    </body>
+
+</html>
