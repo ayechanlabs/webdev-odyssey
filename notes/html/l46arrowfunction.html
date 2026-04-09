@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Arrow Function</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            // Regular Function
+            const regfun1 = function () {
+                const num1 = 100;
+                return num1;
+            }
+
+            console.log("This is regular function-1: " + regfun1()); // This is regular function-1: 100
+
+            // (i) Arrow Function (ESCM 6)
+            const arrfun1 = () => {
+                const num1 = 200;
+                return num1;
+            }
+
+            console.log("This is arrow function-1: " + arrfun1()); // This is arrow function-1: 200
+
+            // (ii) Parameter Function -> (a) Single Parameter Function -> single parameter မှာ bracket ပါလည်း ရသလို မပါလည်း ရတယ်။
+            const arrfun2 = (num1) => {
+                return num1;
+            }
+
+            console.log("This is arrow function-2: " + arrfun2()); // This is arrow function-2: undefined
+            console.log("This is arrow function-2: " + arrfun2(300)); // This is arrow function-2: 300
+
+            // we can also write arrow function without return keyword and curly braces if the function body contains only one statement.
+            const arrfun3 = num1 => {
+                return num1;
+            }
+            console.log("This is arrow function - 3 without parenthesis: " + arrfun3(400)); // This is arrow function - 3 without parenthesis: 400
+
+            const arrfun4 = num1 => num1 + 50;
+            console.log("This is arrow function - 4 without return keyword and curly braces: " + arrfun4(500)); // This is arrow function - 4 without return keyword and curly braces: 550
+
+            // (iii) Parameter Function -> (b) Multiple Parameter Function -> multiple parameter မှာ bracket ပါကို ပါရမယ်။
+            const multiarrfun1 = (num1, num2) => {
+                const result = num1 + num2;
+                return result;
+            }
+            console.log("This is multiple parameter arrow function: " + multiarrfun1()); // This is multiple parameter arrow function: NaN
+            console.log("This is multiple parameter arrow function: " + multiarrfun1(100)); // This is multiple parameter arrow function: NaN
+            console.log("This is multiple parameter arrow function: " + multiarrfun1(100, 200, 300)); // This is multiple parameter arrow function: 300
+            console.log("This is multiple parameter arrow function: " + multiarrfun1(100, 200)); // This is multiple parameter arrow function: 300
+
+            const multiarrfun2 = (num1 = 10, num2 = 20) => {
+                const result = num1 + num2;
+                return result;
+            }
+            console.log("This is multiple parameter arrow function with default parameter: " + multiarrfun2()); // This is multiple parameter arrow function with default parameter: 30
+            console.log("This is multiple parameter arrow function with default parameter: " + multiarrfun2(100)); // This is multiple parameter arrow function with default parameter: 120
+            console.log("This is multiple parameter arrow function with default parameter: " + multiarrfun2(100, 200, 300)); // This is multiple parameter arrow function with default parameter: 300
+            console.log("This is multiple parameter arrow function with default parameter: " + multiarrfun2(100, 200)); // This is multiple parameter arrow function with default parameter: 300
+
+
+        </script>
+    </body>
+</html>
