@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Function Exercise</title>
+
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                height: 100vh;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                width: 300px;
+                background-color: #f4f4f4;
+                padding: 10px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            label {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .form-control {
+                width: 100%;
+                padding: 5px;
+            }
+
+            .btn {
+                width: 100%;
+                background-color: darkblue;
+                color: #fff;
+                font-size: 16px;
+                border: none;
+
+                padding: 5px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h3>Show Name = <span id="replacename"></span></h3>
+
+            <form action="" method="">
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname" class="form-control" autocomplete="off" autofocus />
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" class="form-control" autocomplete="off" />
+                </div>
+
+                <button type="button" class="btn" onclick="getData()">Get Name</button>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            function getData() {
+                // console.log("Hello");
+                
+                const getFirstName = document.getElementById("firstname").value;
+                const getLastName = document.getElementById("lastname").value;
+                const getReplaceName = document.getElementById("replacename");
+
+                // alternatives to use -> innerHTML, innerText & textContent
+                getReplaceName.textContent = `${getFirstName} ${getLastName}`; // we can also use "innerText" instead of "textContent", but textContent is better than innerText.
+
+                document.getElementById("firstname").value = "";
+                document.getElementById("lastname").value = "";
+                document.getElementById("firstname").focus();
+            }
+
+            // getData(); // Hello
+        </script>
+    </body>
+</html>
