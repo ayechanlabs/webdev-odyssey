@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Scope</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            // There are 2 types of Scopes.
+            // 1. Global Scope
+            // 2. Block Scope
+            // 3. Function Scope
+
+            const name = "Aye Chan";
+                // name = "Kyaw Kyaw"; // we can re-assign value in global scope.
+            // const name = "Su Su" // error, we can't re-declare variable in global scope.
+            console.log(name);
+
+            let city = "Mandalay";
+                city = "Yangon";
+            // let city = "Bago"; // error, we can't re-declare variable in global scope.
+            console.log(city);
+
+            var country = "Myanmar";
+                country = "Thailand";
+            var country = "Laos"; // we can re-declare variable in global scope.
+            console.log(country);
+
+            // Global Scope
+            var globalVar = "I am a global variable";
+            let globalLet = "I am a global let";
+            const globalConst = "I am a global const";
+
+            function accessGlobalScope() {
+                console.log(globalVar); // accessible
+                console.log(globalLet); // accessible
+                console.log(globalConst); // accessible
+            }
+
+            accessGlobalScope();
+
+            // we can also call global variables outside of function, it will be accessible.
+            console.log(globalVar); // accessible
+            console.log(globalLet); // accessible
+            console.log(globalConst); // accessible
+
+            // Block Scope
+        </script>
+    </body>
+</html>
