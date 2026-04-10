@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nested Function</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+            function outerfun() {
+
+                function innerfun() {
+                    console.log("Hello, I'm inner function");
+                }
+
+                innerfun();
+            }
+
+            outerfun();
+
+            function greet() {
+
+                return function() {
+                    return "Hello, Sir!";
+                }
+            }
+
+            let getGreet = greet(); // it will return value from inner function as a function.
+            let message = getGreet(); // it will return "Hello, Sir!".
+            console.log(getGreet);
+            console.log(message);
+
+            // we can also call like this, it will return "Hello, Sir!".
+            console.log(greet()());
+        </script>
+    </body>
+</html>
