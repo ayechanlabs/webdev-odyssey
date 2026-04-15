@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM (Document Object Model) Clock</title>
+
+        <style type="text/css">
+            body {
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h3 id="display">00: 00: 00 AM Sunday</h3>
+
+        <script type="text/javascript">
+            const getDisplay = document.getElementById("display");
+
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+            function startClock() {
+                const getDate = new Date();
+                let getHours = getDate.getHours(); // hours
+                let getMinutes = getDate.getMinutes(); // minutes
+                let getSeconds = getDate.getSeconds(); // seconds
+                let getDay = getDate.getDay(); // day as index numbers
+
+                let getAmPm;
+                switch (getHours > 12) {
+                    case true:
+                        getAmPm = "PM";
+                        getHours = getHours - 12; // convert to 12-hour format
+                        break;
+                    case false:
+                        getAmPm = "AM";
+                        break;
+                }
+
+                let setClock = `${getHours}: ${getMinutes}: ${getSeconds} ${getAmPm} ${days[getDay]}`;
+                getDisplay.textContent = setClock;
+
+            }
+            startClock();
+
+            // 1 seconds = 1000 milliseconds
+            setInterval(startClock, 1000); // call startClock function every 1 second (1000 milliseconds)
+
+        </script>
+
+    </body>
+</html>
