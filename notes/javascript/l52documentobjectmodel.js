@@ -52,6 +52,26 @@ document.getElementById("tasktitle").style.padding = "5px";
 // document.getElementById("tasktitle").innerText = "My Tasks";
 document.getElementById("tasktitle").innerHTML = "<span style='color: white;'>My To Do</span>" // html tag တွေကို innerHTML နဲ့ သုံးလို့ ရတယ်။ ဒါပေမဲ့ အဲဒီ html tag တွေကို textContent နဲ့ innerText နဲ့ သုံးလို့ မရဘူး။
 
+// Call by Class Name (Class)
+// const lis = document.getElementsByClassName("list-group-item");
+// console.log(lis); // getElementsByClassName က array နဲ့ မလာဘူး။ HTML Collection နဲ့ လာတယ်။ ဒါပေမဲ့ array နဲ့ လုပ်ချင်ရင်တော့ Array.from() နဲ့ ပြောင်းလို့ ရတယ်။
+// console.log(lis[2]);
+
+// lis[2].style.color = "red";
+// lis[2].textContent = "Have to visit";
+// lis[2].innerText = "Have to cook";
+// lis[2].innerHTML = 'Have to read <a href="#" id="delete-item3" class="delete-item">delete</a>';
+
+// Call by Tag Name (Element)
+// const litags = document.getElementsByTagName('li');
+// console.log(litags);
+// console.log(litags[1]);
+
+// litags[1].style.color = "blue";
+// litags[1].innerHTML = `Have to cook <a href="#" id="delete-item2" class="delete-item">delete</a>`;
+
+
+
 // DOM (Document Object Model), programming interface 
 // for HTML and XML documents. It represents the page so that 
 // programs can change the document structure, style, and content. 
