@@ -33,6 +33,3 @@ string + boolean = concat
 'variable' name ပေးပုံ
 JS မှာ variable တခုကို ကြေငြာတော့မယ်ဆိုရင် - const, var, let ဆိုတဲ့ keyword ကို အသုံးပြုပြီ ဖော်ပြရတယ်။
 variable name တွေကို ပေးတဲ့ အချိန်မှာ variable names တွေကို အားလုံး small letter နဲ့ ရေးသင့်တယ်။
-
-
-

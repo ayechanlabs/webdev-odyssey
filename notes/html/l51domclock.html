@@ -33,7 +33,7 @@
                 let getDay = getDate.getDay(); // day as index numbers
 
                 let getAmPm;
-                switch (getHours > 12) {
+                switch (getHours >= 12) {
                     case true:
                         getAmPm = "PM";
                         getHours = getHours - 12; // convert to 12-hour format
