@@ -70,6 +70,15 @@ document.getElementById("tasktitle").innerHTML = "<span style='color: white;'>My
 // litags[1].style.color = "blue";
 // litags[1].innerHTML = `Have to cook <a href="#" id="delete-item2" class="delete-item">delete</a>`;
 
+// Query Selector
+console.log(document.querySelector('#tasktitle'));
+console.log(document.querySelector(".card-title"));
+console.log(document.querySelector("h3"));
+
+console.log(document.querySelector("li"));
+console.log(document.querySelector(".list-group-item"));
+
+document.querySelector("li").style.color = "blue";
 
 
 // DOM (Document Object Model), programming interface 
