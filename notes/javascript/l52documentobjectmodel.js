@@ -180,6 +180,85 @@ chl = getul.children[0].children[0].href; // URL of a element
 
 console.log(chl);
 
+// Children to Parent
+const getfirstli = document.querySelector('li.list-group-item:first-child');
+console.log(getfirstli);
+
+//              li         ul
+let getparent = getfirstli.parentElement;
+//             li          ul           div.card-footer
+getparent = getfirstli.parentElement.parentElement;
+//              li      ul            div.card-footer div.card
+getparent = getfirstli.parentElement.parentElement.parentElement;
+//              li      ul            div.card-footer div.card      div.container
+getparent = getfirstli.parentElement.parentElement.parentElement.parentElement;
+console.log(getparent);
+
+// Next Element Sibling
+let getsibling = getfirstli;
+//              li 1        li 2
+getsibling = getfirstli.nextElementSibling;
+//              li 1        li 2            li 3
+getsibling = getfirstli.nextElementSibling.nextElementSibling;
+//              li 1        li 2                li 3                li 4
+getsibling = getfirstli.nextElementSibling.nextElementSibling.nextElementSibling;
+//              li 1        li 2                li 3            li 4                li 5
+getsibling = getfirstli.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+
+getsibling = getfirstli.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling; // null
+console.log(getsibling);
+
+// Previous Element Sibling
+//              li 1        li 2            li 3                li 2
+getsibling = getfirstli.nextElementSibling.nextElementSibling.previousElementSibling;
+console.log(getsibling);
+
+// Create Element
+const newli = document.createElement('li');
+
+// Add ID
+newli.id = "new-item";
+
+// Add Class
+newli.className = "list-group-item";
+newli.className = "delete-me"; // သူက အပေါ်က list-group-item ကို ဖျက်ပြီး delete-me override လုပ်လိုက်သလိုဖြစ်သွားတယ်။
+newli.className = "list-group-item delete-me"; // အပေါ်ကလို မဖြစ်ချင်ဘူးဆိုရင် အခု လို တခါထဲ ပြန်ရေးပေး
+newli.classList.add("new-item");
+newli.classList.add("delete-you", "delete-we", "delete-them"); // တခါထဲမှာ အများကြီး class ထည့်လို့ ရတယ်။
+newli.classList.remove("delete-me"); // delete-me class ကို ဖျက်လိုက်တယ်။
+
+// Add Attribute, setAttribute(attrname, value)
+newli.setAttribute("title", "newitem");
+
+// newli.textContent = "Hey";
+// newli.innerText = "Hello";
+// newli.innerHTML = `List Item 6 <a href="#" id="delete-item6" class="delete-item">delete</a>`;
+
+// const newText = document.createTextNode("Hello World!");
+// console.log(newText);
+// newli.appendChild(newText); // newli element ထဲက အောက်ဆုံးမှာ Hello World! ဆိုတဲ့ text ကို ထည့်လိုက်တယ်။
+
+newli.appendChild(document.createTextNode("Have to cook"));
+
+const newlink = document.createElement('a');
+newlink.href = "#";
+newlink.id = "delete-item6";
+// newlink.className = "delete-item";
+newlink.classList.add("delete-item");
+
+const newitalic = document.createElement("i");
+newitalic.classList.add("fas", "fa-trash-alt");
+console.log(newitalic);
+newlink.appendChild(newitalic);
+
+newlink.appendChild(document.createTextNode("delete"));
+console.log(newlink);
+
+newli.appendChild(newlink);
+console.log(newli);
+
+document.querySelector("ul.list-group").appendChild(newli); // ul element ထဲက အောက်ဆုံးမှာ newli element ကို ထည့်လိုက်တယ်။
+
 
 // DOM (Document Object Model), programming interface 
 // for HTML and XML documents. It represents the page so that 
