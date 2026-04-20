@@ -99,6 +99,48 @@ document.getElementById("tasktitle").innerHTML = "<span style='color: white;'>My
 // console.log(document.querySelectorAll('.list-group-item'));
 // console.log(document.querySelectorAll('ul .list-group-item')[3]);
 
+// const listitems = document.querySelector('ul').getElementsByClassName('list-group-item');
+// console.log(listitems); // HTML Collection နဲ့ လာတယ်။ HTML Collection က pure array မဟုတ်သလို သူကို forEach နဲ့လည်း looping ပတ်လို့ မရဘူး။ ဒါပေမဲ့ array နဲ့ လုပ်ချင်ရင်တော့ Array.from() နဲ့ ပြောင်းလို့ ရတယ်။ 
+// console.log(typeof listitems); // object
+// console.log(listitems[1]);
+
+// const arritems = Array.from(listitems);
+// console.log(arritems); // array နဲ့ ပြောင်းလို့ ရတယ်။
+
+// arritems.forEach (function(arritem) {
+//     console.log(arritem);
+// });
+
+// const listitems2 = document.querySelectorAll("ul.list-group li.list-group-item");
+// console.log(listitems2); // NodeList(5)
+// console.log(typeof listitems2); // object
+// console.log(listitems2[1]);
+
+// listitems2.forEach (function(listitem, idx) {
+//     // console.log(listitem);
+
+//     // listitem.innerText = `Hello World`;
+//     listitem.innerText = `${++idx} Hello World`; // index ကို 1 ကနေ စတင်ချင်လို့ ++idx လုပ်ထားတာ
+// });
+
+// const lisodds = document.querySelectorAll('li:nth-child(odd)');
+// console.log(lisodds); // ood li တွေ အကုန် ရလာမယ်။
+
+// const lisevens = document.querySelectorAll('li:nth-child(even)');
+// console.log(lisevens); // even li တွေ အကုန် ရလာမယ်။
+
+// lisodds.forEach (function(lisodd) {
+//     lisodd.style.color = "grey";
+// });
+
+// lisevens.forEach (function(liseven) {
+//     liseven.style.color = "silver";
+// });
+
+// for(let i = 0; i < lisevens.length; i++) {
+//     lisevens[i].style.backgroundColor = "orange";
+// }
+
 
 // DOM (Document Object Model), programming interface 
 // for HTML and XML documents. It represents the page so that 
