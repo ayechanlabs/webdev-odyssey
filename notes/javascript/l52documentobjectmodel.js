@@ -71,14 +71,33 @@ document.getElementById("tasktitle").innerHTML = "<span style='color: white;'>My
 // litags[1].innerHTML = `Have to cook <a href="#" id="delete-item2" class="delete-item">delete</a>`;
 
 // Query Selector
-console.log(document.querySelector('#tasktitle'));
-console.log(document.querySelector(".card-title"));
-console.log(document.querySelector("h3"));
+// console.log(document.querySelector('#tasktitle'));
+// console.log(document.querySelector(".card-title"));
+// console.log(document.querySelector("h3"));
 
-console.log(document.querySelector("li"));
-console.log(document.querySelector(".list-group-item"));
+// console.log(document.querySelector("li"));
+// console.log(document.querySelector(".list-group-item"));
 
-document.querySelector("li").style.color = "blue";
+// document.querySelector("li").style.color = "blue";
+// document.querySelector("ul li").style.color = "violet"; // ul ထဲက li ကို ခေါ်တာ
+// document.querySelector("ul li:nth-child(odd)").style.color = "grey";
+// document.querySelector("ul li:nth-child(even)").style.color = "silver";
+// document.querySelector("ul li:last-child").style.color = "green";
+// document.querySelector("ul li:last-of-type").style.color = "orange";
+// document.querySelector("ul li:nth-of-type(4)").style.color = "steelblue";
+
+// Query Selector All
+// console.log(document.querySelectorAll('#tasktitle'));
+// console.log(document.querySelectorAll('#tasktitle')[0]);
+
+// console.log(document.querySelectorAll('.card-title'));
+// console.log(document.querySelectorAll('.card-title')[0]);
+
+// console.log(document.querySelectorAll('li'));
+// console.log(document.querySelectorAll('li')[2]);
+
+// console.log(document.querySelectorAll('.list-group-item'));
+// console.log(document.querySelectorAll('ul .list-group-item')[3]);
 
 
 // DOM (Document Object Model), programming interface 
