@@ -141,6 +141,45 @@ document.getElementById("tasktitle").innerHTML = "<span style='color: white;'>My
 //     lisevens[i].style.backgroundColor = "orange";
 // }
 
+// Parent to Children
+
+let getli = document.querySelector('ul li');
+    getli = document.querySelector('li.list-group-item');
+    getli = document.querySelector('li.list-group-item:first-child');
+console.log(getli);
+
+let chl;
+let getul = document.querySelector('ul.list-group');
+// console.log(getul);
+
+chl = getul.children; // HTML Collection (5)
+console.log(chl);
+console.log(chl[0]); // first child
+
+// chl[1].textContent = "Have to go";
+// getul.children[1].innerText = "Have to cook";
+// getul.children[1].innerHTML = `Have to read <a href="#" id="delete-item2" class="delete-item">delete</a>`;
+
+// Parent to Children to Children
+chl = getul; // ul element
+chl = getul.children; // HTML Collection (5)
+chl = getul.children[0]; // li element
+chl = getul.children[0].children; // HTML Collection
+
+//      ul      li         a
+chl = getul.children[0].children[0]; // a element
+chl = getul.children[0].children[0].id; // delete-item1
+chl = getul.children[0].children[0].className; // delete-item
+chl = getul.children[0].children[0].classList; // DOMTokenList(1) ['delete-item', value: 'delete-item']
+chl = getul.children[0].children[0].classList[0]; // delete-item
+chl = getul.children[0].children[0].href; // URL of a element
+
+//      ul      li         a         i
+// chl = getul.children[0].children[0].children; // HTMLCollection
+// chl = getul.children[0].children[0].children[0]; // text node
+
+console.log(chl);
+
 
 // DOM (Document Object Model), programming interface 
 // for HTML and XML documents. It represents the page so that 
