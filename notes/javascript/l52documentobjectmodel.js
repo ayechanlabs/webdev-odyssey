@@ -289,17 +289,82 @@ getcardfooter.replaceChild(newtitleh2, oldtitleh4); // card-footer element ထ�
 
 // Remove Element, removeChild(element)
 const getlis = document.querySelectorAll("li");
-console.log(getlis); // NodeList(6)
+// console.log(getlis); // NodeList(6)
 
-getlis[0].remove(); // first li element ကို ဖျက်လိုက်တယ်။
+// getlis[0].remove(); // first li element ကို ဖျက်လိုက်တယ်။
 
-console.log(getlis); // NodeList(6)
+// console.log(getlis); // NodeList(6)
 
-getlis[1].remove(); // li 2
+// getlis[1].remove(); // li 2
 
-console.log(getlis.length); // 6
+// console.log(getlis.length); // 6
 
+// Remove Child Element
+const getfirstul = document.querySelector("ul");
+// console.log(getfirstul); // ul ကြီး တခုလုံးရမှာ
+// getfirstul.remove(); // သူက ul ကြီး တခုလုံးကို ဖြတ်လိုက်မှာ
 
+// console.log(getfirstul.children[0]); // ပထမဆုံး li ကို မြင်ရမှာ ဖြစ်တယ်။
+
+// ဒီ removeChild မှာက တခါဖြတ်ပြီတိုင်း index ကို အစကနေ ပြန်ပြီ count လုပ်တယ်။ အဲတော့ တခုဖြတ်လိုက်တိုင်း index က အသစ် ပြောင်းသွားတယ်။ အစကနေ ပြန်ပြီ count လုပ်ပြီမှ ဖြတ်တယ်။
+// getfirstul.removeChild(getfirstul.children[0]); // ul element ထဲက ပထမဆုံး li element ကို ဖျက်လိုက်တယ်။
+// getfirstul.removeChild(getfirstul.children[1]); // ul element ထဲက ဒုတိယ li element ကို ဖျက်လိုက်တယ်။
+// getfirstul.removeChild(getfirstul.children[3]);
+
+// Attribute
+const firstli = document.querySelector('li');
+console.log(firstli);
+const firstchild = firstli.children[0];
+console.log(firstchild); // a element
+
+console.log(firstchild.id); // delete-item1
+console.log(firstchild.href); // URL of a element
+console.log(firstchild.title); // iamtitle
+console.log(firstchild.alt); // undefined -> img မှာ သုံးတဲ့ attribute မို့လို့ တိုက်ရိုက် ခေါ် လို့ မရတာ။
+console.log(firstchild.getAttribute("id")); // delete-item1
+console.log(firstchild.getAttribute("href")); // URL of a element
+console.log(firstchild.getAttribute("title")); // iamtitle
+console.log(firstchild.getAttribute("alt")); // iamalt
+
+// we can also check if the attribute exist or not by using hasAttribute() method. It returns true if the attribute exist and false if it does not exist.
+let hasatt = firstchild.hasAttribute("href"); // true
+console.log(hasatt);
+
+hasatt = firstchild.hasAttribute("hay"); // false
+console.log(hasatt);
+
+// className Vs ClassList
+
+// console.log(firstchild.className); // delete-item
+// firstchild.className = "delete-myself"; // firstchild ထဲမှာရှိတဲ့ နဂို class ကို ဖျက်ပြီ delete-myself ဆိုတဲ့ class နဲ့ override လုပ်လိုက်သလိုဖြစ်သွားတယ်။
+// firstchild.className = "delete-item delete-myself"; // အပေါ်ကလို မဖြစ်ချင်ဘူးဆိုရင် အခုလို တခါထဲ ပြန်ရေးပေးရတယ်။
+// firstchild.className = "delete-item delete-myself delete-ourselves";
+// firstchild.className = "delete-item delete-ourselves"; // delete-myself class ကို ဖျက်လိုက်တယ်။
+
+console.log(firstchild.classList); // DOMTokenList
+console.log(firstchild.classList[0]); // delete-item
+console.log(firstchild.classList[1]); // undefined
+
+firstchild.classList.add("delete-myself");
+firstchild.classList.add("delete-ourselves", "delete-us", "delete-yourself");
+
+firstchild.classList.remove("delete-us");
+firstchild.classList.remove("delete-ourselves", "delete-yourself");
+
+// condition ပေးတဲ့ နေရာမှာ အရှေ့အနောက်လည်း မှားလိုမရသလို space တလုံးလည်း ပို့ လို့ မရဘူး။ ပိုလိုက်တာနဲ့ No ဖြစ်သွားလိမ့်မယ်။
+// တခုခု ပျောက်သွားရင်လည်း ဒါမှမဟုတ် ထည့် မစစ်ရင်လည်း No ပဲ ထွက်မှာ။
+if (firstchild.className === "delete-item delete-myself") {
+    console.log("Yes");
+} else {
+    console.log("No");
+}
+
+// သူကကျတော့ selector name တခုချင်း စစ်မယ်ဆိုရင် ပိုအဆင်ပြေတယ် className ထပ်စားရင်
+if (firstchild.classList.contains("delete-myself")) {
+    console.log("Yes");
+} else {
+    console.log("No");
+}
 
 
 // DOM (Document Object Model), programming interface 
