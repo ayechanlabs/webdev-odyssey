@@ -180,6 +180,17 @@ chl = getul.children[0].children[0].href; // URL of a element
 
 console.log(chl);
 
+// Child Element Count
+chl = getul.children.length; // 5
+chl = getul.childElementCount; // 5
+
+chl = getul.children[0].children.length; // 1
+chl = getul.children[0].childElementCount; // 1
+
+chl = getul.children[0].children[0].childElementCount; // 1
+
+console.warn(chl);
+
 // Children to Parent
 const getfirstli = document.querySelector('li.list-group-item:first-child');
 console.log(getfirstli);
@@ -258,6 +269,37 @@ newli.appendChild(newlink);
 console.log(newli);
 
 document.querySelector("ul.list-group").appendChild(newli); // ul element ထဲက အောက်ဆုံးမှာ newli element ကို ထည့်လိုက်တယ်။
+
+// Replace Element, replaceChild(newElement, oldElement)
+const oldtitleh4 = document.getElementById("tasktitle");
+// console.log(oldtitleh4);
+
+const newtitleh2 = document.createElement("h2");
+newtitleh2.id = "tasktitle";
+
+const newcaption = document.createTextNode("All My List");
+newtitleh2.appendChild(newcaption);
+
+// console.log(newtitleh2);
+
+const getcardfooter = document.querySelector(".card-footer");
+// console.log(getcardfooter);
+
+getcardfooter.replaceChild(newtitleh2, oldtitleh4); // card-footer element ထဲက oldtitleh4 element ကို newtitleh2 element နဲ့ အစားထိုးလိုက်တယ်။
+
+// Remove Element, removeChild(element)
+const getlis = document.querySelectorAll("li");
+console.log(getlis); // NodeList(6)
+
+getlis[0].remove(); // first li element ကို ဖျက်လိုက်တယ်။
+
+console.log(getlis); // NodeList(6)
+
+getlis[1].remove(); // li 2
+
+console.log(getlis.length); // 6
+
+
 
 
 // DOM (Document Object Model), programming interface 
