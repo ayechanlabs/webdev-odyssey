@@ -430,14 +430,31 @@ const clbtn = document.querySelector('.clear-tasks');
 // clbtn.addEventListener('mousedown', mouseEventType);
 
 // Mouse Up (single click)
-clbtn.addEventListener('mouseup', mouseEventType);
+// clbtn.addEventListener('mouseup', mouseEventType);
 
+const card = document.querySelector('.card');
+
+// Mouse Enter
+// card.addEventListener('mouseenter', mouseEventType);
+
+// Mouse Over (element to element)
+// card.addEventListener('mouseover', mouseEventType);
+
+// Mouse Leave
+// card.addEventListener('mouseleave', mouseEventType);
+
+// Mouse Move
+card.addEventListener('mousemove', mouseEventType);
+
+const headingh2 = document.querySelector('h2');
 
 function mouseEventType(e) {
     e.preventDefault();
 
     // console.log("I am working");
-    console.log(`Event Type = ${e.type}`);
+    // console.log(`Event Type = ${e.type}`);
+
+    headingh2.textContent = `MouseX: ${e.clientX}, MouseY: ${e.clientY}`;
 }
 
 
