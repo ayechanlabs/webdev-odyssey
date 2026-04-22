@@ -366,6 +366,30 @@ if (firstchild.classList.contains("delete-myself")) {
     console.log("No");
 }
 
+// addEventListener (eventtype, callbackfunction)
+const clearbtn = document.querySelector(".clear-tasks");
+
+// Method 1
+clearbtn.addEventListener("click", function(e) {
+    console.log("Hello, I'm working...");
+
+    console.log(e);
+    console.log(e.target); // click လုပ်တာနဲ့ a element ကို ပြန်ထုတ်ပေးမှာဖြစ်တယ်။ သူက ဘယ် element ပေါ်မှာ event listener ထည့်ထားလည်း အဲ element ကိုပဲ ပြန်ထုတ်ပေးမှာဖြစ်တယ်။
+    
+    console.log(e.target.id); // clearall
+    console.log(e.target.className); // clear-tasks
+    console.log(e.target.classList); // DOMTokenList
+    console.log(e.target.classList[0]); // clear-tasks
+
+    console.log(this); // add event ‌ရေးထားတဲ့ element ကိုပဲ ပြန်ထုတ်ပေးတာ အခုဆိုရင် a element.
+    console.log(this.id); // clearall
+    console.log(this.className); // clear-tasks
+    console.log(this.classList); // DOMTokenList
+    console.log(this.classList[0]); // clear-tasks
+
+    e.preventDefault(); // kill link
+})
+
 
 // DOM (Document Object Model), programming interface 
 // for HTML and XML documents. It represents the page so that 

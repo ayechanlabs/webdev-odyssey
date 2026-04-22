@@ -64,7 +64,18 @@
                         </li>
                     </ul>
 
-                    <a href="#" id="clearall" class="clear-tasks">Clear All Tasks</a>
+                    <!-- 
+                    အခု JS မှာ click နှိပ်ရင် "#" ကို သွားမဲ့ အစား javascript:void(0); ကို သုံးလို့ရတယ်။
+                    အဲလိုလုပ်လိုက်တာ reload ပြန် မဖြစ်တော့ဘူး # လိုမျိုး။
+                    -->
+                    <!-- <a href="#" id="clearall" class="clear-tasks">Clear All Tasks</a> -->
+                    <a href="javascript:void(0);" id="clearall" class="clear-tasks">Clear All Tasks</a>
+
+                    <!-- 
+                    a tag တွေမှာ link ပါခဲ့ရင် JS ဘက်မှာ event.preventDefault(); ကို သုံးပြီ ဒီ element click ခေါက်လိုက်
+                    တဲ့ အချိန်ရင် သူသွားမဲ့ link ကို မသွားအောင် ပိတ်လိုက်လို့ရတယ်။
+                     -->
+                    <!-- <a href="https://google.com" id="clearall" class="clear-tasks">Clear Tasks</a> -->
                 </div>
 
                 <div class="moretasks">
