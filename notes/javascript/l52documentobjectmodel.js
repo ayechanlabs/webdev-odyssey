@@ -391,7 +391,7 @@ const clearbtn = document.querySelector(".clear-tasks");
 // })
 
 // Method 2
-clearbtn.addEventListener('click', myclick);
+// clearbtn.addEventListener('click', myclick);
 
 function myclick(e) {
     e.preventDefault();
@@ -403,6 +403,41 @@ function myclick(e) {
 
     // e.target.innerText = "Finished";
     // this.textContent = "Done";
+
+    // Coordinate Event - relative to the windows
+    // console.log(e);
+    // const clientx = e.clientX;
+    // const clienty = e.clientY;
+    // console.log(clientx, clienty);
+
+    // Coordinate Event - relative to the element
+    // const offsetx = e.offsetX;
+    // const offsety = e.offsetY;
+    // console.log(offsetx, offsety);
+
+}
+
+// Mouse Event (Pointer Event)
+const clbtn = document.querySelector('.clear-tasks');
+
+// Single Click
+// clbtn.addEventListener('click', mouseEventType);
+
+// Double Click
+// clbtn.addEventListener('dblclick', mouseEventType);
+
+// Mouse Down
+// clbtn.addEventListener('mousedown', mouseEventType);
+
+// Mouse Up (single click)
+clbtn.addEventListener('mouseup', mouseEventType);
+
+
+function mouseEventType(e) {
+    e.preventDefault();
+
+    // console.log("I am working");
+    console.log(`Event Type = ${e.type}`);
 }
 
 
