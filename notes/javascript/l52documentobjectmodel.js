@@ -444,7 +444,7 @@ const card = document.querySelector('.card');
 // card.addEventListener('mouseleave', mouseEventType);
 
 // Mouse Move
-card.addEventListener('mousemove', mouseEventType);
+// card.addEventListener('mousemove', mouseEventType);
 
 const headingh2 = document.querySelector('h2');
 
@@ -455,7 +455,58 @@ function mouseEventType(e) {
     // console.log(`Event Type = ${e.type}`);
 
     headingh2.textContent = `MouseX: ${e.clientX}, MouseY: ${e.clientY}`;
+
+    document.body.style.backgroundColor = `rgba(${e.offsetX}, ${e.offsetY}, ${e.clientX}, 0.5)`;
 }
+
+// submit
+const getform = document.querySelector('.form');
+
+// getform.addEventListener('submit', function(e){
+//     // console.log('hi');
+//     console.log(`Event type = ${e.type}`);
+
+//     e.preventDefault();
+// });
+
+// Input Event (Keyboard Event)
+const getinput = document.querySelector('#task');
+
+// keydown
+// getinput.addEventListener('keydown', inputEventType);
+// keypress (same as key down)
+// getinput.addEventListener('keypress', inputEventType);
+
+// keyup
+// getinput.addEventListener('keyup', inputEventType);
+// input
+// getinput.addEventListener('input', inputEventType);
+
+// focus
+// getinput.addEventListener('focus', inputEventType);
+// blur
+// getinput.addEventListener('blur', inputEventType);
+
+// copy (ctrl + c) or (right click + copy)
+// getinput.addEventListener('copy', inputEventType);
+
+// cut (ctrl + x) or (right click + cut)
+// getinput.addEventListener('cut', inputEventType);
+
+// paste (ctrl + v) or (right click + paste)
+getinput.addEventListener('paste', inputEventType);
+
+function inputEventType(e) {
+    // console.log(e.target);
+    // console.log(this);
+
+    console.log(`Event Type = ${e.type}`);
+
+    console.log(e.target.value);
+    // console.log(this.value); // regular function မှာပဲ ပေးလို့ရမယ်။ arrow function မှာ ပေးလို့ မရဘူး
+    // console.log(getinput.value); // အဲလိုလည်း ပေးလို့ရတယ် အတူတူပဲ
+}
+
 
 
 
