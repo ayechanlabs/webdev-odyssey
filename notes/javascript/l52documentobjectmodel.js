@@ -507,6 +507,21 @@ function inputEventType(e) {
     // console.log(getinput.value); // အဲလိုလည်း ပေးလို့ရတယ် အတူတူပဲ
 }
 
+// Event Bubbling
+// document.querySelector('.card-title').addEventListener('click', function(){
+//     console.log("I am card-title.");
+// });
+
+// document.querySelector('.card-header').addEventListener('click', function(){
+//     console.log("I am card-header.");
+// })
+
+document.querySelector('.card').addEventListener('click', function(){
+    console.log("I am card.");
+})
+
+// Event Delegation
+
 
 
 
