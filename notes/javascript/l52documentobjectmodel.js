@@ -507,7 +507,7 @@ function inputEventType(e) {
     // console.log(getinput.value); // အဲလိုလည်း ပေးလို့ရတယ် အတူတူပဲ
 }
 
-// Event Bubbling
+// Event Bubbling (သူက child ကနေ parent ကို တက်သွားတာ bottom to top)
 // document.querySelector('.card-title').addEventListener('click', function(){
 //     console.log("I am card-title.");
 // });
@@ -516,11 +516,27 @@ function inputEventType(e) {
 //     console.log("I am card-header.");
 // })
 
-document.querySelector('.card').addEventListener('click', function(){
-    console.log("I am card.");
+// document.querySelector('.card').addEventListener('click', function(){
+//     console.log("I am card.");
+// })
+
+// Event Delegation (parent to child element ကို သွားတာ top to bottom)
+const getdeleteitem = document.querySelector('.delete-item');
+// console.log(getdeleteitem);
+
+// a tag
+getdeleteitem.addEventListener('click', function(e){
+    // console.log("I am delete item.");
+    console.log(e.target); // <a> tag ကို click ရင် a tag ထွက်တယ်။ i tag ကို click ရင် i tag ထွက်တယ်။
+    console.log(this); // သူက ကျတော့ သူရဲ့ parent ဖြစ်တဲ့ a tag ကို ပဲ ထုတ်ပေးမှာဖြစ်တယ်။
 })
 
-// Event Delegation
+document.body.addEventListener('click', eventDelegate);
+
+function eventDelegate(e) {
+    // console.log(e.target);
+    console.log(e.target.className);
+}
 
 
 
