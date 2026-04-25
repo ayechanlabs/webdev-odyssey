@@ -576,7 +576,15 @@ function eventDelegate(e) {
     }
 }
 
+// Form Data
+document.querySelector("#form").addEventListener('submit', function(e){
+    e.preventDefault();
 
+    const getNewTask = document.getElementById("task").value;
+    console.log(getNewTask);
+
+    localStorage.setItem("mytasks", getNewTask);
+})
 
 
 
