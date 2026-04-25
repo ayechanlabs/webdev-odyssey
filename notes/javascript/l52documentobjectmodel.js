@@ -595,18 +595,65 @@ document.querySelector("#form").addEventListener('submit', function(e){
     alltasks.push(getNewTask);
 
     localStorage.setItem("mytasks", JSON.stringify(alltasks));
+
+    document.getElementById("task").value = "";
+    document.getElementById("task").focus();
+
+    document.querySelector("ul.list-group").innerHTML = "";
+
+    newLiToDom();
 })
 
-console.log(localStorage.getItem('mytasks'));
-console.log(typeof localStorage.getItem('mytasks'));
+// console.log(localStorage.getItem('mytasks'));
+// console.log(typeof localStorage.getItem('mytasks'));
 
-console.log(JSON.parse(localStorage.getItem('mytasks')));
-console.log(typeof JSON.parse(localStorage.getItem('mytasks')));
+// console.log(JSON.parse(localStorage.getItem('mytasks')));
+// console.log(typeof JSON.parse(localStorage.getItem('mytasks')));
 
-const getmytasks = JSON.parse(localStorage.getItem('mytasks'));
-getmytasks.forEach((getmytask) => {
-    console.log(getmytask);
-})
+// const getmytasks = JSON.parse(localStorage.getItem('mytasks'));
+// getmytasks.forEach((getmytask) => {
+//     console.log(getmytask);
+// });
+
+
+// create new li, existing data
+function newLiToDom() {
+
+    // clear li
+    document.querySelector("ul.list-group").innerHTML = "";
+
+    const getAllTask = JSON.parse(localStorage.getItem("mytasks"));
+
+    getAllTask.forEach(function(getAllTask, idx){
+    // console.log(getAllTask);
+
+        const li = document.createElement("li");
+        li.id = "new-item";
+        li.classList.add("list-group-item");
+        li.appendChild(document.createTextNode(getAllTask));
+
+        const link = document.createElement("a");
+        link.href = "javascript:void(0);";
+        link.id = `delete-item${++idx}`;
+        link.classList.add("delete-item");
+
+        const italic = document.createElement("i");
+        italic.classList.add("fas", "fas-trash-alt");
+
+        link.appendChild(italic);
+        link.appendChild(document.createTextNode("delete"));
+
+        // console.log(link);
+
+        li.appendChild(link);
+
+        // console.log(li);
+
+        document.querySelector("ul.list-group").appendChild(li);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', newLiToDom);
 
 
 
