@@ -531,12 +531,52 @@ getdeleteitem.addEventListener('click', function(e){
     console.log(this); // သူက ကျတော့ သူရဲ့ parent ဖြစ်တဲ့ a tag ကို ပဲ ထုတ်ပေးမှာဖြစ်တယ်။
 })
 
-document.body.addEventListener('click', eventDelegate);
+// document.body.addEventListener('click', eventDelegate);
 
 function eventDelegate(e) {
     // console.log(e.target);
-    console.log(e.target.className);
+    // console.log(e.target.className);
+
+    // if(e.target.className === "fas fa-trash-alt"){
+    //     console.log("I am working, I am trash.");
+    // }
+
+    // if(e.target.className === "list-group-item"){
+    //     console.log("I am list item");
+    // }
+
+    //              i       a
+    // console.log(e.target.parentElement);
+
+    //    i     a (not working)
+    // if(e.target.parentElement.className === "delete-item") {
+    //     console.log("I am a tag.");
+    // }
+
+    //    i         a
+    if(e.target.parentElement.classList.contains("delete-item")){
+        // console.log("I am a tag");
+
+        // i
+        // e.target.remove();
+
+        // i        a
+        // e.target.parentElement.remove();
+
+        // i        a           li
+        e.target.parentElement.parentElement.remove();
+
+        //      a
+    } else if(e.target.classList.contains("delete-item")){
+        // a
+        // e.target.remove();
+
+        // a        li
+        e.target.parentElement.remove();
+    }
 }
+
+
 
 
 
