@@ -576,16 +576,37 @@ function eventDelegate(e) {
     }
 }
 
-// Form Data
+// Form Data to Local Storage
 document.querySelector("#form").addEventListener('submit', function(e){
     e.preventDefault();
+    // console.log("I am working");
 
     const getNewTask = document.getElementById("task").value;
-    console.log(getNewTask);
+    // console.log(getNewTask);
 
-    localStorage.setItem("mytasks", getNewTask);
+    let alltasks;
+
+    if (localStorage.getItem('mytasks') === null) {
+        alltasks = [];
+    } else {
+        alltasks = JSON.parse(localStorage.getItem('mytasks'));
+    }
+
+    alltasks.push(getNewTask);
+
+    localStorage.setItem("mytasks", JSON.stringify(alltasks));
 })
 
+console.log(localStorage.getItem('mytasks'));
+console.log(typeof localStorage.getItem('mytasks'));
+
+console.log(JSON.parse(localStorage.getItem('mytasks')));
+console.log(typeof JSON.parse(localStorage.getItem('mytasks')));
+
+const getmytasks = JSON.parse(localStorage.getItem('mytasks'));
+getmytasks.forEach((getmytask) => {
+    console.log(getmytask);
+})
 
 
 
