@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 300px;
+    background: #212121;
+
+    padding: 15px 10px;
+}
+
+p {
+    margin: 0;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.info {
+    color: #9B9B9B;
+    font-size: 13px;
+
+    margin-top: 10px;
+}

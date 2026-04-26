@@ -1,0 +1,17 @@
+.review {
+    width: 250px;
+    height: 90px;
+    font-family: Arial, sans-serif;
+
+    border: 1px solid rgb(150, 150, 150);
+
+    padding-left: 15px;
+}
+
+p {
+    font-size: 15px;
+}
+
+button {
+    border: 1px solid lightslategrey;
+}
