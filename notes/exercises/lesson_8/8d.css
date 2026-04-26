@@ -1,0 +1,35 @@
+.last_name {
+    margin-left: 10px;
+}
+
+.email {
+    width: 366px;
+    
+    display: block;
+}
+
+.sign_up {
+    width: 395px;
+    color: #ffffff;
+    background-color: #3975EA;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 5px;
+
+}
+
+.first_name, .last_name, .email, .sign_up {
+    padding: 10px 10px;
+}
+
+.first_name, .last_name, .email {
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.first_name, .email, .sign_up {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
