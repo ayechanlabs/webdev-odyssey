@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML & CSS Exercise 8E</title>
+        <link href="8e.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="form-control">
+            <p>Request a ride now</p>
+
+            <label for="pick_up_location"></label>
+            <input type="text" name="pick_up_location" id="pick_up_location" class="input_destination" placeholder="Enter pickup location" autofocus />
+
+            <label for="drop_off_location"></label>
+            <input type="text" name="drop_off_location" id="drop_off_location" class="input_destination" placeholder="Enter destination" />
+
+            <div class="buttons">
+                <button type="submit" id="request_ride" class="request_ride">Request Now</button>
+                <button type="button" id="later_ride" class="later_ride">Schedule for later</button>
+            </div>
+        </div>
+    </body>
 </html>
