@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.form-group .form-control, .form-group .submit_btn {
+    border-style: solid;
+    padding: 10px;
+}
+
+.container .message_1, .container .message_2 {
+    display: block;
+    margin-top: 10px;
+}
