@@ -20,6 +20,10 @@ body {
     padding: 10px;
 }
 
+.form-group .form-control:focus {
+    outline: none;
+}
+
 .container .message_1, .container .message_2 {
     display: block;
     margin-top: 10px;
