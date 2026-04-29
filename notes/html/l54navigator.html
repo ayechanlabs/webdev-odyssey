@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigator Properties & Methods</title>
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+            console.log(navigator.userAgent);
+            console.log(navigator.platform); // အခု လက်ရှိသုံးနေတဲ့ OS ကို ပြောတာ ဖြစ်တယ်။
+            console.log(navigator.onLine); // true -> internet လိုင်း ရ မရ ကို စစ်တာ ဖြစ်တယ်။
+
+            // Detect Browser
+            function detectBrowser() {
+                const user_agent = navigator.userAgent;
+                console.log(user_agent); // Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+
+                if (user_agent.includes("Firefox")) {
+                    return "Mozilla Firefox";
+                } else if (user_agent.includes("OPR")) {
+                    return "Opera";
+                } else if (user_agent.includes("Edg")) {
+                    return "Microsoft Edge";
+                } else if (user_agent.includes("Safari") && !user_agent.includes("Chrome")) {
+                    return "Safari";
+                } else if (user_agent.includes("Chrome") && !user_agent.includes("OPR")) {
+                    return "Google Chrome"
+                } else {
+                    return "Unknown Browser";
+                }
+            }
+
+            console.log("Browser: ", detectBrowser());
+
+            // .test() -> regular expression pattern -> case sensitive
+            const pattern = /apple/;
+            console.log(pattern.test("I like apple.")); // true
+            console.log(pattern.test("I like apples.")); // true
+            console.log(pattern.test("I like Apple")); // false
+            console.log(pattern.test("I like APPLE")); // false
+            console.log(pattern.test("I like orange")); // false
+
+            const string = /^Hello/;
+            console.log(string.test("Hi Hello")); // false
+            console.log(string.test("Hello World")); // true
+            console.log(string.test("hello world")); // false
+
+            // Detect OS (Method 2)
+            function detectOS() {
+                const userAgent = navigator.userAgent;
+
+                if (userAgent.includes("Windows")) return "Windows";
+
+                if (userAgent.includes("Mac") && !userAgent.includes("iPhone")) return "MacOS";
+
+                if (userAgent.includes("Linux") && !userAgent.includes("Android")) return "Linux";
+
+                if (userAgent.includes("Android")) return "Android";
+
+                if ((/iPhone | iPad/).test(userAgent)) return "iOS";
+
+                return "Unknown OS";
+            }
+
+            console.log("Operating System : ", detectOS());
+
+            // Detect Device
+            function isMobileDevice() {
+                return /Android | iPhone | iPad | Windows Phone/i.test(navigator.userAgent);
+            }
+
+            console.log("Device Type: ", isMobileDevice() ? "Mobile" : "Desktop");
+
+        </script>
+    </body>
+
+</html>
