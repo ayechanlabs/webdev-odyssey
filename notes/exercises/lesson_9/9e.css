@@ -1,0 +1,81 @@
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.card-container {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+
+    padding: 10px 15px;
+}
+
+.card-img {
+    width: 50px;
+    height: 50px;
+
+    vertical-align: middle;
+    object-fit: cover;
+
+    border-radius: 50px;
+
+    margin-right: 5px;
+}
+
+.card-container .tweet-box {
+    width: 250px;
+    font-size: 15px;
+
+    border: none;
+
+    padding: 10px 8px;
+}
+
+.tweet-box:focus {
+    outline: none;
+    border-bottom: 1px solid grey;
+}
+
+.card-container .tweet-btn {
+    color: #ffffff;
+    background-color: #4A99E9;
+
+    border: none;
+    border-radius: 20px;
+
+    margin-left: 5px;
+    padding: 8px 15px;
+
+    cursor: pointer;
+
+    /* Method - 2 */
+    /* box-shadow: 0 8px 0 #2980b9;
+    transition: all 0.1s; */
+
+    /* Method - 3 */
+    /* box-shadow: inset 5px 5px 10px #ccc, inset -5px -5px 10px #fff; */
+}
+
+.tweet-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    /* Method - 2 */
+    /* transform: translateY(4px);
+    box-shadow: 0 4px 0 #2980b9; */
+
+    /* Method - 3 */
+    /* transform: scale(0.95);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2); */
+}
