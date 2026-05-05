@@ -109,8 +109,21 @@
             .then((battery_life) => {
                 console.log(`Battery Level: ${battery_life.level * 100}%`); // 0 to 1
                 console.log(`Charging: ${battery_life.charging}`);
+                console.log(`Time to Full: ${battery_life.chargingTime} seconds`);
+                console.log(`Time to Empty: ${battery_life.dischargingTime} seconds`);
+
+                battery_life.addEventListener('levelchange', () => {
+                    console.log(`Battery Level: ${battery_life.level * 100}%`);
+                });
+
+                battery_life.addEventListener('chargingchange', () => {
+                    console.log(`Charging status: ${battery_life.charging}`);
+                });
             })
             .catch(error => console.log("Failed: ", error));
+
+            // GEO Location
+            console.log(navigator.geolocation);
 
         </script>
     </body>
