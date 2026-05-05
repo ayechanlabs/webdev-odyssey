@@ -7,6 +7,9 @@
     </head>
 
     <body>
+        <!-- <button type="button" onclick="clickToClipboard()">Click Me to Copy the Link!</button> -->
+
+        <button type="button" onclick="clickToClipboard('Hello, World!')">Click Me to Copy the Text!</button>
 
         <script type="text/javascript">
             console.log(navigator.userAgent);
@@ -75,7 +78,39 @@
             console.log("Device Type: ", isMobileDevice() ? "Mobile" : "Desktop");
 
             // Clipboard (readText(), writeText())
-            navigator.clipboard.readText();
+            // console.log(navigator.clipboard); // clipboard {}
+
+            function clickToClipboard(value) {
+                navigator.clipboard.writeText(`${value}`)
+                .then(() => console.log("Copied to Clipboard!"))
+                .catch(error => console.log("Failed: ", error));
+            }
+
+            // function clickToClipboard() {
+            //     navigator.clipboard.writeText(`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />`)
+            //     .then(() => console.log("Copied to Clipboard!"))
+            //     .catch(error => console.log("Failed: ", error));
+            // }
+
+            // clickToClipboard();
+
+            // navigator.clipboard.writeText("Hello, World!")
+            //     .then(() => console.log("Copied to clipboard!"))
+            //     .catch(error => console.log("Failed: ", error));
+
+            navigator.clipboard.readText()
+                .then(text => console.log("Clipboard Result : ", text))
+                .catch(error => console.log("Failed : ", error));
+
+            
+            // Battery
+
+            navigator.getBattery()
+            .then((battery_life) => {
+                console.log(`Battery Level: ${battery_life.level * 100}%`); // 0 to 1
+                console.log(`Charging: ${battery_life.charging}`);
+            })
+            .catch(error => console.log("Failed: ", error));
 
         </script>
     </body>
