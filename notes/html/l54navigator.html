@@ -123,7 +123,18 @@
             .catch(error => console.log("Failed: ", error));
 
             // GEO Location
-            console.log(navigator.geolocation);
+            // console.log(navigator.geolocation);
+
+            // check permission status
+            navigator.permissions.query({name: 'geolocation'})
+            .then(result => {
+                console.log("Geolocation Permission : ", result.state); // granted, prompt, denied
+
+                navigator.geolocation.getCurrentPosition(position => {
+                    console.log("Latitude : ", position.coords.latitude);
+                    console.log("Longitude : ", position.coords.longitude);
+                }, error => console.log("Failed : ", error.message));
+            }); 
 
         </script>
     </body>
