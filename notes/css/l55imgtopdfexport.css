@@ -1,8 +1,41 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: sans-serif;
     background: linear-gradient(160deg, green, silver);
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+
+    padding: 30px;
+}
+
+.display {
+    width: 100%;
+    height: auto;
+
+    border: 2px solid #999;
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+.btn_container {
+    display: flex;
+    justify-content: center;
 }
