@@ -29,4 +29,7 @@ function pdfloader() {
         return;
     }
 }
+
+// https://www.npmjs.com/package/jspdf
+// https://github.com/parallax/jsPDF
     
