@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    /* font-family: 'Times New Roman', Times, serif; */
+    /* font-family: "Google Sans Flex", sans-serif; */
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+
+    /* horizontal-align  */
+    text-align: center;
+    /* vertical-align */
+    align-content: center;
+}
+
+.img-container .google-logo {
+    width: 250px;
+    height: auto;
+
+    margin-bottom: 10px;
+}
+
+.text-box-container .search-box {
+    width: 500px;
+    font-size: 15px;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+
+    margin-bottom: 30px;
+    padding: 10px 20px;
+}
+
+.google-search-btn {
+    margin-right: 10px;
+}
+
+.google-search-btn, .feeling-lucky-btn {
+    font-size: 14px;
+    font-weight: 500;
+
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: #F0F0F0; */
+    border: 1px solid #F0F0F0;
+    border-radius: 3px;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+}
+
+.google-search-btn:hover, .feeling-lucky-btn:hover {
+    /* transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); */
+    border: 1px solid #000000;
+}
+
