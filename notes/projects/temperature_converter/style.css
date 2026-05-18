@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --teal: #42909D;
+    --deep-blue: #4E5AA0;
+    --dark-purple: #6A3E93;
+    --magenta-purple: #8B269C;
+}
+
+* {
+    /* font-family: "Roboto Mono", monospace; */
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    margin: 0;
+}
+
+/* background: linear-gradient(
+        135deg,
+        #42909D 0%,
+        #3A4281 35%,
+        #63438E 65%,
+        #8B269C 100%
+        ); */
+body {
+    height: 100vh;
+
+    background: linear-gradient(
+        to right,
+        var(--teal),
+        var(--deep-blue),
+        var(--dark-purple),
+        var(--magenta-purple)
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+
+    padding: 30px 30px;
+}
+
+.temp-title {
+    font-size: 26px;
+
+    margin-bottom: 10px;
+}
+
+.temp-subtitle {
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+.input-box-design {
+    font-size: 16px;
+
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+.input-boxes-container #temp-decimal-input {
+    width: 50px;
+}
+
+.input-boxes-container .convert-btn {
+    color: #ffffff;
+    background: #000000;
+    font-size: 16px;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+}
+
+.convert-btn:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.convert-btn:active {
+    box-shadow: none;
+    transform: none;
+}
