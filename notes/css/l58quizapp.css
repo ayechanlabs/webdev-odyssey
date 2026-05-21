@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333333;
+    color: #f4f4f4;
+}
+
+.container {
+    max-width: 500px;
+    background-color: #ffffff;
+    color: #333333;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    margin:auto;
+    padding: 20px;
+}
+
+/* Dark Mode Styles */
+.dark-mode .container {
+    background-color: #444444;
+    color: #f4f4f4;
+}
+
+.options button {
+    display: block;
+    width: 100%;
+    background-color: #e3e3e3;
+    font-size: 16px;
+
+    border: none;
+    border-radius: 150px 0 150px 0;
+
+    margin: 10px 0;
+
+    cursor: pointer;
+}
+
+/* Dark Mode Styles */
+.dark-mode .options button {
+    background-color: #666666;
+    color: #ffffff;
+}
+
+.options button:hover {
+    background-color: #333333;
+    color: #ffffff;
+
+    transform: scale(1.1);
+}
+
+/* 
+!important ဆိုတာက parent မှာ အရောင် ပေးထားပေးမဲ့ ဒီ အရောင်ကို ဦးစားပေးပြီ ဖော်ပြ ချင်တဲ့ အခါမှာ သုံးတာ
+ */
+.options .correct {
+    background-color: steelblue !important;
+    color: #ffffff;
+}
+
+.options .incorrect {
+    background-color: #ff4d4d;
+    color: #ffffff;
+}
+
+.next-btn {
+    font-size: 16px;
+    display: none;
+
+    margin-top: 15px;
+    padding: 5px 15px;
+
+    cursor: pointer;
+}
+
+/* Dark Mode Styles */
+.dark-mode .next-btn, .dark-mode #result button {
+    background-color: #888888;
+    color: #ffffff;
+
+    border: none;
+}
+
+#result {
+    display: none;
+}
+
+#result button {
+    font-size: 16px;
+    
+    margin-top: 15px;
+    padding: 10px 20px;
+
+    cursor: pointer;
+}
