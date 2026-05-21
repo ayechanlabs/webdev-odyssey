@@ -9,10 +9,15 @@
     <body>
         <div>
             <h1 id="welcome">Welcome to jQuery</h1>
+            <h2 id="mm" class="mm">Welcome to Myanmar.</h2>
+            <h2 id="th" class="th">Welcome to Thailand</h2>
+            <h2 id="sl" class="sl">Welcome to Sri Lanka</h2>
+            <h2 id="in" class="in">Welcome to India</h2>
+            <h2 id="de" class="de">Welcome to Germany</h2>
         </div>
 
         <script src="https://code.jquery.com/jquery-4.0.0.js" type="text/javascript"></script>
-        <script src="../libs/jquery-4.0.0.js" type="text/javascript"></script>
+        <!-- <script src="../libs/jquery-4.0.0.js" type="text/javascript"></script> -->
 
         <script type="text/javascript">
             console.log('Hello, World!');
@@ -25,7 +30,19 @@
                 // console.log(getH1);
 
                 // ${'tag_name/id/class'}
-                $('#welcome');
+                // $('#welcome');
+
+                // $('h1').fadeOut(); // သူက ချက်ချင်းပျောက်သွားတာ အဲလို မပျောက်ချင်ဘူး ဆိုရင် အချိန်ပေးလို့ရတယ်
+                // 1s = 1000ms
+                $('h1').fadeOut(2000); // 2000ms = 2s
+
+                // fadeTo(speed, opacity), slow = 600ms, fast = 200ms
+                $('#sl').fadeTo(3000, 0.5); // 3000ms = 3s, 0.5 = 50% opacity
+
+                // $('#in').fadeToggle(); // ပျောက်သွားတာကို ပြန်ပေါ်လာအောင် toggle လုပ်တာ
+                $('#in').fadeToggle(3000); // 3000ms = 3s
+                $('#in').fadeToggle(5000); // 5000ms = 5s
+
             });
         </script>
     </body>
