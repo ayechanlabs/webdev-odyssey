@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Show and Hide</title>
+
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 800px;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: silver;
+        }
+
+        #div1 {
+            background-color: green;
+        }
+
+        #div2 {
+            background-color: steelblue;
+        }
+
+        #div4 {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <h1>jQuery Show and Hide Methods</h1>
+
+            <div class="row">
+                <div id="div1" class="box">Div 1</div>
+                <div id="div2" class="box">Div 2</div>
+                <div id="div3" class="box">Div 3</div>
+                <div id="div4" class="box">Div 4</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-4.0.0.js" type="text/javascript"></script> -->
+    <script src="../libs/jquery-4.0.0.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready( function() {
+            // we can also use seconds to specify the time duration
+            // $('#div1').hide(); // hide() method က သူ့ကိုပျောက်သွားအောင် လုပ်တာ
+            // $('#div2').show(); // show() method က သူ့ကိုပြန်ပေါ်လာအောင် လုပ်တာ
+            // $('#div1').hide(2000); // 2000ms = 2s
+            // $('#div1').show(3000); // 3000ms = 3s
+
+            // $("#div2").slideUp(2000); // slideUp() method က သူ့ကိုပေါ် တက်သွားအောင် လုပ်တာ
+            // $("#div2").slideDown(3000); // slideDown() method က သူ့ကိုအောက်ကျအောင် လုပ်တာ
+
+            // => animation(object, speed, callback)
+            $("#div3").animate( {
+                width: 0,
+                height: 0,
+                marginLeft: "200px", // margin-left: 200px or "marginLeft": "200px"
+                marginTop: "70px",
+                opacity:0
+            }, 2000, function() {
+                console.log("Animation is done!");
+            });
+
+            // => callback function
+            // $("#div1").fadeTo(1000, 0);
+            // $("#div2").fadeTo(1000, 0);
+            // // $("#div3").fadeTo(1000, 0);
+            // $("#div4").fadeTo(1000, 0);
+
+            $("#div1").fadeTo(1000, 0, function() {
+                $("#div2").fadeTo(1000, 0, function() {
+                    $("#div4").fadeTo(1000, 0);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
