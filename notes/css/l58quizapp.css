@@ -45,6 +45,7 @@ body {
     border-radius: 150px 0 150px 0;
 
     margin: 10px 0;
+    padding: 10px 10px;
 
     cursor: pointer;
 }
@@ -62,6 +63,13 @@ body {
     transform: scale(1.1);
 }
 
+.dark-mode .options button:hover {
+    background-color: #666666;
+    color: #ffffff;
+
+    transform: scale(1.1);
+}
+
 /* 
 !important ဆိုတာက parent မှာ အရောင် ပေးထားပေးမဲ့ ဒီ အရောင်ကို ဦးစားပေးပြီ ဖော်ပြ ချင်တဲ့ အခါမှာ သုံးတာ
  */
@@ -71,7 +79,7 @@ body {
 }
 
 .options .incorrect {
-    background-color: #ff4d4d;
+    background-color: red !important;
     color: #ffffff;
 }
 
