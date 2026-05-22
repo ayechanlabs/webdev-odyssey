@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Strichpunkt+Sans:wght@400..900&display=swap');
+
+* {
+    font-family: "Strichpunkt Sans", "Roboto", sans-serif;
+    font-optical-sizing: auto;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column; /* Force children to stack vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 200px;
+    min-height: 300px;
+
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+    margin-bottom: 15px;
+    padding: 15px 20px;
+}
+
+.container .theme-container {
+    margin-top: 10px;
+}
+
+.theme-container, h3, .quiz-container {
+    margin-bottom: 10px;
+}
+
+.quiz-container .quiz-question {
+    margin-bottom: 10px;
+}
+
+.container .quiz-container .options-container button {
+    width: 100%;
+    background-color: #E3E3E3;
+    font-size: 15px;;
+
+    border: none;
+    border-radius: 20px 0 20px 0;
+
+    padding: 10px 0;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+}
+
+.quiz-container .options-container button:hover {
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.quiz-container .options-container button.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.quiz-container .options-container button.incorrect {
+    background-color: #f44336;
+    color: white;
+}
+
+.next-btn {
+    width: 100px;
+    background-color: #f4f4f4;
+    font-size: 18px;
+
+    /* align-self: center; */
+
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    transform: translateY(-2px);
+}
+
+.next-btn:active {
+    transform: none;
+}
