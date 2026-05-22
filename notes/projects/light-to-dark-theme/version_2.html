@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+
+    <style type="text/css">
+        /* The outer track of the switch */
+        .toggle-switch {
+            width: 60px;
+            height: 34px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 34px;
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            transition: background-color 0.3s ease;
+            outline: none;
+        }
+
+        /* Focus state for keyboard accessibility */
+        .toggle-switch:focus-visible {
+            outline: 2px solid #007bff;
+            outline-offset: 2px;
+        }
+
+        /* The inner sliding knob */
+        .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 28px;
+            height: 28px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        /* Active / "ON" State Styles */
+        .toggle-switch.active {
+            background-color: #4cd964; /* Green track when ON */
+        }
+
+        .toggle-switch.active .toggle-knob {
+            transform: translateX(26px); /* Moves knob to the right */
+        }
+
+    </style>
+</head>
+<body>
+    <button id="toggle-switch" class="toggle-switch" aria-pressed="false">
+        <span class="toggle-knob"></span>
+    </button>
+
+    <script type="text/javascript">
+        const toggleBtn = document.getElementById('toggle-switch');
+
+        toggleBtn.addEventListener('click', () => {
+        // Toggle the active class for styling
+        const isActive = toggleBtn.classList.toggle('active');
+        
+        // Update aria-pressed for screen readers (must be a string)
+        toggleBtn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+
+    </script>
+</body>
+</html>
