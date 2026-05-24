@@ -10,15 +10,27 @@ let currentQuestion = document.querySelector("#quiz-question"),
     nextBtn = document.querySelector("#next-btn"),
     restartBtn = document.querySelector("#restart-btn");
 
+const savedTheme = localStorage.getItem("quiz-theme");
+
+if (savedTheme === "dark") {
+    rootElement.setAttribute("data-theme", "dark");
+    themeText.textContent = "Theme: Dark Mode";
+} else {
+    rootElement.removeAttribute("data-theme");
+    themeText.textContent = "Theme: Light Mode";
+}
+
 themeBtn.addEventListener("click", () => {
     const currentTheme = rootElement.getAttribute("data-theme");
 
     if (currentTheme === "dark") {
         rootElement.removeAttribute("data-theme");
         themeText.textContent = "Theme: Light Mode";
+        localStorage.setItem("quiz-theme", "light"); // Save theme choice
     } else {
         rootElement.setAttribute("data-theme", "dark");
         themeText.textContent = "Theme: Dark Mode";
+        localStorage.setItem("quiz-theme", "dark"); // Save theme choice
     }
 });
 
@@ -73,6 +85,106 @@ const quizQuestions = [
         question: "What is the chemical symbol for water?",
         options: ["H2O", "CO2", "O2", "NaCl"],
         answer: "H2O"
+    },
+    {
+        question: "Which element has the chemical symbol for 'K'?",
+        options: ["Krypton", "Potassium", "Calcium", "Copper"],
+        answer: "Potassium"
+    },
+    {
+        question: "How many time zones does Russia have?",
+        options: ["5", "7", "9", "11"],
+        answer: "11"
+    },
+    {
+        question: "What is the national animal of Scotland?",
+        options: ["Unicorn", "Phoenix", "Red Deer", "Loch Ness Monster"],
+        answer: "Unicorn"
+    },
+    {
+        question: "Which artist painted 'The Starry Night'?",
+        options: ["Pablo Picasso", "Claude Monet", "Vincent van Gogh", "Leonardo da Vinci"],
+        answer: "Vincent van Gogh"
+    },
+    {
+        question: "What is the smallest country in the world by land area?",
+        options: ["Monaco", "San Marino", "Liechtenstein", "Vatican City"],
+        answer: "Vatican City"
+    },
+    {
+        question: "Which movie won the first-ever Academy Award for Best Picture in 1929?",
+        options: ["Wings", "Sunrise", "Metropolis", "The Jazz Singer"],
+        answer: "Wings"
+    },
+    {
+        question: "What is the highest-grossing film of all time (unadjusted for inflation)?",
+        options: ["Titanic", "Avatar", "Avengers: Endgame", "Star Wars: The Force Awakens"],
+        answer: "Avatar"
+    },
+    {
+        question: "How many elements are currently on the periodic table?",
+        options: ["112", "115", "118", "120"],
+        answer: "118"
+    },
+    {
+        question: "Which country is home to the Kangaroo?",
+        options: ["New Zealand", "South Africa", "Australia", "Kenya"],
+        answer: "Australia"
+    },
+    {
+        question: "What is the capital city of Australia?",
+        options: ["Sydney", "Melbourne", "Brisbane", "Canberra"],
+        answer: "Canberra"
+    },
+    {
+        question: "Which blood type is known as the universal donor?",
+        options: ["O Negative", "O Positive", "AB Negative", "A Positive"],
+        answer: "O Negative"
+    },
+    {
+        question: "Who is credited with inventing the World Wide Web in 1989?",
+        options: ["Bill Gates", "Steve Jobs", "Tim Berners-Lee", "Alan Turing"],
+        answer: "Tim Berners-Lee"
+    },
+    {
+        question: "What is the longest river in the world?",
+        options: ["Amazon River", "Nile River", "Yangtze River", "Mississippi River"],
+        answer: "Nile River"
+    },
+    {
+        question: "In which year did the Titanic sink?",
+        options: ["1905", "1912", "1918", "1923"],
+        answer: "1912"
+    },
+    {
+        question: "Which planet in our solar system rotates clockwise on its axis?",
+        options: ["Venus", "Mars", "Jupiter", "Neptune"],
+        answer: "Venus"
+    },
+    {
+        question: "What is the currency of Japan?",
+        options: ["Yuan", "Won", "Yen", "Ringgit"],
+        answer: "Yen"
+    },
+    {
+        question: "How many bones does a shark have?",
+        options: ["0", "50", "150", "200"],
+        answer: "0"
+    },
+    {
+        question: "Which classical composer became completely deaf later in life?",
+        options: ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Johann Sebastian Bach", "Frederic Chopin"],
+        answer: "Ludwig van Beethoven"
+    },
+    {
+        question: "What is the primary ingredient in traditional guacamole?",
+        options: ["Tomato", "Tomatillo", "Avocado", "Mango"],
+        answer: "Avocado"
+    },
+    {
+        question: "Which country gifted the Statue of Liberty to the United States?",
+        options: ["United Kingdom", "France", "Germany", "Italy"],
+        answer: "France"
     }
 ];
 

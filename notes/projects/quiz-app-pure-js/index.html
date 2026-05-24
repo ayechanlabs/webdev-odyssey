@@ -6,6 +6,12 @@
     <title>Quiz App with Pure JavaScript</title>
 
     <link href="style.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript">
+        if (localStorage.getItem("quiz-theme") === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+        }
+    </script>
 </head>
 <body>
     <div class="container">
