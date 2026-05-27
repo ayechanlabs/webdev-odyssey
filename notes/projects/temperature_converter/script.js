@@ -6,17 +6,23 @@ const inputTemp = document.querySelector("#temp-decimal-input"),
       resultTxt = document.querySelector(".result-text");
 
 function checkGetInput() {
-    if (
+    // if (
+    //     (inputTemp.value.trim() !== "") &&
+    //     (fromUnit.value !== "FU") &&
+    //     (toUnit.value !== "TU")
+    // ) {
+    //     // console.log(false);
+    //     convertBtn.disabled = false;
+    // } else {
+    //     // console.log(true);
+    //     convertBtn.disabled = true;
+    // }
+
+    convertBtn.disabled = !(
         (inputTemp.value.trim() !== "") &&
         (fromUnit.value !== "FU") &&
         (toUnit.value !== "TU")
-    ) {
-        // console.log(false);
-        convertBtn.disabled = false;
-    } else {
-        // console.log(true);
-        convertBtn.disabled = true;
-    }
+    );
 }
 
 inputTemp.addEventListener ("input", checkGetInput);
@@ -26,7 +32,7 @@ toUnit.addEventListener ("change", checkGetInput);
 checkGetInput();
 
 function convertTemp() {
-    let currentTemp = Number(inputTemp.value).toFixed(2), convertTemp = 0;
+    let currentTemp = Number(inputTemp.value), convertTemp = 0;
 
     // Convert Fahrenheit to Celsius
     if (fromUnit.value === "F" && toUnit.value === "C") {
@@ -77,5 +83,5 @@ convertBtn.addEventListener("click", () => {
     // The result should be like this -> 34 Celsius is 93.2 Fahrenheit.
     resultTxt.textContent = `${inputTemp.value} ${fromUnit.options[fromUnit.selectedIndex].text} is ${result.toFixed(2)} ${toUnit.options[toUnit.selectedIndex].text}.`;
 
-    console.log(result);
+    // console.log(result);
 });
