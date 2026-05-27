@@ -99,3 +99,10 @@ body {
     box-shadow: none;
     transform: none;
 }
+
+.convert-btn:disabled {
+    background-color: #666666;
+    color: #aaaaaa;
+
+    cursor: not-allowed;
+}
