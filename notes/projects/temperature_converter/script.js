@@ -11,10 +11,10 @@ function checkGetInput() {
         (fromUnit.value !== "FU") &&
         (toUnit.value !== "TU")
     ) {
-        console.log(false);
+        // console.log(false);
         convertBtn.disabled = false;
     } else {
-        console.log(true);
+        // console.log(true);
         convertBtn.disabled = true;
     }
 }
@@ -26,7 +26,7 @@ toUnit.addEventListener ("change", checkGetInput);
 checkGetInput();
 
 function convertTemp() {
-    let currentTemp = Number(inputTemp.value), convertTemp = 0;
+    let currentTemp = Number(inputTemp.value).toFixed(2), convertTemp = 0;
 
     // Convert Fahrenheit to Celsius
     if (fromUnit.value === "F" && toUnit.value === "C") {
@@ -40,18 +40,20 @@ function convertTemp() {
     else if (fromUnit.value === "F" && toUnit.value === "F") {
         convertTemp = currentTemp;
     }
+
     // Convert Celsius to Fahrenheit
     else if (fromUnit.value === "C" && toUnit.value === "F") {
         convertTemp = (currentTemp * (9/5)) + 32;
     }
     // Convert Celsius to Kelvin
     else if (fromUnit.value === "C" && toUnit.value === "K") {
-        convertTemp = (currentTemp + 2733.15);
+        convertTemp = (currentTemp + 273.15);
     }
     // Convert Celsius to Celsius
     else if (fromUnit.value === "C" && toUnit.value === "C") {
         convertTemp = currentTemp;
     }
+    
     // Convert Kelvin to Fahrenheit
     else if (fromUnit.value === "K" && toUnit.value === "F") {
         convertTemp = (currentTemp - 273.15) * 9/5 +32;
@@ -69,15 +71,11 @@ function convertTemp() {
 }
 
 convertBtn.addEventListener("click", () => {
-    result = convertTemp();
+    let result = convertTemp();
    
     // resultTxt.innerHTML or textContent
     // The result should be like this -> 34 Celsius is 93.2 Fahrenheit.
-    resultTxt.textContent = `
-    ${inputTemp.value} 
-    ${fromUnit.options[fromUnit.selectedIndex].text} 
-    is ${result}
-    ${toUnit.options[toUnit.selectedIndex].text}.`;
+    resultTxt.textContent = `${inputTemp.value} ${fromUnit.options[fromUnit.selectedIndex].text} is ${result.toFixed(2)} ${toUnit.options[toUnit.selectedIndex].text}.`;
 
     console.log(result);
 });
