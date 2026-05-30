@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Intro V5, Table</title>
+
+    <!-- bootstrap css1 js1 -->
+    <link href="../libs/bootstrap-5.3.8/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- datatable css1 js1 -->
+    <link href="https://cdn.datatables.net/2.3.8/css/dataTables.dataTables.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Table</h1>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table id="first-table" class="table border">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Aung Aung</td>
+                            <td>agag@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Maung Maung</td>
+                            <td>mgmg@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Hla Hla</td>
+                            <td>hlahla@gmail.com</td>
+                            <td>Mandalay</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Su Su</td>
+                            <td>susu@gmail.com</td>
+                            <td>Mandalay</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Aye Aye</td>
+                            <td>ayeaye@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Kyaw Kyaw</td>
+                            <td>kwkw@gmail.com</td>
+                            <td>Mawlamyine</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Ni Ni</td>
+                            <td>nini@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Nyi Nyi</td>
+                            <td>nyinyi@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Hsu Hsu</td>
+                            <td>hsuhsu@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Lin Lin</td>
+                            <td>linlin@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-6">
+                <table class="table border table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Aung Aung</td>
+                            <td>agag@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Maung Maung</td>
+                            <td>mgmg@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Hla Hla</td>
+                            <td>hlahla@gmail.com</td>
+                            <td>Mandalay</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Su Su</td>
+                            <td>susu@gmail.com</td>
+                            <td>Mandalay</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Aye Aye</td>
+                            <td>ayeaye@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Kyaw Kyaw</td>
+                            <td>kwkw@gmail.com</td>
+                            <td>Mawlamyine</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Ni Ni</td>
+                            <td>nini@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Nyi Nyi</td>
+                            <td>nyinyi@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Hsu Hsu</td>
+                            <td>hsuhsu@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Lin Lin</td>
+                            <td>linlin@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-6">
+                <table class="table border table-striped-columns table-sm">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Aung Aung</td>
+                            <td>agag@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Maung Maung</td>
+                            <td>mgmg@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Hla Hla</td>
+                            <td>hlahla@gmail.com</td>
+                            <td>Mandalay</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Su Su</td>
+                            <td>susu@gmail.com</td>
+                            <td>Mandalay</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Aye Aye</td>
+                            <td>ayeaye@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Kyaw Kyaw</td>
+                            <td>kwkw@gmail.com</td>
+                            <td>Mawlamyine</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Ni Ni</td>
+                            <td>nini@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Nyi Nyi</td>
+                            <td>nyinyi@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Hsu Hsu</td>
+                            <td>hsuhsu@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Lin Lin</td>
+                            <td>linlin@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-6">
+                <table class="table border table-striped table-success table-sm table-hover">
+                    <thead>
+                        <tr class="table-active">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Aung Aung</td>
+                            <td>agag@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Maung Maung</td>
+                            <td>mgmg@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Hla Hla</td>
+                            <td>hlahla@gmail.com</td>
+                            <td>Mandalay</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Su Su</td>
+                            <td>susu@gmail.com</td>
+                            <td>Mandalay</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Aye Aye</td>
+                            <td>ayeaye@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Kyaw Kyaw</td>
+                            <td>kwkw@gmail.com</td>
+                            <td>Mawlamyine</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Ni Ni</td>
+                            <td>nini@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Nyi Nyi</td>
+                            <td>nyinyi@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Hsu Hsu</td>
+                            <td>hsuhsu@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Lin Lin</td>
+                            <td>linlin@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-6">
+                <table class="table border table-striped table-info table-sm table-hover">
+                    <thead>
+                        <tr class="table-active">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Aung Aung</td>
+                            <td>agag@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Maung Maung</td>
+                            <td>mgmg@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Hla Hla</td>
+                            <td>hlahla@gmail.com</td>
+                            <td>Mandalay</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Su Su</td>
+                            <td>susu@gmail.com</td>
+                            <td>Mandalay</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Aye Aye</td>
+                            <td>ayeaye@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Kyaw Kyaw</td>
+                            <td>kwkw@gmail.com</td>
+                            <td>Mawlamyine</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Ni Ni</td>
+                            <td>nini@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Nyi Nyi</td>
+                            <td>nyinyi@gmail.com</td>
+                            <td>Yangon</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Hsu Hsu</td>
+                            <td>hsuhsu@gmail.com</td>
+                            <td>Bago</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Lin Lin</td>
+                            <td>linlin@gmail.com</td>
+                            <td class="table-active">Yangon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap css1 js1 -->
+    <script src="../libs/bootstrap-5.3.8/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    
+    <!-- jquery js1 -->
+    <script src="../libs/jquery-4.0.0.js" type="text/javascript"></script>
+
+    <!-- datatable css1 js1 -->
+    <script src="https://cdn.datatables.net/2.3.8/js/dataTables.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#first-table").DataTable();
+        });
+    </script>
+</body>
+</html>
+
+<!-- 
+table မှာ border ပေးချင်ရင် border ရေးလိုက်ရင် ရပြီ
+table မှာ လူကူးမျဥ်းကြားလို့ ဖြစ်ချင်ရင် table-striped ပေးရင် ရတယ်။
+table-striped-columns ဆိုတာက လူကူးမျဥ်းကြားကို columns လိုက် ပေါ်စေချင်တာ။
+table ရဲ့ size တွေမှာ sm & md ပဲ ရှိတယ်။
+table တွေမှာ color ပေးစေချင်ရင် table-'color' ဆိုပြီ ပေးလိုက်ရင်ရပြီ table-info
+table မှာ mouse တင်လိုက်ရင် တင်လိုက်ကြောင်းပြစေချင်ရင် table-hover ဆိုပြီ သုံးလို့ရတယ်။
+
+jQuery နဲ့ ရေးထားတဲ့ libraries တွေသုံးချင်ရင် jQuery ချိတ်ဆက်ထားတဲ့ အောက်မှာ လာချိတ်ရမယ်။
+ -->
