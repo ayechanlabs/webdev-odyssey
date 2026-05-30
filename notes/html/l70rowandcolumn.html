@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Intro V5, Row and Column</title>
+
+    <link href="../libs/bootstrap-5.3.8/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Row and Column</h1>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="bg-primary text-light col-6">Hello Yangon</h1>
+            <h1 class="bg-secondary text-light col-6">Hello Mandalay</h1>
+            <h1 class="bg-success text-light col-8">Hello Pyinoolwin</h1>
+            <h1 class="bg-info text-light col-2">Hello Bago</h1>
+            <h1 class="bg-danger text-light col">Hello Mawlamyine</h1>
+            <h1 class="bg-warning text-light col-8">Hello Yayy</h1>
+            <h1 class="bg-dark text-light col">Hello Kachin</h1>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="row">
+        <div class="bg-primary text-light col-6">
+            <div class="row">
+                <div class="bg-success col-xxl-3 col-xl-4 col-lg-6 col-sm-12">Col 1 - div 1</div>
+                <div class="bg-success col-xxl-3 col-xl-4 col-lg-6 col-sm-12">Col 1 - div 2</div>
+                <div class="bg-success col-xxl-3 col-xl-4 col-lg-6 col-sm-12">Col 1 - div 3</div>
+                <div class="bg-success col-xxl-3 col-xl-4 col-lg-6 col-sm-12">Col 1 - div 4</div>
+                <div class="bg-success col-xxl-3 col-xl-4 col-lg-6 col-sm-12">Col 1 - div 5</div>
+                <div class="bg-success col-xxl-3 col-xl-4 col-lg-6 col-sm-12">Col 1 - div 6</div>
+            </div>
+        </div>
+
+        <div class="bg-secondary text-light col-6">
+            <div class="row">
+                <div class="bg-success col-md-6 col-sm-12">Col 2 - div 1</div>
+                <div class="bg-danger col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="bg-info col-md-6 col-sm-12">Col 2 - div 2 - div 1</div>
+                        <div class="bg-warning col-md-6 col-sm-12">Col 2 - div 2 - div 2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../libs/bootstrap-5.3.8/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</body>
+</html>
+
+<!-- 
+Bootstrap က column ခွဲရင် 12 column ကို အဓိက ထားပြီခွဲ့တာ
+
+col = column auto (default is 12)
+col-1 to col-12 ထိရှိတယ်
+
+ -->

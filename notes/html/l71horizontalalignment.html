@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Intro V5, Horizontal Alignment</title>
+
+    <link href="../libs/bootstrap-5.3.8/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .row {
+            height: 100px;
+            background-color: silver;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Horizontal Alignment</h1>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-2 bg-primary">Column 1</div>
+            <div class="col-2 bg-info">Column 2</div>
+            <div class="col-2 bg-success">Column 3</div>
+        </div>
+
+        <hr/>
+
+        <div class="row justify-content-center">
+            <div class="col-2 bg-primary">Column 1</div>
+            <div class="col-2 bg-info">Column 2</div>
+            <div class="col-2 bg-success">Column 3</div>
+        </div>
+
+        <hr/>
+
+        <div class="row justify-content-end">
+            <div class="col-2 bg-primary">Column 1</div>
+            <div class="col-2 bg-info">Column 2</div>
+            <div class="col-2 bg-success">Column 3</div>
+        </div>
+    </div>
+
+    <script src="../libs/bootstrap-5.3.8/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</body>
+</html>
+
+<!-- 
+Bootstrap က column ခွဲရင် 12 column ကို အဓိက ထားပြီခွဲ့တာ
+
+col = column auto (default is 12)
+col-1 to col-12 ထိရှိတယ်
+
+ -->
