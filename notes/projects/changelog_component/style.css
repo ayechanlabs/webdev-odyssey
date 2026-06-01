@@ -106,7 +106,7 @@ body {
 }
 
 .timeline-content {
-    width: 60%;
+    width: 60%; /* 65% 2nd option*/
     color: #111111;
     font-size: 1rem;
     font-weight: 500;
