@@ -16,21 +16,128 @@
         <form action="" method="" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="first-name">First Name</label>
-                    <input type="text" name="first-name" id="first-name" class="form-control" placeholder="Enter your First Name" />
+                    <label for="first-name" class="form-label">First Name</label>
+                    <input type="text" name="first-name" id="first-name" class="form-control form-control-lg" placeholder="Enter your First Name" />
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Enter your Last Name" />
+                    <label for="last-name" class="form-label">Last Name</label>
+                    <input type="text" name="last-name" id="last-name" class="form-control form-control-md" placeholder="Enter your Last Name" />
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="age">Age</label>
-                    <input type="number" name="age" id="age" class="form-control" placeholder="Enter your Age" />
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" name="age" id="age" class="form-control form-control-sm" placeholder="Enter your Age" />
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="email">Age</label>
-                    <input type="number" name="age" id="age" class="form-control" placeholder="Enter your Age" />
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="age" id="age" class="form-control" placeholder="Enter your Email" />
                 </div>
+                <div class="col-md-6 mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="age" id="age" class="form-control" placeholder="Enter your Password" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="color" class="form-label">Color Picker</label>
+                    <input type="color" name="age" id="age" class="form-control form-control-color" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <!-- 
+                    form-select-md & form-select-sm ဆိုပြီ ၂ခု ထပ်ရှိေသးတယ်။
+                     -->
+                    <select name="country" id="country" class="form-select form-select-lg">
+                        <option selected disabled>Choose Country</option>
+                        <option value="mm">Myanmar</option>
+                        <option value="th">Thailand</option>
+                        <option value="sk">Sri-Lanka</option>
+                        <option value="indo">Indonesia</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="roles" class="form-label">Role</label>
+                    <select name="roles[]" id="roles" class="form-select" size="6" multiple>
+                        <option value="ad">Admin</option>
+                        <option value="mg">Manager</option>
+                        <option value="sup">Supervisor</option>
+                        <option value="edi">Editor</option>
+                        <option value="vr">Viewer</option>
+                        <option value="sub">Subscriber</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="searchcity" class="form-label">Search by city name</label>
+                    <input type="text" name="searchcity" id="searchcity" class="form-control" list="samplecities" />
+                    <datalist id="samplecities">
+                        <option value="Yangon"></option>
+                        <option value="Mandalay"></option>
+                        <option value="Bago"></option>
+                        <option value="Mawlamyine"></option>
+                    </datalist>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Gender</label>
+                    <div class="form-check">
+                        <input type="radio" name="gender" id="genderm" class="form-check-input" value="1" /><label for="genderm" class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="gender" id="genderf" class="form-check-input" value="0" /><label for="genderf" class="form-check-label">Female</label>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Fav Music</label>
+                    <div class="form-check">
+                        <input type="checkbox" name="favmusic" id="favpop" class="form-check-input" value="1" />
+                        <label for="favpop" class="form-check-label">Pop</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="favmusic" id="favrock" class="form-check-input" value="2" />
+                        <label for="favrock" class="form-check-label">Rock</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="favmusic" id="favhip" class="form-check-input" value="3" />
+                        <label for="favhip" class="form-check-label">Hip-Hop</label>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" name="dob" id="dob" class="form-control rounded-0" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="nrc" class="form-label">NRC</label>
+                    <input type="file" name="nrc" id="nrc" class="form-control" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="score" class="form-label">Score</label>
+                    <input type="range" name="score" id="score" class="form-range" min="0" max="100" step="10" value="0" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text">@</span>
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Username" />
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="input-group input-group-sm">
+                        <input type="text" name="useraccount" id="useraccount" class="form-control" placeholder="Useraccount" />
+                        <span class="input-group-text">@icloud.com</span>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="bio" class="form-label">Bio</label>
+                    <textarea name="bio" id="bio" class="form-control rounded-0" rows="3"></textarea>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="form-check form-switch">
+                        <input type="checkbox" name="agree" id="agree" class="form-check-input" value="1" />
+                        <label for="agree" class="form-check-label">I Agree All the above regulations.</label>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="d-flex justify-content-end">
+                        <button type="reset" class="btn btn-secondary btm-sm rounded-0 me-3">Cancel</button>
+                        <button type="submit" class="btn btn-primary btm-sm rounded-0">Register</button>
+                    </div>
+                </div>
+                
             </div>
         </form>
 
