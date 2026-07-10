@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --success-color: #2ecc71;
+    --info-color: #3498db;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --accent-color: #f39c12;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 5px;
+}
+
+/* Start - Back to Top Button */
+/* End - Back to Top Button */
+
+
+/* Start Header Section */
+
+    /* start navbar */
+    /* end navbar */
+
+    /* start banner */
+    /* end banner */
+
+/* End Header Section */
+
+
+/* Start Clients Section */
+/* End Clients Section */
+
+
+/* Start Team Section */
+/* End Team Section */
+
+
+/* Start Public Section */
+/* End Public Section */
+
+
+/* Start Pricing Section */
+/* End Pricing Section */
+
+
+/* Start Contact Section */
+/* End Contact Section */
+
+
+/* Start Footer Section */
+/* End Footer Section */
+
+
+/* Start Modal Box */
+/* End Modal Box */
+
+
+/* Start Animation for banner */
+/* End Animation for banner */
+
+
+/* Start Responsive Adjustments */
+/* End Responsive Adjustments */
