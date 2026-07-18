@@ -72,9 +72,9 @@
                 <div class="row">
                     <div class="col-11 col-lg-8 col-md-10 text-center banner-contents">
                         <h1 class="animates">PTT Software Development Company</h1>
-                        <h2 class="display-1 animates">We help companies to digitalize their businesses.</h2>
-                        <p class="display-2 animates">Properly set processes. Transparent cooperation. Predictable delivery.</p>
-                        <a href="#" class="display-3 btn btn-warning btn-lg rounded-pill px-3 animates">Get In Touch</a>
+                        <h2 class="animates delayones">We help companies to digitalize their businesses.</h2>
+                        <p class="animates delaytwos">Properly set processes. Transparent cooperation. Predictable delivery.</p>
+                        <a href="#loginmodal" class="btn btn-warning btn-lg rounded-pill px-3 animates delaythrees" data-bs-toggle="modal">Get In Touch</a>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,67 @@
     <!-- End Footer Section -->
 
     <!-- START MODAL AREA -->
+
+    <!-- 
+    Modal Size
+
+    (i) Standard Size
+    modal-xl
+    modal-lg
+    modal-sm
+    modal-md မရှိဘူး default ဖြစ်နေလို့
+
+    (ii) Full Size
+    modal-fullscreen
+    modal-fullscreen-xxl-down
+    modal-fullscreen-xl-down
+    modal-fullscreen-lg-down
+    modal-fullscreen-md-down
+    modal-fullscreen-sm-down
+
+    (ii) Scroll
+    modal-dialog-scrollable
+    -->
         <!-- start get in touch modal -->
+        <div id="loginmodal" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Login to Your Account</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dimiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="">
+                            <div class="mb-3">
+                                <label for="signinemail" class="form-label">Email Address</label>
+                                <input type="email" name="signinemail" id="signinemail" class="form-control" placeholder="Enter your email" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="signinpassword" class="form-label">Password</label>
+                                <input type="password" name="signinpassword" id="signinpassword" class="form-control" placeholder="Enter your password" required />
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input type="checkbox" name="rememberme" id="rememberme" class="form-check-input" />
+                                <label for="rememberme" class="form-check-label">Remember Me</label>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </form>
+
+                        <div class="text-center mt-3">
+                            <a href="javascript:void(0);" class="text-decoration-none">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <p>Don't have an account? <a href="javascript:void(0);" class="text-decoration-none">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- end get in touch modal -->
     <!-- END MODAL AREA -->
 

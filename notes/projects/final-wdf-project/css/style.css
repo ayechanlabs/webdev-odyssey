@@ -192,6 +192,27 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Start Modal Box */
+/* start get in touch modal */
+.modal-header {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    color: #ffffff;
+    border: none;
+}
+
+.modal-body {
+    border: none;
+    padding: 30px;
+}
+
+.modal-footer {
+    border: none;
+    background: #f9f9f9;
+}
+/* end get in touch modal */
 /* End Modal Box */
 
 
@@ -212,15 +233,15 @@ h1, h2, h3, h4, h5, h6 {
     animation: fadeup 0.8s ease forwards;
 }
 
-.display-1 {
+.delayones {
     animation-delay: 0.2s;
 }
 
-.display-2 {
+.delaytwos {
     animation-delay: 0.4s;
 }
 
-.display-3 {
+.delaythrees {
     animation-delay: 0.6s;
 }
 
