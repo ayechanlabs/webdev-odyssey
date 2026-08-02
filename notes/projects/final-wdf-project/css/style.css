@@ -27,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    letter-spacing: 5px;
+    /* letter-spacing: 5px; */
 }
 
 /* Start - Back to Top Button */
@@ -168,10 +168,120 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Start Clients Section */
+section {
+    padding: 80px 0;
+}
+
+.sectiontitles {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sectiontitles h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    padding-bottom: 15px;
+
+    position: relative;
+}
+
+.sectiontitles h2::after {
+    content: "";
+
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.sectiontitles p {
+    color: #777;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* start card style */
+.card {
+    height: 100%;
+
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-subtitle {
+    color: #777;
+    font-size: 0.9rem;
+
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+/* end card style */
 /* End Clients Section */
 
 
 /* Start Team Section */
+.teamcards .card img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    margin: 20px auto;
+}
+
+.teamcards .socialicons a {
+    width: 36px;
+    height: 36px;
+    background-color: #f5f5f5;
+    color: #555;
+
+    border-radius: 50%;
+
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+
+    margin: 0 5px;
+
+    transition: all 0.3s ease;
+}
+
+.teamcards .socialicons a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
 /* End Team Section */
 
 
