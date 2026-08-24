@@ -27,10 +27,41 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /* letter-spacing: 5px; */
+    letter-spacing: 3px;
 }
 
 /* Start - Back to Top Button */
+.back-to-tops {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+
+    z-index: 99;
+
+    transition: all 0.3s ease;
+}
+
+.back-to-tops:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.back-to-tops.active {
+    opacity: 0.2;
+    visibility: visible;
+}
 /* End - Back to Top Button */
 
 
@@ -228,6 +259,7 @@ section {
 
 .card-title {
     font-weight: 600;
+    font-size: 18px;
 }
 
 .card-subtitle {
@@ -399,6 +431,13 @@ section {
 
 
 /* Start Footer Section */
+footer {
+    text-align: center;
+}
+
+footer p {
+    opacity: 0.8;
+}
 /* End Footer Section */
 
 
